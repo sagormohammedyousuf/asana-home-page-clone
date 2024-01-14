@@ -65,13 +65,15 @@ $(document).ready(function () {
 
   $(".customize-btn").click(function(e) {
     e.stopPropagation(); // Prevent click from propagating to document
-
+    // $(".customize-modal").css("width" , "384px")
     if ($(".customize-modal").css("right") === "-384px") {
       // Show side-nav
       $(".customize-modal").animate({ right: '0px' }, 100);
+      // $(".customize-modal").css("display" , "block")
     } else {
       // Hide side-nav
       $(".customize-modal").animate({ right: '-384px' }, 100);
+      
     }
   });
 
@@ -93,6 +95,9 @@ $(document).ready(function () {
 
 
 
+  $(".hide-customize-modal").click(function(){
+    $(".customize-modal").css("right" , "-384px")
+  })
 
 
 

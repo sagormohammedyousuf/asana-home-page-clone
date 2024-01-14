@@ -1004,12 +1004,13 @@ body {
 /* customize modal  */
 
 .customize-modal {
+    /* display: none; */
     width: 384px;
     height: 870px;
     background-color: #1e1f21;
     position: absolute;
     padding: 2rem;
-    right: 0;
+    right: -384px;
     top: 3.1rem;
     z-index: 9999;
     border-left: 1px solid #838083;
@@ -1038,6 +1039,14 @@ body {
     justify-content: space-between;
     margin-bottom: 1.5rem;
     color: #fff;
+ }
+
+ .hide-customize-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
  }
 
  .cm-top h1{
