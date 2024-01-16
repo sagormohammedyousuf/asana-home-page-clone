@@ -43,57 +43,6 @@ $(document).ready(function () {
   });
 
     
-  // $(document).ready(function() {
-  //   $(".more-btn").click(function () {
-  //     $(".more-btn-option").toggle();
-  //   });
-  
-  //   // When clicking anywhere on the screen, close the modal
-  //   $(document).on('click', function (e) {
-  //     // Check if the clicked area is neither the more-btn nor any of its descendants
-  //     // And also not the more-btn-option nor any of its descendants
-  //     if (!$(e.target).closest('.more-btn').length && !$(e.target).closest('.more-btn-option').length) {
-  //       $(".more-btn-option").hide();
-  //     }
-  //   });
-  // });
-  
-
-
-
-
-
-
-  // $(".customize-btn").click(function(e) {
-  //   e.stopPropagation(); // Prevent click from propagating to document
-  //   // $(".customize-modal").css("width" , "384px")
-  //   if ($(".customize-modal").css("right") === "-384px") {
-  //     // Show side-nav
-  //     $(".customize-modal").animate({ right: '0px' }, 100);
-  //     // $(".customize-modal").css("display" , "block")
-  //   } else {
-  //     // Hide side-nav
-  //     $(".customize-modal").animate({ right: '-384px' }, 100);
-      
-  //   }
-  // });
-
-  // // Close the customize-modal when clicking anywhere on the screen
-  // $(document).click(function(e) {
-  //   // Check if the clicked area is neither the customize-modal nor any of its descendants
-  //   if (!$(e.target).closest('.customize-modal').length) {
-  //     // Hide side-nav if it is open
-  //     if ($(".customize-modal").css("right") === "0px") {
-  //       $(".customize-modal").animate({ right: '-384px' }, 100);
-  //     }
-  //   }
-  // });
-
-  // // Prevent the click inside the customize-modal from propagating to document
-  // $(".customize-modal").click(function(e) {
-  //   e.stopPropagation();
-  // });
-
 
 
   $(".hide-customize-modal").click(function(){
@@ -137,6 +86,7 @@ $(".maroon").click(function () {
    $(".home-page").css("background-image", "url('asset/Maroon_background_dark.jpg')");
    $(".done-icon").css("display" , "none")
    $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+   $(".achievement-widget-content").css("background"," #423437")
 });
 
 //  set bg golden  //
@@ -146,6 +96,7 @@ $(".golden").click(function () {
    
    $(".done-icon").css("display" , "none")
    $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+   $(".achievement-widget-content").css("background","#252423");
 });
 
 
@@ -157,6 +108,7 @@ $(".olive").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background","#252423");
 });
 
 
@@ -167,6 +119,7 @@ $(".deep-greenish-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #3C4740");
 });
 
 
@@ -177,6 +130,7 @@ $(".deep-greenish-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 
@@ -188,6 +142,7 @@ $(".blue-green").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 
@@ -200,6 +155,7 @@ $(".pale-green").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 
@@ -210,6 +166,7 @@ $(".steel-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #3F4650")
 });
 
 
@@ -220,6 +177,7 @@ $(".lavender-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #4E4A52")
 });
 
 
@@ -230,6 +188,7 @@ $(".lavender-purple").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #50464C")
 });
 
 // set bg salmon
@@ -239,6 +198,7 @@ $(".salmon").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 // set bg pale-beige
@@ -248,6 +208,7 @@ $(".pale-beige").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 
@@ -259,6 +220,7 @@ $(".dark-bg").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+  $(".achievement-widget-content").css("background"," #252423")
 });
 
 

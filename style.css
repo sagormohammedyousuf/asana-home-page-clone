@@ -522,13 +522,14 @@ body {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .current-date {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  
 }
 
 .presentation-text {
@@ -545,7 +546,9 @@ body {
   height: 46px;
   width: 450px;
   font-size: 14px;
-  background: hsl(346, 14%, 23%);
+  background: #423437;
+ 
+  
   border-radius: 10vmax;
   -webkit-border-radius: 10vmax;
   -moz-border-radius: 10vmax;
@@ -617,7 +620,7 @@ body {
 /* task section css  */
 
 .task-section {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
