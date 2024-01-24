@@ -10,30 +10,34 @@
   <body>
     <div class="wrapper">
       <nav class="navbar">
-        <div class="menu-box">
-          <img class="menu-icon" src="icon/menu.svg" alt="navbar" />
-          <div class="create">
-            <div class="create-icon" id="create-modal">
-              <img class="add" src="icon/add.svg" /><span>Create</span>
+        <div class="top-navbar-left">
+          <div class="menu-box">
+            <div class="menu-icon-box">
+              <img class="menu-icon" src="icon/nav-icon.svg" alt="navbar" />
             </div>
-
-            <!--  modal //  -->
-            <div class="create-modal">
-              <div class="modal-item">
-                <img src="icon/task-alt.svg" alt="task" />Task
+            <div class="create">
+              <div class="create-icon" id="create-modal">
+                <img class="add" src="icon/add.svg" /><span>Create</span>
               </div>
-              <div class="modal-item">
-                <img src="icon/assignment.svg" alt="project" />Project
-              </div>
-              <div class="modal-item">
-                <img src="icon/sms.svg" alt="massage" />Massage
-              </div>
-              <div class="modal-item">
-                <img src="icon/work.svg" alt="portfolio" />Portfolio
-              </div>
-              <hr class="modal-hr" />
-              <div class="modal-item">
-                <img src="icon/person_add.svg" alt="Invite" />Invite
+  
+              <!--  modal //  -->
+              <div class="create-modal">
+                <div class="modal-item">
+                  <img src="icon/task-alt.svg" alt="task" />Task
+                </div>
+                <div class="modal-item">
+                  <img src="icon/assignment.svg" alt="project" />Project
+                </div>
+                <div class="modal-item">
+                  <img src="icon/sms.svg" alt="massage" />Massage
+                </div>
+                <div class="modal-item">
+                  <img src="icon/work.svg" alt="portfolio" />Portfolio
+                </div>
+                <hr class="modal-hr" />
+                <div class="modal-item">
+                  <img src="icon/person_add.svg" alt="Invite" />Invite
+                </div>
               </div>
             </div>
           </div>
@@ -42,117 +46,119 @@
           <img src="icon/search.svg" />
           <input type="search" placeholder="Search" />
         </div>
-        <div class="profile-box">
-          <button class="up-btn">Upgrade</button>
-          <div class="profile">
-            <img class="profile-pic" src="asset/human_face_1.png" />
-            <img class="expand" src="icon/expand_more.svg" />
-          </div>
-
-          <!-- profile modal  -->
-          <div class="profile-modal">
-            <div class="user-details">
-              <img
-                src="asset/human_face_1.png"
-                alt="human_face_1"
-                class="profile-pic"
-              />
-              <p class="work-sp">My workspace</p>
-              <p class="email-pro">smyusu565@gmail.com</p>
+        <div class="top-navbar-right">
+          <div class="profile-box">
+            <button class="up-btn">Upgrade</button>
+            <div class="profile">
+              <img class="profile-pic" src="asset/human_face_1.png" />
+              <img class="expand icon" src="icon/expand_more.svg" />
             </div>
-            <div class="profile-modal-item">
-              <img src="icon/graphic_eq.svg" alt="" />Admin console
-            </div>
-            <div class="profile-modal-item">
-              <img src="icon/add.svg" alt="new" />New workspace
-            </div>
-            <div class="profile-modal-item">
-              <img src="icon/person_add.svg" alt="invite to asana" />Invite to
-              Asana
-            </div>
-            <div class="profile-modal-item">
-              <button class="btn-pro-modal">Upgrade</button>
-            </div>
-            <hr class="modal-hr" />
-            <div class="profile-modal-item">
-              <img src="icon/account_circle_.svg" alt="account" />Profile
-            </div>
-            <div class="profile-modal-item">
-              <img src="icon/settings.svg" alt="setting" />Setting
-            </div>
-            <hr class="modal-hr" />
-            <div class="profile-modal-item">
-              <img src="icon/arrow_right.svg" alt="logout" />Logout
-            </div>
-          </div>
-
-          <!-- customize modal  -->
-          <div class="customize-modal">
-              <div class="cm-top">
-                <h1>Customize Home</h1>
-                <div class="hide-customize-modal">
-                  <img src="icon/keyboard_tab.svg">
-                </div>
+  
+            <!-- profile modal  -->
+            <div class="profile-modal">
+              <div class="user-details">
+                <img
+                  src="asset/human_face_1.png"
+                  alt="human_face_1"
+                  class="profile-pic"
+                />
+                <p class="work-sp">My workspace</p>
+                <p class="email-pro">smyusu565@gmail.com</p>
               </div>
-
-              <!-- set background  -->
-              <h3 class="bg-text">Background</h3>
-              <div class="bg-theme">
-                <div class="bg-clr maroon"> </div>
-                <div class="bg-clr golden"> </div>
-                <div class="bg-clr olive"> </div>
-                <div class="bg-clr deep-greenish-blue"> </div>
-                <div class="bg-clr blue-green"> </div>
-                <div class="bg-clr pale-green"></div>
-                <div class="bg-clr steel-blue"> </div>
-                <div class="bg-clr lavender-blue"> </div>
-                <div class="bg-clr lavender-purple"> </div>
-                <div class="bg-clr salmon"> </div>
-                <div class="bg-clr pale-beige"> </div>
-                <div class="bg-clr dark-bg"></div>
+              <div class="profile-modal-item">
+                <img src="icon/graphic_eq.svg" alt="" />Admin console
               </div>
-
-              <h3 class="widgets-text">Widgets</h3>
-              <p class="widgets-info">Click add or drag widgets below to your Home 
-                screen. You can also reorder and remove them.</p>
-
-              <div class="widgets">
-                <div class="widget-top">
-                  <p class="widget-title">Private notepad</p>
-                  <div class="add-widget">
-                    <img src="icon/add.svg">
-                    <p>Add</p>
+              <div class="profile-modal-item">
+                <img src="icon/add.svg" alt="new" />New workspace
+              </div>
+              <div class="profile-modal-item">
+                <img src="icon/person_add.svg" alt="invite to asana" />Invite to
+                Asana
+              </div>
+              <div class="profile-modal-item">
+                <button class="btn-pro-modal">Upgrade</button>
+              </div>
+              <hr class="modal-hr" />
+              <div class="profile-modal-item">
+                <img src="icon/account_circle_.svg" alt="account" />Profile
+              </div>
+              <div class="profile-modal-item">
+                <img src="icon/settings.svg" alt="setting" />Setting
+              </div>
+              <hr class="modal-hr" />
+              <div class="profile-modal-item">
+                <img src="icon/arrow_right.svg" alt="logout" />Logout
+              </div>
+            </div>
+  
+            <!-- customize modal  -->
+            <div class="customize-modal">
+                <div class="cm-top">
+                  <h1>Customize Home</h1>
+                  <div class="hide-customize-modal">
+                    <img src="icon/keyboard_tab.svg">
                   </div>
                 </div>
-                <div class="img-wrapper">
-                  <img class="node-pad-img" src="asset/home_notepad_widget_preview_dark.png"/>
+  
+                <!-- set background  -->
+                <h3 class="bg-text">Background</h3>
+                <div class="bg-theme">
+                  <div class="bg-clr maroon"> </div>
+                  <div class="bg-clr golden"> </div>
+                  <div class="bg-clr olive"> </div>
+                  <div class="bg-clr deep-greenish-blue"> </div>
+                  <div class="bg-clr blue-green"> </div>
+                  <div class="bg-clr pale-green"></div>
+                  <div class="bg-clr steel-blue"> </div>
+                  <div class="bg-clr lavender-blue"> </div>
+                  <div class="bg-clr lavender-purple"> </div>
+                  <div class="bg-clr salmon"> </div>
+                  <div class="bg-clr pale-beige"> </div>
+                  <div class="bg-clr dark-bg"></div>
                 </div>
-              </div>
-
-              <!-- anther widgets -->
-              <div class="widgets">
-                <div class="widget-top">
-                  <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
-                  <div class="add-widget">
-                    <img src="icon/add.svg">
-                    <p>Add</p>
+  
+                <h3 class="widgets-text">Widgets</h3>
+                <p class="widgets-info">Click add or drag widgets below to your Home 
+                  screen. You can also reorder and remove them.</p>
+  
+                <div class="widgets">
+                  <div class="widget-top">
+                    <p class="widget-title">Private notepad</p>
+                    <div class="add-widget">
+                      <img src="icon/add.svg">
+                      <p>Add</p>
+                    </div>
+                  </div>
+                  <div class="img-wrapper">
+                    <img class="node-pad-img" src="asset/home_notepad_widget_preview_dark.png"/>
                   </div>
                 </div>
-
-                <div class="sub-div">
-                  <div class="gray-div"></div>
-                  <img src="icon/link.svg" alt="link-icon">
+  
+                <!-- anther widgets -->
+                <div class="widgets">
+                  <div class="widget-top">
+                    <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
+                    <div class="add-widget">
+                      <img src="icon/add.svg">
+                      <p>Add</p>
+                    </div>
+                  </div>
+  
+                  <div class="sub-div">
+                    <div class="gray-div"></div>
+                    <img src="icon/link.svg" alt="link-icon">
+                  </div>
+                  <div class="sub-div">
+                    <div class="gray-div"></div>
+                    <img src="icon/link.svg" alt="link-icon">
+                  </div>
+                  <div class="sub-div">
+                    <div class="gray-div"></div>
+                    <img src="icon/link.svg" alt="link-icon">
+                  </div>
+  
                 </div>
-                <div class="sub-div">
-                  <div class="gray-div"></div>
-                  <img src="icon/link.svg" alt="link-icon">
-                </div>
-                <div class="sub-div">
-                  <div class="gray-div"></div>
-                  <img src="icon/link.svg" alt="link-icon">
-                </div>
-
-              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -163,15 +169,15 @@
         <!-- site nav  -->
         <div class="side-nav">
           <div class="side-nav-item side-nav-item-active">
-            <img src="icon/home.svg" alt="home" />Home
+            <img src="icon/home-icon.svg" alt="home" />Home
           </div>
           <div class="side-nav-item">
-            <img src="icon/task-alt.svg" alt="task" />My tasks
+            <img src="icon/taks-icon.svg" alt="task" />My tasks
           </div>
           <div class="side-nav-item">
             <img src="icon/notifications.svg" alt="notifications" />inbox
           </div>
-          <hr class="modal-hr" />
+          <hr class="modal-hr mt-half"/>
           <div class="side-nav-item insights-top-div" id="side-nav-hover-id">
             <div class="insights">
               <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />Insights
@@ -180,13 +186,13 @@
             <img id="app-icon" src="icon/apps_.svg" />
           </div>
           <div class="side-nav-item">
-            <img src="icon/vital_signs.svg" alt="sign" />Reporting
+            <img src="icon/repotting-icon.svg" alt="sign" />Reporting
           </div>
           <div class="side-nav-item">
-            <img src="icon/folder.svg" alt="folder" />Portfolio
+            <img class="portfolio-icon" src="icon/portfolio.svg" alt="folder" />Portfolio
           </div>
           <div class="side-nav-item">
-            <img src="icon/person_2_.svg" alt="person" />Goals
+            <img src="icon/goal-icon.svg" alt="person" />Goals
           </div>
   
           <div
@@ -214,7 +220,7 @@
             <img id="app-icon" class="project-app-icon" src="icon/apps_.svg" />
           </div>
           <div class="side-nav-item" id="workspace">
-            <img src="icon/group_.svg" alt="group" />My workspace
+            <img src="icon/workplace-icon.svg" alt="group" />My workspace
             <img class="chevron" src="icon/chevron_right.svg" />
   
             <div class="workspace-modal">
@@ -256,7 +262,7 @@
                 <img src="icon/asana-fav.webp" />Invite
               </div>
               <div class="border-stand"></div>
-              <div class="help-div"><img src="icon/help.svg" />Help</div>
+              <div class="help-div"><img class="help-icon" src="icon/what.svg" />Help</div>
             </div>
           </div>
         </div>
@@ -291,7 +297,7 @@
                 </div>
     
                 <div class="task-stats">
-                  <img src="icon/group_.svg" alt="done-icon" />
+                  <img class="icon" src="icon/2-people.svg" alt="done-icon" />
                   <img src="icon/exposure_zero.svg" alt="zero" />
                   <p>collaborators</p>
                 </div>
@@ -318,33 +324,28 @@
 
 
 
-        
-
-          
-
-
           <!-- task -->
           <div class="task-section">
               <div class="section-1">
 
                 <!-- task div 1 -->
-                <div class="task-div">
+                <div class="task-div" id="goal-task-div">
 
                   <div class="top-item">
                     <h3>My goals</h3>
                     <div class="parent-container">
-                      <div class="more-btn">
+                      <div class="more-btn" id="goal-more-btn">
                         <img src="icon/more_horiz.svg" alt="more-icon"/>
                       </div>
 
-                      <!-- <div class="more-btn-option">
-                        <div class="size-option active-option"><img src="icon/check.svg">Half size</div>
-                        <div class="size-option"><p>Full size</p></div>
+                      <div class="more-btn-option gbo-g">
+                        <div class="size-option active-option" id="goal-half-size"><img>Half size</div>
+                        <div class="size-option" id="goal-full-size"><p>Full size</p></div>
                         <div class="remove-option">
                           <img src="icon/delete.svg">
                           Remove widget
                         </div>
-                      </div> -->
+                      </div>
                      </div>
                    
                   </div>
@@ -400,22 +401,22 @@
 
                 </div>
                 <!-- task div 2 -->
-                <div class="task-div">
+                <div class="task-div" id="status-task-div">
                   <div class="top-item">
                     <h3>Status update</h3>
                     <div class="parent-container">
-                      <div class="more-btn">
+                      <div class="more-btn"  id="status-more-btn">
                         <img src="icon/more_horiz.svg" alt="more-icon"/>
                       </div>
 
-                      <!-- <div class="more-btn-option">
-                        <div class="size-option active-option"><img src="icon/check.svg">Half size</div>
-                        <div class="size-option"><p>Full size</p></div>
+                      <div class="more-btn-option" id="id-more-btn-option">
+                        <div class="size-option active-option" id="status-half-size"><img> Half size</div>
+                        <div class="size-option" id="status-full-size"><p>Full size</p></div>
                         <div class="remove-option">
                           <img src="icon/delete.svg">
                           Remove widget
                         </div>
-                      </div> -->
+                      </div>
                      </div>
                   </div>
 
@@ -469,15 +470,25 @@
 
 
             <div class="section-2">
-              <div class="task-div">
+              <div class="task-div" id="draft-task-div">
                 <!-- task div top  -->
                 <div class="top-item">
                   <h3>Draft comments</h3>
                  <div class="parent-container">
-                  <div class="more-btn">
+                  <div class="more-btn draft-more" >
                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                   </div>
+                  <div class="more-btn-option draft-option">
+                    <div class="size-option active-option" id="draft-half-size"><img>Half size</div>
+                    <div class="size-option" id="draft-full-size"><p>Full size</p></div>
+                    <div class="remove-option">
+                      <img src="icon/delete.svg">
+                      Remove widget
+                    </div>
+                  </div>
                  </div>
+
+
                 </div>
 
                 <!-- btm -->
@@ -488,7 +499,7 @@
               </div>
 
 
-              <div class="task-div">
+              <div class="task-div" id="project-task-div">
                 <!-- task div top  -->
                 <div class="top-item">
                   <div class="item">
@@ -500,8 +511,16 @@
                     </select>
                   </div>
                   <div class="parent-container">
-                    <div class="more-btn">
+                    <div class="more-btn project-more">
                       <img src="icon/more_horiz.svg" alt="more-icon"/>
+                    </div>
+                    <div class="more-btn-option project-option">
+                      <div class="size-option active-option" id="project-half-size"><img>Half size</div>
+                      <div class="size-option" id="project-full-size"><p>Full size</p></div>
+                      <div class="remove-option">
+                        <img src="icon/delete.svg">
+                        Remove widget
+                      </div>
                     </div>
                    </div>
                 </div>
@@ -531,7 +550,7 @@
 
             <div class="section-3">
               <!-- task.div.5 -->
-              <div class="task-div">
+              <div class="task-div" id="assign-task-div">
                  <!-- task div top  -->
                  <div class="top-item">
                   <div class="item">
@@ -539,8 +558,16 @@
                   
                   </div>
                   <div class="parent-container">
-                    <div class="more-btn">
+                    <div class="more-btn assign-more">
                       <img src="icon/more_horiz.svg" alt="more-icon"/>
+                    </div>
+                    <div class="more-btn-option assign-option">
+                      <div class="size-option active-option" id="assign-half-size"><img>Half size</div>
+                      <div class="size-option" id="assign-full-size"><p>Full size</p></div>
+                      <div class="remove-option">
+                        <img src="icon/delete.svg">
+                        Remove widget
+                      </div>
                     </div>
                    </div>
                 </div>

@@ -119,7 +119,7 @@ $(".deep-greenish-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #3C4740");
+  $(".achievement-widget-content").css("background","#3C4841 !important");
 });
 
 
@@ -224,6 +224,221 @@ $(".dark-bg").click(function () {
 });
 
 
+
+// more btn option toggle set
+
+// $(".more-btn").click(function() {
+//   $(this).next("#id-more-btn-option").toggle();
+//   $("#status-more-btn").css("display" , "flex");
+// });
+
+$("#status-more-btn").click(function(){
+  $("#id-more-btn-option").toggle();
+  event.stopPropagation(); // Prevents the click from propagating to the document
+});
+
+// Click event on the document
+$(document).click(function() {
+  $("#id-more-btn-option").hide();
+});
+
+// Click event on the .gbo-g element
+$("#id-more-btn-option").click(function() {
+  $(this).hide(); // This will hide .gbo-g when it is clicked
+})
+
+
+
+$("#status-full-size").click(function(){
+  $("#status-task-div").css("width" , "1200px");
+  $("#status-half-size").removeClass("active-option");
+  $("#status-full-size").addClass("active-option");
+  $(".task-status-right").css("width" , "100%")
+
+ 
+  
+})
+
+$("#status-half-size").click(function(){
+  $("#status-task-div").css("width" , "600px");
+  $("#status-full-size").removeClass("active-option");
+  $("#status-half-size").addClass("active-option");
+  $(".task-status-right").css("width" , "600px")
+
+  
+})
+
+
+
+  // Toggle the dropdown menu on click of the button
+  $("#goal-more-btn").click(function(event) {
+      $(".gbo-g").toggle();
+      event.stopPropagation(); // Prevents the click from propagating to the document
+  });
+
+  // Click event on the document
+  $(document).click(function() {
+      $(".gbo-g").hide();
+  });
+
+  // Click event on the .gbo-g element
+  $(".gbo-g").click(function() {
+      $(this).hide(); // This will hide .gbo-g when it is clicked
+  });
+
+
+
+
+$("#goal-full-size").click(function(){
+  $("#goal-task-div").css("width" , "1200px")
+  $("#goal-half-size").removeClass("active-option");
+  $("#goal-full-size").addClass("active-option");
+
+})
+
+$("#goal-half-size").click(function(){
+  $("#goal-task-div").css("width" , "600px")
+  $("#goal-full-size").removeClass("active-option");
+  $("#goal-half-size").addClass("active-option");
+})
+
+
+
+// draft more btn script //
+ 
+  // Toggle the dropdown menu on click of the button
+  $(".draft-more").click(function(event) {
+    $(".draft-option").toggle();
+    event.stopPropagation(); // Prevents the click from propagating to the document
+});
+
+// Click event on the document
+$(document).click(function() {
+    $(".draft-option").hide();
+});
+
+// Click event on the .gbo-g element
+$(".draft-option").click(function() {
+    $(this).hide(); // This will hide .gbo-g when it is clicked
+});
+
+
+
+$("#draft-full-size").click(function(){
+  $("#draft-task-div").css("width" , "1200px")
+  $("#draft-half-size").removeClass("active-option");
+  $("#draft-full-size").addClass("active-option");
+
+})
+
+$("#draft-half-size").click(function(){
+  $("#draft-task-div").css("width" , "600px")
+  $("#draft-full-size").removeClass("active-option");
+  $("#draft-half-size").addClass("active-option");
+})
+
+
+
+
+// project more btn script //
+ 
+  // Toggle the dropdown menu on click of the button
+  $(".project-more").click(function(event) {
+    $(".project-option").toggle();
+    event.stopPropagation(); // Prevents the click from propagating to the document;
+   
+});
+
+// Click event on the document
+$(document).click(function() {
+    $(".project-option").hide();
+    
+});
+
+// Click event on the .gbo-g element
+$(".project-option").click(function() {
+    $(this).hide(); // This will hide .gbo-g when it is clicked
+});
+
+
+
+
+$("#project-full-size").click(function(){
+  $("#project-task-div").css("width" , "1200px")
+  $("#project-half-size").removeClass("active-option");
+  $("#project-full-size").addClass("active-option");
+
+})
+
+$("#project-half-size").click(function(){
+  $("#project-task-div").css("width" , "600px")
+  $("#project-full-size").removeClass("active-option");
+  $("#project-half-size").addClass("active-option");
+})
+
+
+
+
+/// assign // 
+
+
+
+// project more btn script //
+ 
+  // Toggle the dropdown menu on click of the button
+  $(".assign-more").click(function(event) {
+    $(".assign-option").toggle();
+    event.stopPropagation(); // Prevents the click from propagating to the document;
+   
+});
+
+// Click event on the document
+$(document).click(function() {
+    $(".assign-option").hide();
+    
+});
+
+// Click event on the .gbo-g element
+$(".assign-option").click(function() {
+    $(this).hide(); // This will hide .gbo-g when it is clicked
+});
+
+
+
+$("#assign-full-size").click(function(){
+  $("#assign-task-div").css("width" , "1200px")
+  $("#assign-half-size").removeClass("active-option");
+  $("#assign-full-size").addClass("active-option");
+
+})
+
+$("#assign-half-size").click(function(){
+  $("#assign-task-div").css("width" , "600px")
+  $("#assign-full-size").removeClass("active-option");
+  $("#assign-half-size").addClass("active-option");
+})
+
+
+
+// Function to update the current date
+function updateCurrentDate() {
+  var currentDate = new Date();
+  var dayOfWeek = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+  var month = currentDate.toLocaleDateString('en-US', { month: 'long' });
+  var day = currentDate.getDate();
+  
+  // Format the date string
+  var dateString = dayOfWeek + ', ' + month + ' ' + day;
+  
+  // Set the content of the element with class 'current-date'
+  $('.current-date').text(dateString);
+}
+
+// Initial update on document ready
+updateCurrentDate();
+
+// Update the date every second (you can adjust the interval as needed)
+setInterval(updateCurrentDate, 1000);
 
 });
 
