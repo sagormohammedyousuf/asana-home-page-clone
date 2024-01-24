@@ -74,7 +74,7 @@ body {
   top: 0;
   position: fixed;
   z-index: 910;
-  overflow: hidden;
+  
 }
 
 .menu-box {
@@ -350,14 +350,11 @@ body {
   color: #fff;
   padding-top: 10px;
   position: fixed;
-  /*position: -webkit-sticky;
-    position: sticky;
-    */ /*left: -240px;
-    */ /*Hideinitially*/
+  
   top: 49px;
   bottom: 0;
   background-color:#2E2E30;
-  /*Adjustcolorasneeded*/
+  
   overflow-x: hidden;
   z-index: 90;
   transition: left 0.3s;
