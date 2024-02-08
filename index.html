@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/icon/asana-fav.webp" />
+    <link rel="icon" type="image/x-icon"   href="asset/favicon-16x16.png"  sizes="12x12" />
     <link rel="stylesheet" href="style.css" />
-    <title>Asana</title>
+    <title>Home - Asana</title>
   </head>
   <body>
+
+    <header class="header">
+
+    </header>
     <div class="wrapper">
       <nav class="navbar">
         <div class="top-navbar-left">
@@ -51,7 +55,7 @@
             <button class="up-btn">Upgrade</button>
             <div class="profile">
               <img class="profile-pic" src="asset/human_face_1.png" />
-              <img class="expand icon" src="icon/expand_more.svg" />
+              <img class="expand" src="icon/expand_more.svg" />
             </div>
   
             <!-- profile modal  -->
@@ -169,38 +173,41 @@
         <!-- site nav  -->
         <div class="side-nav">
           <div class="side-nav-item side-nav-item-active">
-            <img src="icon/home-icon.svg" alt="home" />Home
+            <img src="icon/home-icon.svg" alt="home" />
+            <p>Home</p>
           </div>
           <div class="side-nav-item">
-            <img src="icon/taks-icon.svg" alt="task" />My tasks
+            <img src="icon/taks-icon.svg" alt="task" />
+            <p>My tasks</p>
           </div>
           <div class="side-nav-item">
-            <img src="icon/notifications.svg" alt="notifications" />inbox
+            <img src="icon/notifications.svg" alt="notifications" />
+            <p>Inbox</p>
           </div>
-          <hr class="modal-hr mt-half"/>
-          <div class="side-nav-item insights-top-div" id="side-nav-hover-id">
+          <hr class="modal-hr mt-half mb"/>
+          <div class="insights-top-div" id="side-nav-hover-id">
             <div class="insights">
-              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />Insights
+              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" /><p>Insights</p>
               <img src="icon/add.svg" id="add-icon" />
             </div>
             <img id="app-icon" src="icon/apps_.svg" />
           </div>
           <div class="side-nav-item">
-            <img src="icon/repotting-icon.svg" alt="sign" />Reporting
+            <img src="icon/repotting-icon.svg" alt="sign" /><p>Reporting</p>
           </div>
           <div class="side-nav-item">
-            <img class="portfolio-icon" src="icon/portfolio.svg" alt="folder" />Portfolio
+            <img class="portfolio-icon" src="icon/portfolio.svg" alt="folder" /><p>Portfolios</p>
           </div>
           <div class="side-nav-item">
-            <img src="icon/goal-icon.svg" alt="person" />Goals
+            <img src="icon/goal-icon.svg" alt="person" /><p>Goals</p>
           </div>
   
           <div
-            class="side-nav-item project-top-div insights-top-div"
+            class=" insights-top-div"
             id="project-main"
           >
             <div class="project insights">
-              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />Project
+              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" /><p>Projects</p>
               <img id="more-icon" src="icon/more_horiz.svg" />
               <img src="icon/add.svg" id="add-icon" />
             </div>
@@ -208,26 +215,26 @@
           </div>
           <div class="side-nav-item">
             <div class="clr-div"></div>
-            Cross-functional project plan
+            <p>Cross-functional project p...</p>
           </div>
           <div
-            class="side-nav-item project-top-div insights-top-div"
+            class="project-top-div insights-top-div"
             id="project-main"
           >
             <div class="project insights">
-              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />Team
+              <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" /> <p>Team</p>
             </div>
             <img id="app-icon" class="project-app-icon" src="icon/apps_.svg" />
           </div>
           <div class="side-nav-item" id="workspace">
-            <img src="icon/workplace-icon.svg" alt="group" />My workspace
-            <img class="chevron" src="icon/chevron_right.svg" />
+            <img id="workplace-icon" src="icon/workplace-icon.svg" alt="group" /><p>My workspace</p>
+            <img class="chevron" src="icon/right-sign.svg" />
   
             <div class="workspace-modal">
               <p class="wsm-title">My workspace</p>
               <div class="workspace-modal-item">
                 <div>
-                  <img src="icon/person_add.svg" />
+                  <img  src="icon/person_add.svg" />
                   <p>invite teammates</p>
                 </div>
                 <div class="workspace-people">
@@ -259,10 +266,10 @@
             <hr class="modal-hr" />
             <div class="cover-div">
               <div class="invite-div">
-                <img src="icon/asana-fav.webp" />Invite
+                <img src="icon//Asana-Dots-Coral-source.svg" /><p>Invite</p>
               </div>
               <div class="border-stand"></div>
-              <div class="help-div"><img class="help-icon" src="icon/what.svg" />Help</div>
+              <div class="help-div"><img class="help-icon" src="icon/what.svg" /><p>Help</p></div>
             </div>
           </div>
         </div>
@@ -278,7 +285,7 @@
 
           <div class="achievement-widget">
             <p class="current-date">Thursday, January 11</p>
-            <p class="presentation-text">Good morning , MD</p>
+            <p class="presentation-text">Good morning, MD</p>
 
 
             <div class="cover">
@@ -289,16 +296,17 @@
                   <option value="my-week">My week</option>
                   <option value="my-month">My month</option>
                 </select>
-                <div class="border-stand"></div>
-                <div class="task-stats">
-                  <img src="icon/done_.svg" alt="done-icon" />
-                  <img src="icon/exposure_zero.svg" alt="zero" />
-                  <p>task completed</p>
+                <div class="border-stand home-stand"></div>
+                <div class="task-stats  ml-30 task-stats-style">
+                  <img class="done-icon" src="icon/done_.svg" alt="done-icon" />
+                  <!-- <img src="icon/exposure_zero.svg" alt="zero" /> -->
+                  <p class="zero">0</p>
+                  <p>tasks completed</p>
                 </div>
     
-                <div class="task-stats">
-                  <img class="icon" src="icon/2-people.svg" alt="done-icon" />
-                  <img src="icon/exposure_zero.svg" alt="zero" />
+                <div class="task-stats collaborators">
+                  <img  class="icon  ml" src="icon/2-people.svg" alt="done-icon" />
+                  <p class="zero ms">0</p>
                   <p>collaborators</p>
                 </div>
               </div>
@@ -326,10 +334,10 @@
 
           <!-- task -->
           <div class="task-section">
-              <div class="section-1">
+              <div class="section-1" >
 
                 <!-- task div 1 -->
-                <div class="task-div" id="goal-task-div">
+                <div class="task-div goal-task-div" id="boxA">
 
                   <div class="top-item">
                     <h3>My goals</h3>
@@ -352,7 +360,7 @@
 
                   <p class="task-summary">Try Asana Advanced to make traction on the goals you own.</p>
                   <div class="btn-div">
-                    <button class="task-clr-btn btn">Try for Free</button>
+                    <button class="task-clr-btn btn">Try for free</button>
                     <button class="task-border-btn btn ">Remove widget</button>
                   </div>
 
@@ -393,17 +401,19 @@
                          <div class="percentage-div">
                             <div class="percentage-index p-85"></div>
                          </div>
-                         80%
+                         90%
                       </div>
                     </div>
                   </div>
                   
 
                 </div>
+
+                
                 <!-- task div 2 -->
-                <div class="task-div" id="status-task-div">
+                <div class="task-div status-task-div" id="boxB">
                   <div class="top-item">
-                    <h3>Status update</h3>
+                    <h3>Status updates</h3>
                     <div class="parent-container">
                       <div class="more-btn"  id="status-more-btn">
                         <img src="icon/more_horiz.svg" alt="more-icon"/>
@@ -420,15 +430,15 @@
                      </div>
                   </div>
 
-                  <p class="task-summary">upgrade to Asana Advanced to use status updates widget on <br> your home screen</p>
+                  <p class="task-summary">Upgrade to Asana Advanced to use the status updates widget on <br> your home screen</p>
                   <div class="btn-div">
-                    <button class="task-clr-btn btn">Try for Free</button>
+                    <button class="task-clr-btn btn msb">Try for free</button>
                     <button class="task-border-btn btn ">Remove widget</button>
                   </div>
 
                   <div class="status status-right margin-top">
                     <div class="task-status-right">
-                      <div class="graph">
+                      <div class="graph pl-10">
                         <div class="graph-one"></div>
                         <div class="graph-two"></div>
                       </div>
@@ -441,7 +451,7 @@
                     </div>
                     <div class="task-status-right ">
 
-                      <div class="graph">
+                      <div class="graph pl-10">
                         <div class="graph-one"></div>
                         <div class="graph-two"></div>
                       </div>
@@ -453,7 +463,7 @@
                     </div>
                     <div class="task-status-right last-task-status">
 
-                      <div class="graph">
+                      <div class="graph pl-10">
                         <div class="graph-one"></div>
                         <div class="graph-two"></div>
                       </div>
@@ -465,7 +475,7 @@
                      </div>
                       </div>
                     </div>
-                  </div>
+                </div>
             </div>
 
 
@@ -576,7 +586,7 @@
                 <div class="people-status">
                   <div class="people-status-div">
                     <div class="ps-left">
-                      <img src="icon/task-alt-1.svg" alt="task-icon">
+                      <img src="icon/taks-icon.svg" alt="task-icon">
                       <div id="st-div-1"></div>
                     </div>
                     <div class="ps-right">
@@ -588,7 +598,7 @@
                   <hr class="modal-hr" />
                   <div class="people-status-div">
                     <div class="ps-left">
-                      <img src="icon/task-alt-2.svg" alt="task-icon">
+                      <img src="icon/taks-icon-2.svg" alt="task-icon">
                       <div id="st-div-2"></div>
                     </div>
                     <div class="ps-right">
@@ -600,7 +610,7 @@
                   <hr class="modal-hr" />
                   <div class="people-status-div">
                     <div class="ps-left">
-                      <img src="icon/task-alt-3.svg" alt="task-icon">
+                      <img src="icon/taks-icon-3.svg" alt="task-icon">
                       <div id="st-div-3"></div>
                     </div>
                     <div class="ps-right">
@@ -612,7 +622,7 @@
                   <hr class="modal-hr" id="hr-4"/>
                   <div class="people-status-div">
                     <div class="ps-left">
-                      <img id="taks-icon-clr" src="icon/task-alt-4.svg" alt="task-icon">
+                      <img id="taks-icon-clr" src="icon/taks-icon-4.svg" alt="task-icon">
                       <div id="st-div-4"></div>
                     </div>
                     <div class="ps-right ">

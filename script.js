@@ -86,7 +86,7 @@ $(".maroon").click(function () {
    $(".home-page").css("background-image", "url('asset/Maroon_background_dark.jpg')");
    $(".done-icon").css("display" , "none")
    $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-   $(".achievement-widget-content").css("background"," #423437")
+   $(".achievement-widget-content").css("background"," #43373F")
 });
 
 //  set bg golden  //
@@ -119,7 +119,7 @@ $(".deep-greenish-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#3C4841 !important");
+  $(".achievement-widget-content").css("background"," #3C4C4A !important");
 });
 
 
@@ -439,6 +439,92 @@ updateCurrentDate();
 
 // Update the date every second (you can adjust the interval as needed)
 setInterval(updateCurrentDate, 1000);
+
+
+
+
+// Get the current hour of the day
+var currentHour = new Date().getHours();
+        
+// Select the element with the class 'presentation-text'
+var greetingElement = $('.presentation-text');
+
+// Define the greetings based on the time of day
+var greeting;
+if (currentHour >= 5 && currentHour < 12) {
+    greeting = 'Good morning, MD';
+} else if (currentHour >= 12 && currentHour < 18) {
+    greeting = 'Good afternoon, MD';
+} else {
+    greeting = 'Good evening, MD';
+}
+
+// Set the text content of the element to the appropriate greeting
+greetingElement.text(greeting);
+
+
+
+
+
+// dragable box // 
+
+$(function() {
+  $("#boxA, #boxB").draggable({
+      containment: "#section-1",
+      start: function(event, ui) {
+          $(this).data("origPosition", $(this).position());
+      },
+      stop: function(event, ui) {
+          checkOverlap($(this));
+      }
+  });
+
+  function checkOverlap(draggedBox) {
+      var $otherBox = draggedBox.is(".boxA") ? $("#boxB") : $("#boxA");
+
+      if (isOverlapping(draggedBox, $otherBox)) {
+          var draggedBoxOrigPosition = draggedBox.data("origPosition");
+          var otherBoxPosition = $otherBox.position();
+
+          draggedBox.animate({
+              top: otherBoxPosition.top,
+              left: otherBoxPosition.left
+          }, 'fast');
+
+          $otherBox.animate({
+              top: draggedBoxOrigPosition.top,
+              left: draggedBoxOrigPosition.left
+          }, 'fast');
+      } else {
+          // Return the box to its original position if it's not overlapping
+          draggedBox.animate({
+              top: draggedBox.data("origPosition").top,
+              left: draggedBox.data("origPosition").left
+          }, 'fast');
+      }
+  }
+
+  function isOverlapping(box1, box2) {
+      var a = box1.offset();
+      a.right = a.left + box1.outerWidth();
+      a.bottom = a.top + box1.outerHeight();
+
+      var b = box2.offset();
+      b.right = b.left + box2.outerWidth();
+      b.bottom = b.top + box2.outerHeight();
+
+      return !(a.left > b.right || 
+               a.right < b.left || 
+               a.top > b.bottom ||
+               a.bottom < b.top);
+  }
+});
+
+
+
+
+
+
 
 });
 
