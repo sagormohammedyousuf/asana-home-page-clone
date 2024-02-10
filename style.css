@@ -16,6 +16,8 @@
   --pale-beige: hsl(38, 32%, 82%);
 }
 
+/* customize scroll bar */
+
 ::-webkit-scrollbar {
   width: 1.1rem;
   
@@ -50,13 +52,10 @@ body {
   /* overflow: scroll; */
 }
 
-.top-navbar-left {
-  width: 688px;
-  height: 32px;
-  padding: 0 0 0 26px;
-  display: flex;
-  align-items: center;
-}
+
+
+/* navbar style start  */
+
 
 .navbar {
   display: flex;
@@ -70,6 +69,14 @@ body {
   top: 0;
   position: fixed;
   z-index: 910;
+}
+
+.top-navbar-left {
+  width: 688px;
+  height: 32px;
+  padding: 0 0 0 26px;
+  display: flex;
+  align-items: center;
 }
 
 .menu-box {
@@ -93,6 +100,8 @@ body {
   height: 16px;
   cursor: pointer;
 }
+
+/* create btn style */
 
 .create {
   background: #3d3e40;
@@ -138,6 +147,9 @@ body {
   margin: 0 6px 0 6px;
 }
 
+
+/* create modal  */
+
 .create-modal {
   padding-block: 4px;
   top: 1%;
@@ -177,6 +189,8 @@ body {
   height: 1px;
   background: #454547;
 }
+
+/* nav bar search box  */
 .search-box {
   margin-left: 7px;
   padding: 0 0 0 15px;
@@ -225,6 +239,8 @@ body {
   color: #8e8f8d;
 }
 
+/* navbar right site style start here  */
+
 .top-navbar-right {
   width: 688px;
   height: 36px;
@@ -232,6 +248,8 @@ body {
   align-items: center;
   justify-content: right;
 }
+
+/* profile box  */
 
 .profile-box {
   display: flex;
@@ -251,6 +269,10 @@ body {
   font-weight: 200;
   border-radius: 6px;
   cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .profile-pic {
@@ -258,22 +280,30 @@ body {
   height: 28px;
 }
 
+/* .expand icon  */
 .expand {
   width: 12px;
   height: 12px;
   margin-bottom: 6px;
 }
 
+/* profile modal  */
+
 .profile-modal {
   z-index: 999;
   position: absolute;
-  top: 50px;
-  right: 20px;
-  width: 220px;
+  top: 45px;
+  right: 12px;
+  width: 240px;
+  height: 454px;
   color: #fff;
   background: var(--dark);
   outline: 1px solid #6a696a;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .user-details {
@@ -307,15 +337,15 @@ body {
 
 .profile-modal-item img {
   margin-right: 8px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 .btn-pro-modal {
   padding: 8px 32px;
   width: 85%;
   margin-inline: 15px;
-  background: #e7ad5b;
+  background: #F1BD6C;
   border: none;
   outline: none;
   border-radius: 4px;
@@ -329,6 +359,8 @@ body {
 .profile-modal {
   display: none;
 }
+
+/* side nav start here  */
 
 .side-nav {
   background: var(--dark-neutral);
@@ -643,7 +675,7 @@ body {
   background-image: url("asset/Maroon_background_dark.jpg");
   background-size: cover;
   /* background-position: center; */
-  padding-top: 51px;
+  padding-top: 49px;
 
   color: #fff;
 
@@ -659,14 +691,17 @@ margin-top: 49px; */
   padding-left: 240px;
   transition: 0.3s;
 
-  max-height: 100vh;
+  max-height: 100dvh;
   overflow-y: scroll;
   margin: 0px;
   padding-top: 20px;
   padding-left: 250px;
+
+  padding-bottom: 130px;
 }
 
 .home-text {
+  margin-top: 2px;
   font-size: 20px;
   color: #f5f4f3;
   margin-left: 14px;
@@ -780,6 +815,13 @@ margin-top: 49px; */
   background-color: rgb(161, 158, 158);
 }
 
+.done-icon-s {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-left: 2px;
+}
+
 .done-icon {
   width: 16px;
   height: 16px;
@@ -860,11 +902,11 @@ margin-top: 49px; */
   justify-content: center;
   gap: 0.9rem;
   flex-wrap: wrap;
-  
+  position:relative;
 }
 
 #section-1 {
- /* position: relative; */
+ position: absolute;
  display: flex;
  width: 1200px;
  z-index: 999;
@@ -883,7 +925,7 @@ margin-top: 49px; */
 }
 
 #boxA , #boxB {
-
+  /* position: absolute; */
   width: 597px;
   height: 400px;
 }
@@ -1562,8 +1604,10 @@ body.modal-open {
 }
 
 .drag-div {
-  background: transparent ;
-  
+  position: relative;
+   /* background: rgba(0,0,0,0.4);  */
+   background: rgba(236, 229, 232, 0.1)
+
 }
 
 .task-content {

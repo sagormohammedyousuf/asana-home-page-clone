@@ -31,14 +31,14 @@ $(document).ready(function () {
   $(".menu-icon").click(function () {
     if ($(".side-nav").css("left") === "-240px") {
       // Show side-nav
-      $(".side-nav").animate({ left: '0px' }, 100);
+      $(".side-nav").animate({ left: '0px' }, 10);
       // Add padding to home-page
-      $(".home-page-content").animate({ paddingLeft: '250px' }, 100);
+      $(".home-page-content").animate({ paddingLeft: '250px' }, 10);
     } else {
       // Hide side-nav
-      $(".side-nav").animate({ left: '-240px' }, 100);
+      $(".side-nav").animate({ left: '-240px' }, 10);
       // Reset padding of home-page
-      $(".home-page-content").animate({ paddingLeft: '0px' }, 100);
+      $(".home-page-content").animate({ paddingLeft: '0px' }, 10);
     }
   });
 
@@ -59,10 +59,10 @@ $(document).ready(function () {
     e.stopPropagation(); // Prevent click from propagating
     var currentRight = $(".customize-modal").css("right");
     if (currentRight === "-384px") {
-      $(".customize-modal").animate({ right: '0px' }, 100);
+      $(".customize-modal").animate({ right: '0px' }, 10);
       $("body").addClass("modal-open"); // Add class to hide scrollbar
     } else {
-      $(".customize-modal").animate({ right: '-384px' }, 100);
+      $(".customize-modal").animate({ right: '-384px' }, 10);
       $("body").removeClass("modal-open"); // Remove class to show scrollbar
     }
   });
@@ -70,7 +70,7 @@ $(document).ready(function () {
   // Close the sidebar when clicking outside
   $(document).click(function(e) {
     if ($(".customize-modal").css("right") === "0px") {
-      $(".customize-modal").animate({ right: '-384px' }, 100);
+      $(".customize-modal").animate({ right: '-384px' }, 10);
       $("body").removeClass("modal-open"); // Remove class to show scrollbar
     }
   });
@@ -438,7 +438,7 @@ function updateCurrentDate() {
 updateCurrentDate();
 
 // Update the date every second (you can adjust the interval as needed)
-setInterval(updateCurrentDate, 1000);
+setInterval(updateCurrentDate, 1000000);
 
 
 
