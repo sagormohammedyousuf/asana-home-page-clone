@@ -119,8 +119,15 @@ $(".deep-greenish-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #3C4C4A !important");
+  $(".achievement-widget-content").css("background", "#3C4C4A !important");
+
+  $(document).ready(function() {
+    $(".achievement-widget-content").css("background", "#3C4C4A");
 });
+
+});
+
+
 
 
 // set bg blue-green 
@@ -166,7 +173,7 @@ $(".steel-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #3F4650")
+  $(".achievement-widget-content").css("background","#414A5E")
 });
 
 
@@ -177,7 +184,7 @@ $(".lavender-blue").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #4E4A52")
+  $(".achievement-widget-content").css("background","#504E61")
 });
 
 
@@ -188,7 +195,7 @@ $(".lavender-purple").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #50464C")
+  $(".achievement-widget-content").css("background","#554C5B")
 });
 
 // set bg salmon
@@ -220,7 +227,7 @@ $(".dark-bg").click(function () {
   
   $(".done-icon").css("display" , "none")
   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
+  $(".achievement-widget-content").css("background","#252628")
 });
 
 

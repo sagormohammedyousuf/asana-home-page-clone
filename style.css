@@ -152,13 +152,14 @@ body {
 
 .create-modal {
   padding-block: 4px;
-  top: 1%;
-  left: 12.6%;
+  margin-top: 5px;
+  top: 0;
+  left: 7.7%;
   position: absolute;
   width: 180px;
   background: var(--dark);
   outline: 1px solid #6a696a;
-  z-index: 100;
+  z-index: 999;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -485,7 +486,7 @@ body {
   margin-right: 0px;
 }
 
-/*  project //  */
+/* side nav  project //  */
 
 #project-main:hover #arrow_drop_down {
   width: 15px;
@@ -527,8 +528,6 @@ body {
 #workplace-icon {
   width: 16px;
   height: 16px;
-  /* margin-left: 2px;
-  margin-right: 2px; */
   margin-inline: 2px;
 }
 
@@ -542,8 +541,7 @@ body {
   margin-bottom: 17px;
   
 }
-/* #F06A6A
-#A398EB */
+
 .cover-div {
   padding-block: 8px;
   padding-inline: 8px;
@@ -559,9 +557,7 @@ body {
   margin-right: -2px;
 }
 
-/* .invite-div img {
- width: 15px !important;
-} */
+
 
 .help-div,
 .invite-div {
@@ -599,6 +595,8 @@ body {
   width: 18px !important;
   height: 18px !important;
 }
+
+/* side nav .workspace-modal  */
 
 #workspace:hover .workspace-modal {
   display: block;
@@ -666,37 +664,27 @@ body {
   margin-left: -4px;
 }
 
+ /* home page style start here  */
+
 .home-page {
   width: 100%;
-  /* height: 195vh; */
-
   height: 100%;
   padding-bottom: 20px;
-  background-image: url("asset/Maroon_background_dark.jpg");
+  /* home page background set here  */
+  background-image: url("asset/Maroon_background_dark.jpg"); 
   background-size: cover;
-  /* background-position: center; */
   padding-top: 49px;
-
   color: #fff;
-
-  /* max-height: 250vh;
-  overflow-y: scroll;
-margin: 0px;
-margin-top: 0px;
-padding-left: 0px;
-margin-top: 49px; */
 }
 
 .home-page-content {
   padding-left: 240px;
   transition: 0.3s;
-
   max-height: 100dvh;
   overflow-y: scroll;
   margin: 0px;
   padding-top: 20px;
   padding-left: 250px;
-
   padding-bottom: 130px;
 }
 
@@ -727,6 +715,8 @@ margin-top: 49px; */
 
   margin-right: 10px;
 }
+
+/* conversation text  */
 
 .presentation-text {
   font-size: 2rem;
@@ -864,6 +854,8 @@ margin-top: 49px; */
   height: 28px;
   margin-left: 40px;
 }
+
+/* . customize btn or theme btn  */
 
 .customize-btn {
   /* margin-left: -6px; */
@@ -1232,6 +1224,10 @@ margin-top: 49px; */
   height: 10px;
   background: #ca606b;
   border-radius: 10vmax;
+  -webkit-border-radius: 10vmax;
+  -moz-border-radius: 10vmax;
+  -ms-border-radius: 10vmax;
+  -o-border-radius: 10vmax;
 }
 
 .y-dot {
@@ -1304,8 +1300,11 @@ margin-top: 49px; */
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-
   cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .reg-img {
@@ -1320,7 +1319,7 @@ margin-top: 49px; */
   font-size: 16px;
 }
 
-/* customize modal  */
+/* customize or theme  modal  */
 
 .customize-modal {
   /* display: none; */
@@ -1385,10 +1384,7 @@ margin-top: 49px; */
   align-items: center;
   justify-content: center;
   border-radius: 10vmax;
-  -webkit-border-radius: 10vmax;
-  -moz-border-radius: 10vmax;
-  -ms-border-radius: 10vmax;
-  -o-border-radius: 10vmax;
+
 }
 
 .bg-clr img {
@@ -1452,10 +1448,7 @@ margin-top: 49px; */
   color: #fff;
   border: 1px solid #6a696a;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
   overflow: hidden;
 }
 
