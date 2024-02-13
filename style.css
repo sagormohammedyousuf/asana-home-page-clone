@@ -796,6 +796,7 @@ body {
   font-weight: 500;
   margin-right: 4px;
   margin-bottom: 2px;
+  margin-left: 1px;
 
 }
 
@@ -839,11 +840,11 @@ body {
 }
 
 .ml {
-  margin-left: 20px;
+  margin-left: 21px;
 }
 
 .ms {
-  margin-left: 4px;
+  margin-left: 3px;
   font-weight: 500;
 }
 .ml-30 {
@@ -950,7 +951,7 @@ body {
 
 .top-item h3 {
   font-size: 1.4rem;
-  margin-left:  8px;
+  margin-left:  9px;
   margin-top:5px ;
 }
 
@@ -1037,9 +1038,10 @@ body {
 }
 
 .task-summary {
+  line-height: 24px;
   text-align: center;
-  margin-top: 23px;
-  margin-right: 2px;
+  margin-top: 22px;
+  margin-right: px;
   font-size: 16px;
   color: rgb(162, 160, 162);
 }
@@ -1048,14 +1050,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 18px;
-  margin-right: 6px;
+  margin-top: 16px;
+  margin-left: px;
+  margin-right: 2px;
   gap: 9px;
 }
 
 .task-border-btn {
-  height: 35px;
-  width: 121px;
+  height: 34px;
+  width: 120px;
   background: none;
   color: #fff;
   border: none;
@@ -1112,6 +1115,8 @@ body {
   gap: 10px;
   
 }
+
+
 
 .pl-10 {
   padding-left: 10px;
@@ -1206,15 +1211,17 @@ body {
 }
 
 .status-btn {
-  width: auto;
+  width: fit-content;
+  height: 20px;
   font-size: 12px;
   display: flex;
   align-items: center;
   gap: 5px;
   background: #581d23;
   color: #ca606b;
-  padding-inline: 6px;
-  padding-block: 2px;
+  padding: 0 8px 0 8px;
+  /* padding-inline: 6px;
+  padding-block: 2px; */
   border-radius: 10vmax;
   -webkit-border-radius: 10vmax;
   -moz-border-radius: 10vmax;
@@ -1223,8 +1230,8 @@ body {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: #ca606b;
   border-radius: 10vmax;
   -webkit-border-radius: 10vmax;
