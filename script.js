@@ -80,164 +80,250 @@ $(document).ready(function () {
     e.stopPropagation();
   });
 
-//  set bg  marron//
-$(".maroon").click(function () {
- 
-   $(".home-page").css("background-image", "url('asset/Maroon_background_dark.jpg')");
-   $(".done-icon").css("display" , "none")
-   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-   $(".achievement-widget-content").css("background"," #43373F")
-});
 
-//  set bg golden  //
-$(".golden").click(function () {
   
-   $(".home-page").css("background-image", "url('asset/Orange_yellow_background_dark.jpg')");
+    
+
+
+
+  
+
+// //  set bg  marron//
+// $(".maroon").click(function () {
+ 
+//    $(".home-page").css("background-image", "url('asset/Maroon_background_dark.jpg')");
+//    $(".done-icon").css("display" , "none")
+//    $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//    $(".achievement-widget-content").css("background"," #43373F")
+// });
+
+// //  set bg golden  //
+// $(".golden").click(function () {
+  
+//    $(".home-page").css("background-image", "url('asset/Orange_yellow_background_dark.jpg')");
    
-   $(".done-icon").css("display" , "none")
-   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-   $(".achievement-widget-content").css("background","#252423");
+//    $(".done-icon").css("display" , "none")
+//    $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//    $(".achievement-widget-content").css("background","#252423");
+// });
+
+
+// // set bg olive //
+
+// $(".olive").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Yellow_green_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background","#252423");
+// });
+
+
+// // set bg deep-greenish-blue //
+// $(".deep-greenish-blue").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Blue_green_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background", "#3C4C4A !important");
+
+//   $(document).ready(function() {
+//     $(".achievement-widget-content").css("background", "#3C4C4A");
+// });
+
+// });
+
+
+
+
+// // set bg blue-green 
+// $(".deep-greenish-blue").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Blue_green_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background"," #252423")
+// });
+
+
+// // set bg blue-green" 
+
+// $(".blue-green").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Forest_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background"," #252423")
+// });
+
+
+
+// // set bg pale-green" 
+
+// $(".pale-green").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Aqua_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background"," #252423")
+// });
+
+
+// // set bg steel-blue
+// $(".steel-blue").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Blue_background_dark.jpg')");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background","#414A5E")
+// });
+
+
+// // set bg lavender-blue
+// $(".lavender-blue").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Purple_background_dark.jpg");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background","#504E61")
+// });
+
+
+// // set bg lavender-purple
+// $(".lavender-purple").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Pink_purple_background_dark.jpg");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background","#554C5B")
+// });
+
+// // set bg salmon
+// $(".salmon").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Pink_background_dark.jpg");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background"," #252423")
+// });
+
+// // set bg pale-beige
+// $(".pale-beige").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/Oat_background_dark.jpg");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background"," #252423")
+// });
+
+
+// // set bg dark-bg
+
+// $(".dark-bg").click(function () {
+  
+//   $(".home-page").css("background-image", "url('asset/classic_home_background_dark.png");
+  
+//   $(".done-icon").css("display" , "none")
+//   $(this).html("<img src='icon/done_.svg' class='done-icon'>");
+//   $(".achievement-widget-content").css("background","#252628")
+// });
+
+
+
+
+
+
+
+
+// Function to set background and save choice to local storage
+function setBackgroundAndSave(choice, imageUrl, bgColor) {
+  $(".home-page").css("background-image", "url('" + imageUrl + "')");
+  $(".achievement-widget-content").css("background", bgColor);
+  $(".done-icon").css("display", "none");
+  $(choice).html("<img src='icon/done_.svg' class='done-icon'>");
+  localStorage.setItem("background_choice", choice); // Save choice to local storage
+}
+
+// Function to load background from local storage
+function loadBackgroundFromStorage() {
+  var choice = localStorage.getItem("background_choice");
+  if (choice) {
+      $(choice).click(); // Trigger the click event for the stored choice
+  }
+}
+
+// Click handlers for each background option
+$(".maroon").click(function () {
+  setBackgroundAndSave(".maroon", "asset/Maroon_background_dark.jpg", "#43373F");
 });
 
-
-// set bg olive //
+$(".golden").click(function () {
+  setBackgroundAndSave(".golden", "asset/Orange_yellow_background_dark.jpg", "#252423");
+});
 
 $(".olive").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Yellow_green_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#252423");
+  setBackgroundAndSave(".olive", "asset/Yellow_green_background_dark.jpg", "#252423");
 });
 
-
-// set bg deep-greenish-blue //
 $(".deep-greenish-blue").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Blue_green_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background", "#3C4C4A !important");
-
-  $(document).ready(function() {
-    $(".achievement-widget-content").css("background", "#3C4C4A");
+  setBackgroundAndSave(".deep-greenish-blue", "asset/Blue_green_background_dark.jpg", "#3C4C4A");
 });
-
-});
-
-
-
-
-// set bg blue-green 
-$(".deep-greenish-blue").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Blue_green_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
-});
-
-
-// set bg blue-green" 
 
 $(".blue-green").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Forest_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
+  setBackgroundAndSave(".blue-green", "asset/Forest_background_dark.jpg", "#252423");
 });
-
-
-
-// set bg pale-green" 
 
 $(".pale-green").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Aqua_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
+  setBackgroundAndSave(".pale-green", "asset/Aqua_background_dark.jpg", "#252423");
 });
 
-
-// set bg steel-blue
 $(".steel-blue").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Blue_background_dark.jpg')");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#414A5E")
+  setBackgroundAndSave(".steel-blue", "asset/Blue_background_dark.jpg", "#414A5E");
 });
 
-
-// set bg lavender-blue
 $(".lavender-blue").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Purple_background_dark.jpg");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#504E61")
+  setBackgroundAndSave(".lavender-blue", "asset/Purple_background_dark.jpg", "#504E61");
 });
 
-
-// set bg lavender-purple
 $(".lavender-purple").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Pink_purple_background_dark.jpg");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#554C5B")
+  setBackgroundAndSave(".lavender-purple", "asset/Pink_purple_background_dark.jpg", "#554C5B");
 });
 
-// set bg salmon
 $(".salmon").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Pink_background_dark.jpg");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
+  setBackgroundAndSave(".salmon", "asset/Pink_background_dark.jpg", "#252423");
 });
 
-// set bg pale-beige
 $(".pale-beige").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/Oat_background_dark.jpg");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background"," #252423")
+  setBackgroundAndSave(".pale-beige", "asset/Oat_background_dark.jpg", "#252423");
 });
-
-
-// set bg dark-bg
 
 $(".dark-bg").click(function () {
-  
-  $(".home-page").css("background-image", "url('asset/classic_home_background_dark.png");
-  
-  $(".done-icon").css("display" , "none")
-  $(this).html("<img src='icon/done_.svg' class='done-icon'>");
-  $(".achievement-widget-content").css("background","#252628")
+  setBackgroundAndSave(".dark-bg", "asset/classic_home_background_dark.png", "#252628");
+});
+
+// Load background from local storage when the page loads
+$(document).ready(function() {
+  loadBackgroundFromStorage();
 });
 
 
 
 // more btn option toggle set
 
-// $(".more-btn").click(function() {
-//   $(this).next("#id-more-btn-option").toggle();
-//   $("#status-more-btn").css("display" , "flex");
-// });
+$(".more-btn").click(function() {
+  $(this).next("#id-more-btn-option").toggle();
+  $("#status-more-btn").css("display" , "flex");
+});
 
 $("#status-more-btn").click(function(){
   $("#id-more-btn-option").toggle();

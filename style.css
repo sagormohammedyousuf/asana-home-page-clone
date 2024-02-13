@@ -737,11 +737,11 @@ body {
 }
 
 .achievement-widget-content {
- 
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 6.5rem;
+  margin-left: 109px;
   padding: 0 8px 0 0;
   height: 48px;
   width: 456px;
@@ -858,9 +858,11 @@ body {
 /* . customize btn or theme btn  */
 
 .customize-btn {
-  /* margin-left: -6px; */
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 1px;
   height: 36px;
-  width: 110px;
+  width: 111px;
   border: 1px solid #fff;
   display: flex;
   align-items: center;
@@ -877,7 +879,7 @@ body {
 .customize-btn img {
   width: 16px;
   height: 16px;
-  margin: 0 4px 0 0;
+  margin: 0 0px 0 0;
 }
 
 .customize-btn p {
@@ -912,13 +914,15 @@ body {
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  gap: 16px;
+
+  margin-left: -10px;
  
 }
 
 #boxA , #boxB {
   /* position: absolute; */
-  width: 597px;
+  width: 592px;
   height: 400px;
 }
 
@@ -926,7 +930,7 @@ body {
   
   overflow: hidden;
   cursor: grab;
-  width: 597px;
+  width: 592px;
   height: 400px;
   background: #2A2B2D;
   outline: 1px solid #454547;;
@@ -1035,7 +1039,7 @@ body {
 .task-summary {
   text-align: center;
   margin-top: 23px;
-  margin-right: 7px;
+  margin-right: 2px;
   font-size: 16px;
   color: rgb(162, 160, 162);
 }
@@ -1057,7 +1061,6 @@ body {
   border: none;
   outline: 1px solid #4c4c4e;
   font-size: 14px;
-  
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
