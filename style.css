@@ -277,6 +277,7 @@ body {
 }
 
 .profile-pic {
+  margin-bottom: -4px;
   width: 28px;
   height: 28px;
 }
@@ -285,7 +286,7 @@ body {
 .expand {
   width: 12px;
   height: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 /* profile modal  */
@@ -603,7 +604,7 @@ body {
 }
 
 .chevron {
-  margin-left: 58px;
+  margin-left: 60px;
   width: 12px !important;
   height: 12px !important;
 }
@@ -885,6 +886,7 @@ body {
 
 .customize-btn p {
   margin-bottom: 2px;
+  margin-left: -1px;
 }
 
 /* task section css  */
@@ -921,6 +923,10 @@ body {
  
 }
 
+.section-2 {
+  margin-top: 1px;
+}
+
 #boxA , #boxB {
   /* position: absolute; */
   width: 592px;
@@ -928,19 +934,18 @@ body {
 }
 
 .task-div {
-  
   overflow: hidden;
   cursor: grab;
   width: 592px;
   height: 400px;
   background: #2A2B2D;
-  outline: 1px solid #454547;;
+  outline: 1px solid #454547;
   padding: 1rem;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .top-item {
@@ -1221,9 +1226,9 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  background: #581d23;
+  background: #581D23;
   color: #ca606b;
-  padding: 0 8px 0 8px;
+  padding: 0 8px 0 10px;
   /* padding-inline: 6px;
   padding-block: 2px; */
   border-radius: 10vmax;
@@ -1236,7 +1241,9 @@ body {
 .dot {
   width: 8px;
   height: 8px;
-  background: #ca606b;
+  background: #D1395A;
+  margin-right: 1px;
+  padding-left: 1px;
   border-radius: 10vmax;
   -webkit-border-radius: 10vmax;
   -moz-border-radius: 10vmax;
@@ -1249,17 +1256,17 @@ body {
 }
 
 .y-btn {
-  background: #3d2f1c;
-  color: #e7ad5b;
+  background: #3D3120;
+  color: #e7b164;
 }
 
 .g-btn {
-  background: #1d342d;
-  color: #168b68;
+  background: #1D3733;
+  color: #73ad9c;
 }
 
 .g-dot {
-  background: #168b68;
+  background: #5DA283;
 }
 
 .task-div-btm {
@@ -1663,3 +1670,7 @@ body.modal-open {
 }
 
 /* tumi ar eso na fire priosi */
+
+.cmt-img {
+  margin-top: 20px;
+}
