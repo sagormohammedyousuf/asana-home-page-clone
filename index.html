@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon"   href="asset/favicon-16x16.png"  sizes="12x12" />
     <link rel="stylesheet" href="style.css" />
+
+
+    <!-- for dop and drag  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+
     <title>Home - Asana</title>
   </head>
   <body>
@@ -337,156 +343,158 @@
 
           <!-- task -->
           <div class="task-section">
-              <div class="section-1" >
+          <div class="test-div">
+            <div class="section-1"  id="sortable" >
 
-                <!-- task div 1 -->
-                <div class="task-div goal-task-div" id="boxA">
+              <!-- task div 1 -->
+              <div class="task-div goal-task-div" id="boxA">
 
-                  <div class="top-item">
-                    <h3>My goals</h3>
-                    <div class="parent-container">
-                      <div class="more-btn" id="goal-more-btn">
-                        <img src="icon/more_horiz.svg" alt="more-icon"/>
-                      </div>
+                <div class="top-item">
+                  <h3>My goals</h3>
+                  <div class="parent-container">
+                    <div class="more-btn" id="goal-more-btn">
+                      <img src="icon/more_horiz.svg" alt="more-icon"/>
+                    </div>
 
-                      <div class="more-btn-option gbo-g">
-                        <div class="size-option active-option" id="goal-half-size"><img>Half size</div>
-                        <div class="size-option" id="goal-full-size"><p>Full size</p></div>
-                        <div class="remove-option">
-                          <img src="icon/delete.svg">
-                          Remove widget
-                        </div>
-                      </div>
-                     </div>
-                   
-                  </div>
-
-                  <p class="task-summary">Try Asana Advanced to make traction on the goals you own.</p>
-                  <div class="btn-div">
-                    <button class="task-clr-btn btn">Try for free</button>
-                    <button class="task-border-btn btn ">Remove widget</button>
-                  </div>
-
-
-                  <div class="status">
-                    <div class="task-status">
-                      <div class="graph">
-                        <div class="graph-one"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="percentage">
-                         <div class="percentage-div">
-                            <div class="percentage-index"></div>
-                         </div>
-                         90%
+                    <div class="more-btn-option gbo-g">
+                      <div class="size-option active-option" id="goal-half-size"><img>Half size</div>
+                      <div class="size-option" id="goal-full-size"><p>Full size</p></div>
+                      <div class="remove-option">
+                        <img src="icon/delete.svg">
+                        Remove widget
                       </div>
                     </div>
-                    <div class="task-status">
-
-                      <div class="graph">
-                        <div class="graph-one"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="percentage">
-                         <div class="percentage-div">
-                            <div class="percentage-index p-75"></div>
-                         </div>
-                         75%
-                      </div>
-                    </div>
-                    <div class="task-status">
-
-                      <div class="graph">
-                        <div class="graph-one"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="percentage">
-                         <div class="percentage-div">
-                            <div class="percentage-index p-85"></div>
-                         </div>
-                         90%
-                      </div>
-                    </div>
-                  </div>
-                  
-
+                   </div>
+                 
                 </div>
 
+                <p class="task-summary">Try Asana Advanced to make traction on the goals you own.</p>
+                <div class="btn-div">
+                  <button class="task-clr-btn btn">Try for free</button>
+                  <button class="task-border-btn btn ">Remove widget</button>
+                </div>
+
+
+                <div class="status">
+                  <div class="task-status">
+                    <div class="graph">
+                      <div class="graph-one"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="percentage">
+                       <div class="percentage-div">
+                          <div class="percentage-index"></div>
+                       </div>
+                       90%
+                    </div>
+                  </div>
+                  <div class="task-status">
+
+                    <div class="graph">
+                      <div class="graph-one"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="percentage">
+                       <div class="percentage-div">
+                          <div class="percentage-index p-75"></div>
+                       </div>
+                       75%
+                    </div>
+                  </div>
+                  <div class="task-status">
+
+                    <div class="graph">
+                      <div class="graph-one"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="percentage">
+                       <div class="percentage-div">
+                          <div class="percentage-index p-85"></div>
+                       </div>
+                       90%
+                    </div>
+                  </div>
+                </div>
                 
-                <!-- task div 2 -->
-                <div class="task-div status-task-div" id="boxB">
-                  <div class="top-item">
-                    <h3>Status updates</h3>
-                    <div class="parent-container">
-                      <div class="more-btn"  id="status-more-btn">
-                        <img src="icon/more_horiz.svg" alt="more-icon"/>
-                      </div>
 
-                      <div class="more-btn-option" id="id-more-btn-option">
-                        <div class="size-option active-option" id="status-half-size"><img> Half size</div>
-                        <div class="size-option" id="status-full-size"><p>Full size</p></div>
-                        <div class="remove-option">
-                          <img src="icon/delete.svg">
-                          Remove widget
-                        </div>
-                      </div>
-                     </div>
-                  </div>
+              </div>
 
-                  <p class="task-summary">Upgrade to Asana Advanced to use the status updates widget on <br id="margin-bottom">your home screen </p>
-                  <div class="btn-div">
-                    <button class="task-clr-btn btn msb">Try for free</button>
-                    <button class="task-border-btn btn ">Remove widget</button>
-                  </div>
-
-                  <div class="status status-right margin-top">
-                    <div class="task-status-right">
-                      <div class="graph ">
-                        <div class="graph-one mt-4"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="status-btn">
-                        <div class="dot">
-
-                        </div>
-                        Off track
-                     </div>
+              
+              <!-- task div 2 -->
+              <div class="task-div status-task-div" id="boxB">
+                <div class="top-item">
+                  <h3>Status updates</h3>
+                  <div class="parent-container">
+                    <div class="more-btn"  id="status-more-btn">
+                      <img src="icon/more_horiz.svg" alt="more-icon"/>
                     </div>
-                    <div class="task-status-right ">
 
-                      <div class="graph ">
-                        <div class="graph-one mt-4"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="status-btn y-btn">
-                         <div class="dot y-dot">
-                         </div>
-                         At risk
+                    <div class="more-btn-option" id="id-more-btn-option">
+                      <div class="size-option active-option" id="status-half-size"><img> Half size</div>
+                      <div class="size-option" id="status-full-size"><p>Full size</p></div>
+                      <div class="remove-option">
+                        <img src="icon/delete.svg">
+                        Remove widget
                       </div>
                     </div>
-                    <div class="task-status-right last-task-status">
-
-                      <div class="graph">
-                        <div class="graph-one mt-4"></div>
-                        <div class="graph-two"></div>
-                      </div>
-                      <div class="status-btn g-btn">
-                        <div class="dot g-dot">
-
-                        </div>
-                        On track
-                     </div>
-                    </div>
-                    </div>
+                   </div>
                 </div>
-            </div>
+
+                <p class="task-summary">Upgrade to Asana Advanced to use the status updates widget on <br id="margin-bottom">your home screen </p>
+                <div class="btn-div">
+                  <button class="task-clr-btn btn msb">Try for free</button>
+                  <button class="task-border-btn btn ">Remove widget</button>
+                </div>
+
+                <div class="status status-right margin-top">
+                  <div class="task-status-right">
+                    <div class="graph ">
+                      <div class="graph-one mt-4"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="status-btn">
+                      <div class="dot">
+
+                      </div>
+                      Off track
+                   </div>
+                  </div>
+                  <div class="task-status-right ">
+
+                    <div class="graph ">
+                      <div class="graph-one mt-4"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="status-btn y-btn">
+                       <div class="dot y-dot">
+                       </div>
+                       At risk
+                    </div>
+                  </div>
+                  <div class="task-status-right last-task-status">
+
+                    <div class="graph">
+                      <div class="graph-one mt-4"></div>
+                      <div class="graph-two"></div>
+                    </div>
+                    <div class="status-btn g-btn">
+                      <div class="dot g-dot">
+
+                      </div>
+                      On track
+                   </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+          </div>
 
 
             <div class="section-2">
               <div class="task-div" id="draft-task-div">
                 <!-- task div top  -->
                 <div class="top-item">
-                  <h3>Draft comments</h3>
+                  <h3 style="margin-top: 6px;">Draft comments</h3>
                  <div class="parent-container">
                   <div class="more-btn draft-more" >
                     <img src="icon/more_horiz.svg" alt="more-icon"/>
@@ -516,7 +524,7 @@
                 <!-- task div top  -->
                 <div class="top-item">
                   <div class="item">
-                    <h3>Project</h3>
+                    <h3>Projects</h3>
                     <select>
                       Recents
                       <option>Recents</option>
@@ -673,15 +681,23 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="script.js"></script>
+    <script>
+      $( function() {
+        $( "#sortable" ).sortable();
+      } );
+      </script>
   </body>
   
 </html>

@@ -899,15 +899,15 @@ body {
   justify-content: center;
   gap: 0.9rem;
   flex-wrap: wrap;
-  position:relative;
+  
 }
 
-#section-1 {
- position: absolute;
+.section-1 {
+position: relative;
  display: flex;
  width: 1200px;
- z-index: 999;
 }
+
 
 .section-1,
 .section-2,
@@ -918,9 +918,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-
+  position: relative;
   margin-left: -10px;
- 
 }
 
 .section-2 {
@@ -928,12 +927,14 @@ body {
 }
 
 #boxA , #boxB {
-  /* position: absolute; */
+ /* position: absolute; */
   width: 592px;
   height: 400px;
 }
 
+
 .task-div {
+  
   overflow: hidden;
   cursor: grab;
   width: 592px;
@@ -1674,3 +1675,41 @@ body.modal-open {
 .cmt-img {
   margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+#container {
+  position: relative;
+
+  background: green;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+#boxA, #boxB {
+
+  border: 1px solid black;
+  position: absolute;
+}
+
+.test-div {
+  width: 1200px;
+  position: relative;
+} */

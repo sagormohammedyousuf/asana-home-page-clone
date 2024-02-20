@@ -559,63 +559,6 @@ greetingElement.text(greeting);
 
 
 
-// dragable box // 
-
-$(function() {
-  $("#boxA, #boxB").draggable({
-      containment: "#section-1",
-      start: function(event, ui) {
-          $(this).data("origPosition", $(this).position());
-      },
-      stop: function(event, ui) {
-          checkOverlap($(this));
-      }
-  });
-
-  function checkOverlap(draggedBox) {
-      var $otherBox = draggedBox.is(".boxA") ? $("#boxB") : $("#boxA");
-
-      if (isOverlapping(draggedBox, $otherBox)) {
-          var draggedBoxOrigPosition = draggedBox.data("origPosition");
-          var otherBoxPosition = $otherBox.position();
-
-          draggedBox.animate({
-              top: otherBoxPosition.top,
-              left: otherBoxPosition.left
-          }, 'fast');
-
-          $otherBox.animate({
-              top: draggedBoxOrigPosition.top,
-              left: draggedBoxOrigPosition.left
-          }, 'fast');
-      } else {
-          // Return the box to its original position if it's not overlapping
-          draggedBox.animate({
-              top: draggedBox.data("origPosition").top,
-              left: draggedBox.data("origPosition").left
-          }, 'fast');
-      }
-  }
-
-  function isOverlapping(box1, box2) {
-      var a = box1.offset();
-      a.right = a.left + box1.outerWidth();
-      a.bottom = a.top + box1.outerHeight();
-
-      var b = box2.offset();
-      b.right = b.left + box2.outerWidth();
-      b.bottom = b.top + box2.outerHeight();
-
-      return !(a.left > b.right || 
-               a.right < b.left || 
-               a.top > b.bottom ||
-               a.bottom < b.top);
-  }
-});
-
-
-
-
 
 
 
