@@ -913,8 +913,8 @@ position: relative;
 .section-2,
 .section-3 {
   width: auto;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
