@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/x-icon"   href="asset/favicon-16x16.png"  sizes="12x12" />
       <link rel="stylesheet" href="style.css" />
-      <!-- for dop and drag  -->
+      <!-- for drop and drag  -->
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <title>Home - Asana</title>
    </head>
@@ -96,7 +96,7 @@
                      </div>
                   </div>
                   <!-- customize modal  -->
-                  <div class="customize-modal">
+                  <div class="customize-modal droppable">
                      <div class="cm-top">
                         <h1>Customize Home</h1>
                         <div class="hide-customize-modal">
@@ -123,10 +123,10 @@
                      <p class="widgets-info">Click add or drag widgets below to your Home 
                         screen. You can also reorder and remove them.
                      </p>
-                     <div class="widgets">
+                     <div class="widgets" id="note-widget" style="">
                         <div class="widget-top">
                            <p class="widget-title">Private notepad</p>
-                           <div class="add-widget">
+                           <div class="add-widget" id="add-note">
                               <img src="icon/add.svg">
                               <p>Add</p>
                            </div>
@@ -135,13 +135,15 @@
                            <img class="node-pad-img" src="asset/home_notepad_widget_preview_dark.png"/>
                         </div>
                      </div>
+
+                    
                      <!-- anther widgets -->
-                     <div class="widgets">
+                     <div class="widgets draggable " id="form-widgets" style="">
                         <div class="widget-top">
                            <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
-                           <div class="add-widget">
+                           <div class="add-widget" id="add-form">
                               <img src="icon/add.svg">
-                              <p>Add</p>
+                              <p>Add</p> 
                            </div>
                         </div>
                         <div class="sub-div">
@@ -157,6 +159,11 @@
                            <img src="icon/link.svg" alt="link-icon">
                         </div>
                      </div>
+
+                     <div id="set" style="display: block;">
+
+                     </div>
+
                   </div>
                </div>
             </div>
@@ -308,9 +315,118 @@
                <!-- task -->
                <div class="task-section">
                   <div class="test-div">
-                     <div class="section-1"  id="sortable" >
+                     <div class="section-1 droppable"  id="sortable" >
+                        <!-- private notepad  -->
+                        <div class="task-div" id="private-notepad" style="display: none;">
+                           <!-- task div top  -->
+                           <div class="top-item">
+                              <div class="item">
+                                 <h3>Private notepad</h3>
+                                 <img src="icon/lock.svg" style="width: 12px; margin-top: 10px; margin-left: -8px; "/>
+                              </div>
+                              <div class="parent-container">
+                                 <div class="more-btn "  id="nodepad-more">
+                                    <img src="icon/more_horiz.svg" alt="more-icon"/>
+                                 </div>
+                                 <div class="more-btn-option" id="nodepad-more-option">
+                                    <div class="size-option active-option" id="note-half-size"><img>Half size</div>
+                                    <div class="size-option" id="note-full-size">
+                                       <p>Full size</p>
+                                    </div>
+                                    <div class="remove-option" id="remove-option-private-note">
+                                       <img src="icon/delete.svg">
+                                       Remove widget
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                       
+                           <div class="status" >
+                              <p style="margin-left: -164px; margin-top: -9px; color: #A2A0A2;">Jot down a quick note or add a link to an important resource.</p>
+                           </div>
+                           <div class="btm-icon" style=" margin-left: 10px;">
+                              <img src="icon/plus.svg" style="width: 14px; height: 14px;">
+                              <div class="border-stand" style="height: 18px;"></div>
+                              <img src="icon/b.svg"/>
+                              <img src="icon/italic.svg"/>
+                              <img src="icon/underline.svg"/>
+                              <img src="icon/strike.svg"/>
+                              <img src="icon/2arrow.svg"/>
+                              <img src="icon/format_list_bulleted.svg" style="width: 16px; height: 16px;"/>
+                              <img src="icon/numberOrder.svg"/>
+                              <img src="icon/link.svg"/>
+                              <div class="border-stand"  style="height: 18px;"></div>
+                              <img src="icon/smile.svg" style="width: 16px; height: 16px;"/>
+                              <img src="icon/addthered.svg" style="width: 16px; height: 16px;"/>
+
+
+                           </div>
+                        </div>
+                        <!-- froms task div 6 -->
+                        <div class="task-div" id="form" style="display: none;">
+                           <!-- task div top  -->
+                           <div class="top-item">
+                              <div class="item">
+                                 <h3>Forms</h3>
+                                 <select style="line-height: 28px;  font-size: 12px; margin-top: 8px; margin-right: 5px; color: rgb(177, 173, 170) ;">
+                                    Recents
+                                    <option>Recents</option>
+                                    <option>Starred</option>
+                                 </select>
+                              </div>
+                              <div class="parent-container">
+                                 <div class="more-btn project-more">
+                                    <img src="icon/more_horiz.svg" alt="more-icon"/>
+                                 </div>
+                                 <div class="more-btn-option project-option">
+                                    <div class="size-option active-option" id="project-half-size"><img>Half size</div>
+                                    <div class="size-option" id="project-full-size">
+                                       <p>Full size</p>
+                                    </div>
+                                    <div class="remove-option" id="remove-option-from">
+                                       <img src="icon/delete.svg">
+                                       Remove widget
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="task-summary">Upgrade to Asana Starter to use forms</p>
+                           <div class="btn-div" style="margin-top: 12px;">
+                              <button class="task-clr-btn btn">Try for free</button>
+                              <button class="task-border-btn btn ">Remove Widget</button>
+                           </div>
+                           <div class="status" style="margin-top: 0;">
+                              <div class="task-status" style="height: 62px; margin-top: 20px;">
+                                 <div class="graph">
+                                    <div class="graph-one" style="margin-top: 3px;"></div>
+                                    <div class="graph-two"></div>
+                                 </div>
+                                 <div class="link">
+                                    <img src="icon/link.svg" alt="link-icon">
+                                 </div>
+                              </div>
+                              <div class="task-status" style="height: 62px;  margin-top: 8px;">
+                                 <div class="graph">
+                                    <div class="graph-one" style="margin-top: 3px;"></div>
+                                    <div class="graph-two"></div>
+                                 </div>
+                                 <div class="link">
+                                    <img src="icon/link.svg" alt="link-icon">
+                                 </div>
+                              </div>
+                              <div class="task-status" style="height: 62px; margin-top: 8px;">
+                                 <div class="graph">
+                                    <div class="graph-one" style="margin-top: 3px;"></div>
+                                    <div class="graph-two"></div>
+                                 </div>
+                                 <div class="link">
+                                    <img src="icon/link.svg" alt="link-icon">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                         <!-- task div 1 -->
-                        <div class="task-div goal-task-div" id="boxA">
+                        <div class="task-div goal-task-div" id="goal-task-div">
                            <div class="top-item">
                               <h3>My goals</h3>
                               <div class="parent-container">
@@ -374,14 +490,14 @@
                            </div>
                         </div>
                         <!-- task div 2 -->
-                        <div class="task-div status-task-div" id="boxB">
+                        <div class="task-div status-task-div" id="status-task-div">
                            <div class="top-item">
                               <h3>Status updates</h3>
                               <div class="parent-container">
                                  <div class="more-btn"  id="status-more-btn">
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
-                                 <div class="more-btn-option" id="id-more-btn-option">
+                                 <div class="more-btn-option z" id="id-more-btn-option">
                                     <div class="size-option active-option" id="status-half-size"><img> Half size</div>
                                     <div class="size-option" id="status-full-size">
                                        <p>Full size</p>
@@ -575,7 +691,7 @@
                               <button class="task-border-btn btn ">Remove widget</button>
                            </div>
                         </div>
-                        <!-- task.div.6 -->
+                        <!-- task.div.8 -->
                         <div class="task-div center drag-div">
                            <div class="task-content">
                               <p>Drag and drop new widgets</p>
@@ -594,7 +710,6 @@
          </div>
       </div>
       </div>
-
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
       <script src="script.js"></script>
@@ -605,5 +720,19 @@
          
          
       </script>
+
+<script>
+  $(function() {
+    $(".draggable").draggable();
+    $(".droppable").droppable({
+        drop: function(event, ui) {
+            $(this).append(ui.draggable);
+            $("#form").css("display", "block");
+            $("#form-widgets").css("display", "none")
+        }
+    });
+   });
+
+   </script>
    </body>
 </html>

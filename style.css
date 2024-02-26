@@ -895,8 +895,7 @@ body {
   margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   gap: 0.9rem;
   flex-wrap: wrap;
   
@@ -909,11 +908,9 @@ position: relative;
 }
 
 
-.section-1,
-.section-2,
-.section-3 {
+.section-1{
   width: auto;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -922,15 +919,8 @@ position: relative;
   margin-left: -10px;
 }
 
-.section-2 {
-  margin-top: 1px;
-}
 
-#boxA , #boxB {
- /* position: absolute; */
-  width: 592px;
-  height: 400px;
-}
+
 
 
 .task-div {
@@ -1114,6 +1104,8 @@ position: relative;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+
+
 
 .graph {
   display: flex;
@@ -1470,8 +1462,15 @@ position: relative;
   color: #fff;
   border: 1px solid #6a696a;
   border-radius: 10px;
-
   overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#form-widgets {
+  /* display: none; */
 }
 
 .widget-top {
@@ -1652,7 +1651,7 @@ body.modal-open {
 .gray-div {
   width: 80%;
   height: 10px;
-  background: #423f3c;
+  background: #414244;
   margin-left: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1662,12 +1661,8 @@ body.modal-open {
 }
 
 .sub-div img {
-  width: 20px;
-  transform: rotate(-50deg);
-  -webkit-transform: rotate(-50deg);
-  -moz-transform: rotate(-50deg);
-  -ms-transform: rotate(-50deg);
-  -o-transform: rotate(-50deg);
+  width: 16px;
+
 }
 
 /* tumi ar eso na fire priosi */
@@ -1686,30 +1681,34 @@ body.modal-open {
 
 
 
+/* forms link icon style  */
+.link {
+  width: 16px;
 
-
-
-
-/* 
-
-
-
-#container {
-  position: relative;
-
-  background: green;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-#boxA, #boxB {
-
-  border: 1px solid black;
-  position: absolute;
+  margin-right: 4px;
+  margin-top: 3px;
 }
 
-.test-div {
-  width: 1200px;
-  position: relative;
-} */
+.btm-icon {
+ margin-top: 259px;
+ display: flex;
+ align-items: center;
+ gap: 16px;
+}
+
+.btm-icon  img{
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+#set {
+  width: 300px;
+  height: 200px;
+ 
+}
+
+
+#set div {
+  display: block;
+}

@@ -320,25 +320,21 @@ $(document).ready(function() {
 
 // more btn option toggle set
 
-$(".more-btn").click(function() {
-  $(this).next("#id-more-btn-option").toggle();
-  $("#status-more-btn").css("display" , "flex");
-});
-
-$("#status-more-btn").click(function(){
-  $("#id-more-btn-option").toggle();
-  event.stopPropagation(); // Prevents the click from propagating to the document
+  // Toggle the dropdown menu on click of the button
+  $("#status-more-btn").click(function(event) {
+    $(".z").toggle();
+    event.stopPropagation(); // Prevents the click from propagating to the document
 });
 
 // Click event on the document
 $(document).click(function() {
-  $("#id-more-btn-option").hide();
+    $(".z").hide();
 });
 
 // Click event on the .gbo-g element
-$("#id-more-btn-option").click(function() {
-  $(this).hide(); // This will hide .gbo-g when it is clicked
-})
+$("z").click(function() {
+    $(this).hide(); // This will hide .gbo-g when it is clicked
+});
 
 
 
@@ -353,10 +349,10 @@ $("#status-full-size").click(function(){
 })
 
 $("#status-half-size").click(function(){
-  $("#status-task-div").css("width" , "600px");
+  $("#status-task-div").css("width" , "592px");
   $("#status-full-size").removeClass("active-option");
   $("#status-half-size").addClass("active-option");
-  $(".task-status-right").css("width" , "600px")
+  $(".task-status-right").css("width" , "592px")
 
   
 })
@@ -390,7 +386,7 @@ $("#goal-full-size").click(function(){
 })
 
 $("#goal-half-size").click(function(){
-  $("#goal-task-div").css("width" , "600px")
+  $("#goal-task-div").css("width" , "592px")
   $("#goal-full-size").removeClass("active-option");
   $("#goal-half-size").addClass("active-option");
 })
@@ -425,7 +421,7 @@ $("#draft-full-size").click(function(){
 })
 
 $("#draft-half-size").click(function(){
-  $("#draft-task-div").css("width" , "600px")
+  $("#draft-task-div").css("width" , "592px")
   $("#draft-full-size").removeClass("active-option");
   $("#draft-half-size").addClass("active-option");
 })
@@ -464,7 +460,7 @@ $("#project-full-size").click(function(){
 })
 
 $("#project-half-size").click(function(){
-  $("#project-task-div").css("width" , "600px")
+  $("#project-task-div").css("width" , "592px")
   $("#project-full-size").removeClass("active-option");
   $("#project-half-size").addClass("active-option");
 })
@@ -506,7 +502,7 @@ $("#assign-full-size").click(function(){
 })
 
 $("#assign-half-size").click(function(){
-  $("#assign-task-div").css("width" , "600px")
+  $("#assign-task-div").css("width" , "592px")
   $("#assign-full-size").removeClass("active-option");
   $("#assign-half-size").addClass("active-option");
 })
@@ -556,9 +552,85 @@ if (currentHour >= 5 && currentHour < 12) {
 greetingElement.text(greeting);
 
 
+  $("#remove-option-from").click(function(){
+    $("#form").css("display", "none");
+
+     
+     var clonedWidgets = $("#form-widgets").clone();
+     clonedWidgets.css("display", "block");
+ 
+     
+     $("#set").html(clonedWidgets);
+ 
+
+    $("#form-widgets").css("display", "none" );
+    // $("#form-widgets").css("width", "0" );
+
+         
+    
+  })
+
+  $("#add-form").click(function(){
+    $("#form").css("display" ,"block");
+    $("#form-widgets").css("display" , "none");
+
+  })
 
 
 
+
+
+
+
+  
+
+// node pad more btn script //
+ 
+  // Toggle the dropdown menu on click of the button
+  $("#nodepad-more").click(function(event) {
+    $("#nodepad-more-option").toggle();
+    event.stopPropagation(); // Prevents the click from propagating to the document;
+   
+});
+
+// Click event on the document
+$(document).click(function() {
+    $("#nodepad-more-option").hide();
+    
+});
+
+// Click event on the .gbo-g element
+$("#nodepad-more-option").click(function() {
+    $(this).hide(); // This will hide .gbo-g when it is clicked
+});
+
+
+
+
+$("#note-full-size").click(function(){
+  $("#private-notepad").css("width" , "1200px")
+  $("#note-half-size").removeClass("active-option");
+  $("#note-full-size").addClass("active-option");
+
+})
+
+$("#note-half-size").click(function(){
+  $("#private-notepad").css("width" , "592px")
+  $("#note-full-size").removeClass("active-option");
+  $("#note-half-size").addClass("active-option");
+})
+
+
+$("#remove-option-private-note").click(function(){
+  $("#private-notepad").css("display" ,"none");
+  $("#note-widget").css("display" , "block");
+})
+
+$("#add-note").click(function(){
+  $("#private-notepad").css("display" ,"block");
+  $("#note-widget").css("display" , "none");
+
+})
 
 
 
