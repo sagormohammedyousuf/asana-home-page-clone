@@ -481,11 +481,14 @@ body {
   margin-right: 0px;
 }
 
-#side-nav-hover-id:hover #add-icon {
-  width: 15px;
-  height: 15px;
-  margin-right: 0px;
+ .add-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 19px;
+  margin-top: 3px;
 }
+
+
 
 /* side nav  project //  */
 
@@ -501,11 +504,6 @@ body {
   margin-right: 0px;
 }
 
-#project-main:hover #add-icon {
-  width: 15px;
-  height: 15px;
-  margin-right: 0px;
-}
 
 #project-main:hover #more-icon {
   width: 15px;
@@ -1010,7 +1008,7 @@ position: relative;
 }
 
 .size-option p {
-  padding-left: 30px;
+  padding-left: 22px;
 }
 
 .more-btn-option div {
@@ -1286,7 +1284,7 @@ position: relative;
   background: none;
   border: none;
   outline: none;
-  color: #6a696a;
+  color: #838083
 }
 
 .item select option {
@@ -1298,41 +1296,67 @@ position: relative;
 .wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .create-project {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  /* margin-left: -30px; */
+  width: 271px;
 }
 
 .border {
-  width: 50px;
-  height: 50px;
-  outline: 2px dotted #fff;
+  /* margin-left: 18px; */
+  width: 48px;
+  height: 48px;
+  outline: 1px dashed #b6b0ab;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 16px;
   cursor: pointer;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.reg-img-div {
+  width: 48px;
+  height: 48px;
+  background: #9EE7E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 .reg-img {
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
+
 }
 
 .dark-text {
+  margin-top: 1px;
+  margin-left: 9px;
   color: #838083;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 500;
+  
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.reg-p {
+  margin-left: 9px;
 }
 
 /* customize or theme  modal  */

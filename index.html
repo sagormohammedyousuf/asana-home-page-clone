@@ -187,9 +187,9 @@
                   <div class="insights">
                      <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />
                      <p>Insights</p>
-                     <img src="icon/add.svg" id="add-icon" />
+                     
                   </div>
-                  <img id="app-icon" src="icon/apps_.svg" />
+                  <img src="icon/plus.svg" class="add-icon"  />
                </div>
                <div class="side-nav-item">
                   <img src="icon/repotting-icon.svg" alt="sign" />
@@ -211,9 +211,9 @@
                      <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />
                      <p>Projects</p>
                      <img id="more-icon" src="icon/more_horiz.svg" />
-                     <img src="icon/add.svg" id="add-icon" />
+                     
                   </div>
-                  <img id="app-icon" class="project-app-icon" src="icon/apps_.svg" />
+                  <img src="icon/plus.svg" class="add-icon"  />
                </div>
                <div class="side-nav-item">
                   <div class="clr-div"></div>
@@ -498,7 +498,7 @@
                                  <div class="more-btn-option z" id="id-more-btn-option">
                                     <div class="size-option active-option" id="status-half-size"><img> Half size</div>
                                     <div class="size-option" id="status-full-size">
-                                       <p>Full size</p>
+                                       <p style="margin-right:px;">Full size</p>
                                     </div>
                                     <div class="remove-option">
                                        <img src="icon/delete.svg">
@@ -576,12 +576,14 @@
                               <p>Yous don't have any unsent comments</p>
                            </div>
                         </div>
+
+                        <!-- project div  -->
                         <div class="task-div" id="project-task-div">
                            <!-- task div top  -->
                            <div class="top-item">
-                              <div class="item">
-                                 <h3>Projects</h3>
-                                 <select>
+                              <div class="item" style="display: flex; align-items: center;">
+                                 <h3 style="margin-bottom: 2px;">Projects</h3>
+                                 <select style="margin-top: 9px; margin-left: -6px; letter-spacing: 0; font-weight: 500;">
                                     Recents
                                     <option>Recents</option>
                                     <option>Starred</option>
@@ -604,15 +606,17 @@
                               </div>
                            </div>
                            <div class="wrap">
-                              <div class="create-project">
+                              <div class="create-project" style="">
                                  <div class="border">
-                                    <img src="icon/add.svg"/>
+                                    <img src="icon/plus.svg" style="width: 16px;"/>
                                  </div>
                                  <p class="dark-text">Create project</p>
                               </div>
-                              <div class="create-project">
-                                 <img class="reg-img" src="asset/Registration.png"/>
-                                 <p>Cross-functional project pl..</p>
+                              <div class="create-project" >
+                                 <div class="reg-img-div">
+                                    <img class="reg-img" src="icon/bulet-list-icon.svg" >
+                                 </div>
+                                 <p class="reg-p">Cross-functional project pl..</p>
                               </div>
                            </div>
                         </div>
