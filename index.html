@@ -123,7 +123,7 @@
                      <p class="widgets-info">Click add or drag widgets below to your Home 
                         screen. You can also reorder and remove them.
                      </p>
-                     <div class="widgets" id="note-widget" style="">
+                     <div class="widgets draggable-2" id="note-widget" >
                         <div class="widget-top">
                            <p class="widget-title">Private notepad</p>
                            <div class="add-widget" id="add-note">
@@ -137,7 +137,7 @@
                      </div>
 
                     
-                     <!-- anther widgets -->
+                     <!-- 2nd widgets -->
                      <div class="widgets draggable " id="form-widgets" style="">
                         <div class="widget-top">
                            <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
@@ -160,9 +160,7 @@
                         </div>
                      </div>
 
-                     <div id="set" style="display: block;">
-
-                     </div>
+                 
 
                   </div>
                </div>
@@ -393,7 +391,7 @@
                            <p class="task-summary">Upgrade to Asana Starter to use forms</p>
                            <div class="btn-div" style="margin-top: 12px;">
                               <button class="task-clr-btn btn">Try for free</button>
-                              <button class="task-border-btn btn ">Remove Widget</button>
+                              <button class="task-border-btn btn">Remove Widget</button>
                            </div>
                            <div class="status" style="margin-top: 0;">
                               <div class="task-status" style="height: 62px; margin-top: 20px;">
@@ -550,6 +548,8 @@
                               </div>
                            </div>
                         </div>
+
+                        <!-- draft comment  -->
                         <div class="task-div" id="draft-task-div">
                            <!-- task div top  -->
                            <div class="top-item">
@@ -571,7 +571,7 @@
                               </div>
                            </div>
                            <!-- btm -->
-                           <div class="task-div-btm cmnt-img">
+                           <div class="task-div-btm cmnt-img" style="margin-top: 80px;">
                               <img class="" src="/asset/BubbleOverlapTextOrange-dark.svg">
                               <p>Yous don't have any unsent comments</p>
                            </div>
@@ -695,6 +695,7 @@
                         <div class="task-div center drag-div">
                            <div class="task-content">
                               <p>Drag and drop new widgets</p>
+                              
                               <div class="customize-btn mt-1">
                                  <img
                                     src="icon/dashboard_customize.svg"
@@ -705,11 +706,16 @@
                         </div>
                      </div>
                   </div>
+
                </div>
             </section>
          </div>
       </div>
+
+      
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
       <script src="script.js"></script>
@@ -721,18 +727,9 @@
          
       </script>
 
-<script>
-  $(function() {
-    $(".draggable").draggable();
-    $(".droppable").droppable({
-        drop: function(event, ui) {
-            $(this).append(ui.draggable);
-            $("#form").css("display", "block");
-            $("#form-widgets").css("display", "none")
-        }
-    });
-   });
+   <script>
+
 
    </script>
    </body>
-</html>
+</html> 

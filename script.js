@@ -554,20 +554,10 @@ greetingElement.text(greeting);
 
   $("#remove-option-from").click(function(){
     $("#form").css("display", "none");
-
-     
-     var clonedWidgets = $("#form-widgets").clone();
-     clonedWidgets.css("display", "block");
- 
-     
-     $("#set").html(clonedWidgets);
+  
+    $("#form-widgets").css("display", "block" );
  
 
-    $("#form-widgets").css("display", "none" );
-    // $("#form-widgets").css("width", "0" );
-
-         
-    
   })
 
   $("#add-form").click(function(){
@@ -637,3 +627,68 @@ $("#add-note").click(function(){
 });
 
 
+
+
+
+
+
+
+
+// // form widget drag and drop //
+
+
+//   var myDragDropFunction = function() {
+//     $(".draggable").draggable();
+//     $(".droppable").droppable({
+//         drop: function(event, ui) {
+//           $(".customize-modal").append(ui.draggable);
+//           $("#form-widgets").attr("style", "position: relative;");
+//           $("#form").css("display", "block");
+//           $("#form-widgets").css("display", "none"); 
+//         }
+//     });
+//   };
+
+
+// myDragDropFunction();
+
+
+
+
+// var myDragDropFunctionTwo = function() {
+//   $(".draggable-2").draggable();
+//   $(".droppable").droppable({
+//       drop: function(event, ui) {
+//         $(".customize-modal").append(ui.draggable-2);
+//         $("#note-widget").attr("style", "position: relative;");
+//         $("#private-notepad").css("display", "block");
+//         $("#note-widget").css("display", "none"); 
+//       }
+//   });
+// };
+
+
+// myDragDropFunctionTwo();
+
+
+var myDragDropFunction = function() {
+  $(".draggable, .draggable-2").draggable(); // Initialize draggable for both classes
+  $(".droppable").droppable({
+      drop: function(event, ui) {
+        var draggedElement = ui.draggable;
+        if (draggedElement.hasClass("draggable")) {
+          $(".customize-modal").append(draggedElement);
+          $("#form-widgets").attr("style", "position: relative;");
+          $("#form").css("display", "block");
+          $("#form-widgets").css("display", "none");
+        } else if (draggedElement.hasClass("draggable-2")) {
+          $(".customize-modal").append(draggedElement);
+          $("#note-widget").attr("style", "position: relative;");
+          $("#private-notepad").css("display", "block");
+          $("#note-widget").css("display", "none");
+        }
+      }
+  });
+};
+
+myDragDropFunction();
