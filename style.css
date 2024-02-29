@@ -20,7 +20,7 @@
 
 ::-webkit-scrollbar {
   width: 1.1rem;
-  
+
   background: #2e2e30;
 }
 
@@ -52,10 +52,7 @@ body {
   /* overflow: scroll; */
 }
 
-
-
 /* navbar style start  */
-
 
 .navbar {
   display: flex;
@@ -146,7 +143,6 @@ body {
   font-size: 14px;
   margin: 0 6px 0 6px;
 }
-
 
 /* create modal  */
 
@@ -347,7 +343,7 @@ body {
   padding: 8px 32px;
   width: 85%;
   margin-inline: 15px;
-  background: #F1BD6C;
+  background: #f1bd6c;
   border: none;
   outline: none;
   border-radius: 4px;
@@ -402,7 +398,7 @@ body {
 }
 
 .side-nav-item:hover {
-  background-color:#3A3A3C;
+  background-color: #3a3a3c;
 }
 
 .side-nav-item-active {
@@ -412,9 +408,7 @@ body {
 .side-nav-item img {
   width: 20px;
   height: 20px;
-  
 }
-
 
 .side-nav-item p {
   margin-bottom: 2px;
@@ -426,19 +420,16 @@ body {
   margin-bottom: 20px;
 }
 
-
 .portfolio-icon {
   width: 20px;
   height: 20px;
   /* stroke: #2a2928; */
 }
 .insights-top-div {
-  
   display: flex;
   justify-content: space-between;
   cursor: grab;
   margin-bottom: 8px;
-  
 }
 
 .insights {
@@ -465,7 +456,7 @@ body {
   margin-right: 14px;
 }
 
-#project-main{
+#project-main {
   margin-top: 12px;
 }
 
@@ -481,14 +472,12 @@ body {
   margin-right: 0px;
 }
 
- .add-icon {
+.add-icon {
   width: 14px;
   height: 14px;
   margin-right: 19px;
   margin-top: 3px;
 }
-
-
 
 /* side nav  project //  */
 
@@ -504,7 +493,6 @@ body {
   margin-right: 0px;
 }
 
-
 #project-main:hover #more-icon {
   width: 15px;
   height: 15px;
@@ -514,7 +502,7 @@ body {
 .clr-div {
   width: 16px;
   height: 16px;
-  background: #9EE7E3;
+  background: #9ee7e3;
   margin-left: 2px;
   margin-right: 2px;
   border-radius: 5px;
@@ -538,7 +526,6 @@ body {
 
   gap: 10%;
   margin-bottom: 17px;
-  
 }
 
 .cover-div {
@@ -556,8 +543,6 @@ body {
   margin-right: -2px;
 }
 
-
-
 .help-div,
 .invite-div {
   display: flex;
@@ -565,7 +550,7 @@ body {
   gap: 6px;
   width: 85px;
   height: 36px;
-  padding-inline:14px
+  padding-inline: 14px;
 }
 
 .help-div,
@@ -579,15 +564,15 @@ body {
 }
 
 .invite-div p {
- left: 54px;
- bottom: 0;
- 
+  left: 54px;
+  bottom: 0;
+
   position: absolute;
 }
 
 .help-icon {
- width: 24px;
- height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .invite-div img {
@@ -663,14 +648,14 @@ body {
   margin-left: -4px;
 }
 
- /* home page style start here  */
+/* home page style start here  */
 
 .home-page {
   width: 100%;
   height: 100%;
   padding-bottom: 20px;
   /* home page background set here  */
-  background-image: url("asset/Maroon_background_dark.jpg"); 
+  background-image: url("asset/Maroon_background_dark.jpg");
   background-size: cover;
   padding-top: 49px;
   color: #fff;
@@ -706,11 +691,10 @@ body {
 }
 
 .current-date {
- 
   font-size: 1rem;
   font-weight: 500;
- 
-  color: #F5F4F3;
+
+  color: #f5f4f3;
 
   margin-right: 10px;
 }
@@ -720,23 +704,21 @@ body {
 .presentation-text {
   font-size: 2rem;
   font-weight: 400;
-  color: #F5F4F3;
+  color: #f5f4f3;
   margin-right: 10px;
   margin-top: 2px;
 }
-
 
 .cover {
   width: 1200px;
   height: 48px;
   display: flex;
-  align-items:end;
+  align-items: end;
   justify-content: space-between;
   margin: 16px 0 12px 0;
 }
 
 .achievement-widget-content {
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -745,16 +727,17 @@ body {
   height: 48px;
   width: 456px;
   font-size: 12px;
-  background: #43373F;
+  background: #43373f;
   /*background: #fffff0;
-  */margin-right: 5px;
+  */
+  margin-right: 5px;
   margin-bottom: 1px;
-  border-radius:60px;
-  -webkit-border-radius:60px;
-  -moz-border-radius:60px;
-  -ms-border-radius:60px;
-  -o-border-radius:60px;
-  -webkit-border-radius:60px;
+  border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  -webkit-border-radius: 60px;
 }
 
 .date-selection {
@@ -783,7 +766,6 @@ body {
   background-color: black;
   width: 150px;
   height: 60px;
-  
 }
 
 .date-selection option:checked {
@@ -796,11 +778,9 @@ body {
   margin-right: 4px;
   margin-bottom: 2px;
   margin-left: 1px;
-
 }
 
 .home-stand {
- 
   margin-left: 17px;
   background-color: rgb(161, 158, 158);
 }
@@ -835,7 +815,6 @@ body {
 
 .task-stats-style {
   margin-right: -40px;
-  
 }
 
 .ml {
@@ -870,7 +849,6 @@ body {
   padding: 0 12px 0 12px;
   border-radius: 6px;
   cursor: pointer;
-
 }
 
 .customize-btn img {
@@ -893,17 +871,15 @@ body {
 
   gap: 0.9rem;
   flex-wrap: wrap;
-  
 }
 
 .section-1 {
-position: relative;
- display: flex;
- width: 1200px;
+  position: relative;
+  display: flex;
+  width: 1200px;
 }
 
-
-.section-1{
+.section-1 {
   width: auto;
   align-items: flex-start;
   justify-content: center;
@@ -914,17 +890,12 @@ position: relative;
   margin-left: -10px;
 }
 
-
-
-
-
 .task-div {
-  
   overflow: hidden;
   cursor: grab;
   width: 592px;
   height: 400px;
-  background: #2A2B2D;
+  background: #2a2b2d;
   outline: 1px solid #454547;
   padding: 1rem;
   border-radius: 8px;
@@ -942,8 +913,8 @@ position: relative;
 
 .top-item h3 {
   font-size: 1.4rem;
-  margin-left:  9px;
-  margin-top:5px ;
+  margin-left: 9px;
+  margin-top: 5px;
 }
 
 .parent-container {
@@ -1047,8 +1018,8 @@ position: relative;
   gap: 9px;
 }
 
-.btn-div  button{
- padding-bottom: 2px;;
+.btn-div button {
+  padding-bottom: 2px;
 }
 
 .task-border-btn {
@@ -1069,8 +1040,8 @@ position: relative;
 .task-clr-btn {
   height: 36px;
   width: 93px;
-  background: #E8B668;
-  color: #3A3A3C;
+  background: #e8b668;
+  color: #3a3a3c;
   border: none;
   font-size: 14px;
   border-radius: 5px;
@@ -1092,7 +1063,7 @@ position: relative;
   margin-bottom: 8px;
   height: 74px;
   width: 542px;
-  
+
   border: 1px solid #454547;
   display: flex;
   align-items: center;
@@ -1105,19 +1076,16 @@ position: relative;
   -o-border-radius: 8px;
 }
 
-
-
 .graph {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  
 }
 .pl-10 {
   padding-left: 10px;
 }
 .graph-one {
-  background-color:#414244;
+  background-color: #414244;
   height: 16px;
   width: 320px;
   border-radius: 4px;
@@ -1149,10 +1117,14 @@ position: relative;
   height: 22px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #868994;
+  gap: 9px;
+  color: #a9acad;
   margin-bottom: 5px;
   margin-right: -1px;
+}
+
+.percentage p {
+  margin-left: -1px;
 }
 .percentage-div {
   width: 48px;
@@ -1178,7 +1150,7 @@ position: relative;
 
 .p-75 {
   width: 75% !important;
-  background: #D1395A;
+  background: #d1395a;
 }
 
 .p-85 {
@@ -1219,7 +1191,7 @@ position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
-  background: #581D23;
+  background: #581d23;
   color: #ca606b;
   padding: 0 8px 0 10px;
   /* padding-inline: 6px;
@@ -1234,7 +1206,7 @@ position: relative;
 .dot {
   width: 8px;
   height: 8px;
-  background: #D1395A;
+  background: #d1395a;
   margin-right: 1px;
   padding-left: 1px;
   border-radius: 10vmax;
@@ -1249,17 +1221,17 @@ position: relative;
 }
 
 .y-btn {
-  background: #3D3120;
+  background: #3d3120;
   color: #e7b164;
 }
 
 .g-btn {
-  background: #1D3733;
+  background: #1d3733;
   color: #73ad9c;
 }
 
 .g-dot {
-  background: #5DA283;
+  background: #5da283;
 }
 
 .task-div-btm {
@@ -1284,7 +1256,7 @@ position: relative;
   background: none;
   border: none;
   outline: none;
-  color: #838083
+  color: #838083;
 }
 
 .item select option {
@@ -1299,17 +1271,39 @@ position: relative;
   justify-content: space-around;
 }
 
+.project-select {
+  margin-top: 10px;
+  padding-left: 3px;
+  font-size: 12px;
+  color: rgb(168, 166, 166) !important;
+  margin-left: -6px;
+  letter-spacing: none;
+  font-weight: 500;
+}
+
 .create-project {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 11px;
   /* margin-left: -30px; */
   width: 271px;
+  height: 59px;
+}
+
+.create-project:hover {
+  background-color: #373739;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  cursor: pointer;
 }
 
 .border {
-  /* margin-left: 18px; */
+  margin-top: 1px;
+  margin-left: 14px;
   width: 48px;
   height: 48px;
   outline: 1px dashed #b6b0ab;
@@ -1325,9 +1319,10 @@ position: relative;
 }
 
 .reg-img-div {
+  margin-left: 5px;
   width: 48px;
   height: 48px;
-  background: #9EE7E3;
+  background: #9ee7e3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1342,21 +1337,22 @@ position: relative;
   width: 24px;
   height: 24px;
   cursor: pointer;
-
 }
 
 .dark-text {
   margin-top: 1px;
   margin-left: 9px;
-  color: #838083;
+  color: #a5a1a5;
   font-weight: 500;
-  
+
   font-size: 14px;
   line-height: 20px;
 }
 
 .reg-p {
-  margin-left: 9px;
+  margin-left: 7px;
+  font-weight: 500;
+  margin-bottom: 4px;
 }
 
 /* customize or theme  modal  */
@@ -1379,7 +1375,6 @@ position: relative;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-
 
 /* style for customize modal  */
 
@@ -1424,7 +1419,6 @@ position: relative;
   align-items: center;
   justify-content: center;
   border-radius: 10vmax;
-
 }
 
 .bg-clr img {
@@ -1626,7 +1620,7 @@ body.modal-open {
 #st-div-3 {
   width: 320px;
   height: 12px;
-  background: #3B3C3E;
+  background: #3b3c3e;
   border-radius: 4px;
 }
 
@@ -1645,9 +1639,8 @@ body.modal-open {
 
 .drag-div {
   position: relative;
-   /* background: rgba(0,0,0,0.4);  */
-   background: rgba(236, 229, 232, 0.1)
-
+  /* background: rgba(0,0,0,0.4);  */
+  background: rgba(236, 229, 232, 0.1);
 }
 
 .task-content {
@@ -1688,7 +1681,6 @@ body.modal-open {
 
 .sub-div img {
   width: 16px;
-
 }
 
 /* tumi ar eso na fire priosi */
@@ -1706,13 +1698,13 @@ body.modal-open {
 }
 
 .btm-icon {
- margin-top: 259px;
- display: flex;
- align-items: center;
- gap: 16px;
+  margin-top: 259px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.btm-icon  img{
+.btm-icon img {
   width: 12px;
   height: 12px;
   cursor: pointer;
@@ -1721,14 +1713,14 @@ body.modal-open {
 #set {
   width: 300px;
   height: 200px;
- 
 }
-
 
 #set div {
   /* display: flex; */
 }
-button ,input , select{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+button,
+input,
+select {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
