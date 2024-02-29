@@ -692,3 +692,41 @@ var myDragDropFunction = function() {
 };
 
 myDragDropFunction();
+
+
+
+$(document).keydown(function(event) {
+  // Check if Ctrl + K are pressed
+  if (event.ctrlKey && event.key === "k") {
+    // Prevent default browser behavior (like searching)
+    event.preventDefault();
+    
+    // Focus on the search input
+    $("#search").focus();
+    $(".search-box").addClass("hover");
+    
+  }
+});
+
+$(document).on('click', function(event) {
+  if (!$(event.target).closest('#search').length) {
+    $(".search-box").removeClass("hover");
+  }
+});
+
+
+
+
+
+
+// Function to hide the likely text
+function hideKpdText() {
+  $('#ctrl').hide();
+  $('#k').hide();
+}
+
+// Function to show the likely text
+function showKpdText() {
+  $('#ctrl').css('display', 'flex');
+  $('#k').css('display', 'flex');
+}
