@@ -246,8 +246,8 @@ $(document).ready(function () {
 
 
 // Function to set background and save choice to local storage
-function setBackgroundAndSave(choice, imageUrl, bgColor) {
-  $(".home-page").css("background-image", "url('" + imageUrl + "')");
+function setBackgroundAndSave(choice, background, bgColor) {
+  $(".home-page").css("background", background);
   $(".achievement-widget-content").css("background", bgColor);
   $(".done-icon").css("display", "none");
   $(choice).html("<img src='icon/done_.svg' class='done-icon'>");
@@ -264,51 +264,52 @@ function loadBackgroundFromStorage() {
 
 // Click handlers for each background option
 $(".maroon").click(function () {
-  setBackgroundAndSave(".maroon", "asset/Maroon_background_dark.jpg", "#43373F");
+  setBackgroundAndSave(".maroon", "linear-gradient(208deg, hsla(317, 30%, 14%, 1) 26%, hsla(312, 15%, 13%, 1) 40%, hsla(220, 5%, 12%, 1) 100%)", "#43373F");
 });
 
+
 $(".golden").click(function () {
-  setBackgroundAndSave(".golden", "asset/Orange_yellow_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".golden", "linear-gradient(208deg, hsla(34, 28%, 21%, 1) 26%, hsla(48, 7%, 14%, 1) 60%, hsla(220, 5%, 12%, 1) 99%)", "#252423");
 });
 
 $(".olive").click(function () {
-  setBackgroundAndSave(".olive", "asset/Yellow_green_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".olive", "linear-gradient(208deg, hsla(76, 15%, 19%, 1) 26%, hsla(84, 7%, 14%, 1) 60%, hsla(220, 5%, 12%, 1) 100%)", "#252423");
 });
 
 $(".deep-greenish-blue").click(function () {
-  setBackgroundAndSave(".deep-greenish-blue", "asset/Blue_green_background_dark.jpg", "#3C4C4A");
+  setBackgroundAndSave(".deep-greenish-blue", "linear-gradient(208deg, hsl(174, 22%, 18%) 26%, hsla(192, 14%, 14%, 1)55%, hsla(220, 5%, 12%, 1) 99%)", "#3C4C4A");
 });
 
 $(".blue-green").click(function () {
-  setBackgroundAndSave(".blue-green", "asset/Forest_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".blue-green", "linear-gradient(208deg, hsla(174, 23%, 17%, 1) 35%, hsla(185, 15%, 14%, 1) 53%, hsla(220, 5%, 12%, 1) 99%)");
 });
 
 $(".pale-green").click(function () {
-  setBackgroundAndSave(".pale-green", "asset/Aqua_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".pale-green", "linear-gradient(208deg, hsla(180, 10%, 24%, 1) 26%, hsla(192, 10%, 20%, 1) 44%, hsla(220, 5%, 12%, 1) 99%)");
 });
 
 $(".steel-blue").click(function () {
-  setBackgroundAndSave(".steel-blue", "asset/Blue_background_dark.jpg", "#414A5E");
+  setBackgroundAndSave(".steel-blue", "linear-gradient(208deg, hsla(221, 33%, 23%, 1) 15%, hsla(219, 30%, 21%, 1) 25%, hsla(220, 5%, 12%, 1) 99%)", "#414A5E");
 });
 
 $(".lavender-blue").click(function () {
-  setBackgroundAndSave(".lavender-blue", "asset/Purple_background_dark.jpg", "#504E61");
+  setBackgroundAndSave(".lavender-blue", "linear-gradient(208deg, hsla(245, 16%, 27%, 1) 31%, hsla(240, 13%, 19%, 1) 50%, hsla(220, 5%, 12%, 1) 99%)", "#504E61");
 });
 
 $(".lavender-purple").click(function () {
-  setBackgroundAndSave(".lavender-purple", "asset/Pink_purple_background_dark.jpg", "#554C5B");
+  setBackgroundAndSave(".lavender-purple", "linear-gradient(208deg, hsla(276, 16%, 25%, 1) 25%, hsla(279, 14%, 23%, 1) 35%, hsla(220, 5%, 12%, 1) 99%)", "#554C5B");
 });
 
 $(".salmon").click(function () {
-  setBackgroundAndSave(".salmon", "asset/Pink_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".salmon", "linear-gradient(208deg, hsla(357, 14%, 29%, 1) 25%, hsla(354, 14%, 27%, 1) 30%, hsla(220, 5%, 12%, 1) 99%)", "#252423");
 });
 
 $(".pale-beige").click(function () {
-  setBackgroundAndSave(".pale-beige", "asset/Oat_background_dark.jpg", "#252423");
+  setBackgroundAndSave(".pale-beige", "linear-gradient(208deg, hsla(220, 2%, 24%, 1) 25%, hsla(240, 2%, 18%, 1) 55%, hsla(220, 5%, 12%, 1) 99%)", "#252423");
 });
 
 $(".dark-bg").click(function () {
-  setBackgroundAndSave(".dark-bg", "asset/classic_home_background_dark.png", "#252628");
+  setBackgroundAndSave(".dark-bg", "linear-gradient(208deg, hsla(220, 5%, 12%, 1) 30%, hsla(220, 5%, 12%, 1) 44%, hsla(220, 5%, 12%, 1) 99%)", "#252628");
 });
 
 // Load background from local storage when the page loads
