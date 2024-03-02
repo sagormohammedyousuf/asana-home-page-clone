@@ -16,6 +16,16 @@
   --pale-beige: hsl(38, 32%, 82%);
 }
 
+
+
+button,
+input,
+select {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
 /* customize scroll bar */
 
 ::-webkit-scrollbar {
@@ -171,7 +181,7 @@ body {
 }
 
 .modal-item:hover {
-  background-color: #373532;
+  background-color: #373839;
 }
 
 .modal-item img {
@@ -203,10 +213,10 @@ body {
   -moz-border-radius: 10vmax;
   -ms-border-radius: 10vmax;
   -o-border-radius: 10vmax;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -ms-transition: 0.2s;
-  -o-transition: 0.2s;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
 }
 
 .search-box:hover {
@@ -240,20 +250,19 @@ body {
   font-size: 14px;
   padding-bottom: 2px;
   padding-left: 1px;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #363639;
-  /* padding-inline: 5px;
-  padding-block: 0px; */
-  
-  border: 1px solid #aaa7a7;
+  /*padding-inline: 5px;
+  padding-block: 0px;
+  */border: 1px solid #aaa7a7;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
 
@@ -261,13 +270,13 @@ body {
 .search-box img {
   width: 16px;
   height: 16px;
-  margin-right: 1px;
+  margin-right: 2px;
 }
 
 .search-box input {
   width: 100%;
   height: 100%;
-  background: none;
+  background: #3d3e40;
   outline: none;
   border: none;
   color: #eef1ea;
@@ -606,6 +615,7 @@ body {
 
 .help-div p {
   margin-left: -2px;
+  margin-bottom: 1px;
 }
 
 .invite-div p {
@@ -826,15 +836,15 @@ body {
 }
 
 .home-stand {
-  margin-left: 17px;
+  margin-left: 18px;
   background-color: rgb(161, 158, 158);
 }
 
 .done-icon-s {
   width: 16px;
   height: 16px;
-  margin-right: 4px;
-  margin-left: 2px;
+  margin-right: 3px;
+  margin-left: 1px;
 }
 
 .done-icon {
@@ -863,15 +873,16 @@ body {
 }
 
 .ml {
-  margin-left: 21px;
+  margin-left: 20px;
+  margin-right: 1px;
 }
 
 .ms {
-  margin-left: 3px;
+  margin-left: 2px;
   font-weight: 500;
 }
 .ml-30 {
-  margin-left: 37px;
+  margin-left: 38px;
 }
 .collaborators {
   width: 141px;
@@ -912,8 +923,9 @@ body {
 .task-section {
   margin-top: 1.2rem;
   display: flex;
+  margin-inline:  auto;
   flex-direction: column;
-
+  width: 1200px;
   gap: 0.9rem;
   flex-wrap: wrap;
 }
@@ -929,9 +941,10 @@ body {
   align-items: flex-start;
   justify-content: center;
   display: flex;
+  
   flex-wrap: wrap;
   gap: 16px;
-  position: relative;
+
   margin-left: -10px;
 }
 
@@ -1758,14 +1771,4 @@ body.modal-open {
 #set {
   width: 300px;
   height: 200px;
-}
-
-#set div {
-  /* display: flex; */
-}
-button,
-input,
-select {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
