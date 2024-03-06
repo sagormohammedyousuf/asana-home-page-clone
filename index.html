@@ -5,6 +5,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/x-icon"   href="asset/favicon-16x16.png"  sizes="12x12" />
       <link rel="stylesheet" href="style.css" />
+      <!-- for calender  -->
+      
+      <link href='https://cdn.jsdelivr.net/npm/fullcalendar/main.min.css' rel='stylesheet' />
+    
+  
       <!-- for drop and drag  -->
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <title>Home - Asana</title>
@@ -174,11 +179,11 @@
          <div class="home-page">
             <!-- site nav  -->
             <div class="side-nav">
-               <div class="side-nav-item side-nav-item-active">
+               <div class="side-nav-item side-nav-item-active" id="side-nav-home" onclick="myHome()">
                   <img src="icon/home-icon.svg" alt="home" />
                   <p>Home</p>
                </div>
-               <div class="side-nav-item">
+               <div class="side-nav-item" id="side-nav-task" onclick="myTask()">
                   <img src="icon/taks-icon.svg" alt="task" />
                   <p>My tasks</p>
                </div>
@@ -717,6 +722,66 @@
 
                </div>
             </section>
+
+            <section class="my-task" style="display: none; margin-left: 240px;">
+               <div class="calender-section">
+                  <div class="calender-div">
+                     <div class="left-side-calender-top">
+                        <div class="profile-pic-c">
+                           <img src="asset/human_face_1.png">
+                        </div>
+                        <div class="task-list">
+                           <div class="task-list-top">
+                              <h2>My tasks</h2>
+                              <img src="/icon/expand_more.svg">
+                           </div>
+                           <ul class="task-list-bottom">
+                              <li>List</li>
+                              <li>Board</li>
+                              <li class="cal-text">Calendar</li>
+                              <li>Files</li>
+                           </div>
+                        </div>
+                        <div class="right-side-calender-top">
+                           <div class="share">
+                              <img src="icon/lock.svg">
+                              Share
+                           </div>
+                           <div class="border-stand c-stand"></div>
+
+                           <div class="color-coustomize" id="color-coustomize">
+                              <div class="color-icon">
+                                 <div class="red-square"></div>
+                                 
+                                 <div class="blue-square"></div>
+                                 <div class="yellow-square"></div>
+                                 <div class="border-square"></div>
+                              </div>
+                        
+                              <p>Customize</p>
+                           </div>
+                           <!-- <div class="color-coustomize">
+                              <div class="color-icon">
+                                 <div class="cit">
+                                    <div class="red-square"></div>
+                                    <div class="yello-square"></div>
+                                 </div>
+                                 <div class="cib">
+                                    <div class="blue-square"></div>
+                                    <div class="border-square"></div>
+                                 </div>
+                              </div>
+                              <p>Customize</p>
+                           </div> -->
+                        </div>
+                     </div>
+                     <div id='calendar'>
+                        
+                     </div>
+               </div>
+                  
+               </div>
+            </section>
          </div>
       </div>
 
@@ -739,6 +804,11 @@
 
 
    </script>
+
+   <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
    </body>
 </html> 
+
+
+
 

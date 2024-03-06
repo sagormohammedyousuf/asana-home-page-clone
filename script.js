@@ -625,6 +625,22 @@ $("#add-note").click(function(){
 
 
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
 });
 
 
@@ -731,3 +747,115 @@ function showKpdText() {
   $('#ctrl').css('display', 'flex');
   $('#k').css('display', 'flex');
 }
+
+
+function myTask() {
+  $(".home-page-content").css("display" , "none")
+  $("#side-nav-home").removeClass("side-nav-item-active")
+  $("#side-nav-task").addClass("side-nav-item-active")
+  $(".my-task").css("display", "block")
+}
+
+function myHome() {
+  $(".home-page-content").css("display" , "block")
+  $("#side-nav-home").addClass("side-nav-item-active")
+  $("#side-nav-task").removeClass("side-nav-item-active")
+  $(".my-task").css("display", "none")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for calender //
+
+
+
+  
+// document.addEventListener('DOMContentLoaded', function() {
+//   var calendarEl = document.getElementById('calendar');
+  
+//   var calendar = new FullCalendar.Calendar(calendarEl, {
+//     timeZone: 'UTC',
+//     initialView: 'dayGridWeek',
+//     headerToolbar: {
+//       left: 'today,prev,next,title',
+      
+   
+ 
+//       center: "",  
+//       right: 'dayGridWeek,dayGridDay'
+      
+//     },
+//     editable: true,
+//     events: 'https://fullcalendar.io/api/demo-feeds/events.json',
+//     titleFormat: { month: 'long', year: 'numeric' }
+//   });
+
+//   calendar.render();
+// });
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    timeZone: 'UTC',
+    initialView: 'dayGridWeek',
+    headerToolbar: {
+      left: 'today,prev,next,title',
+      center: '',  
+      right: 'dayGridWeek,dayGridDay'
+    },
+    editable: true,
+    events: 'https://fullcalendar.io/api/demo-feeds/events.json',
+    titleFormat: { month: 'long', year: 'numeric' },
+    viewDidMount: function(view) {
+      // This function is called when the view is mounted
+      // We modify the day headers after the calendar has rendered
+      var headerCells = document.querySelectorAll('.fc-col-header-cell-cushion');
+      headerCells.forEach(function(cell) {
+        var date = cell.getAttribute('aria-label');
+        var dayOfWeek = date.split(',')[0].trim().substring(0, 3); // Extract day of the week (e.g., Tue)
+        var dayOfMonth = date.split(',')[1].trim().split(' ')[1]; // Extract day of the month (e.g., 12)
+
+        // Set the content of the day header cell with the desired format
+        cell.textContent = dayOfWeek + ' ' + dayOfMonth;
+      });
+    }
+  });
+
+  calendar.render();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
