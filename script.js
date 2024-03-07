@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+
+
   // modal open and close //
   $("#create-modal").click(function () {
     $(".create-modal").toggle();
@@ -780,66 +783,24 @@ function myHome() {
 
 
   
-// document.addEventListener('DOMContentLoaded', function() {
-//   var calendarEl = document.getElementById('calendar');
-  
-//   var calendar = new FullCalendar.Calendar(calendarEl, {
-//     timeZone: 'UTC',
-//     initialView: 'dayGridWeek',
-//     headerToolbar: {
-//       left: 'today,prev,next,title',
-      
-   
- 
-//       center: "",  
-//       right: 'dayGridWeek,dayGridDay'
-      
-//     },
-//     editable: true,
-//     events: 'https://fullcalendar.io/api/demo-feeds/events.json',
-//     titleFormat: { month: 'long', year: 'numeric' }
-//   });
-
-//   calendar.render();
-// });
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
-
+  
   var calendar = new FullCalendar.Calendar(calendarEl, {
     timeZone: 'UTC',
     initialView: 'dayGridWeek',
     headerToolbar: {
       left: 'today,prev,next,title',
-      center: '',  
+      
+   
+ 
+      center: "",  
       right: 'dayGridWeek,dayGridDay'
+      
     },
     editable: true,
     events: 'https://fullcalendar.io/api/demo-feeds/events.json',
-    titleFormat: { month: 'long', year: 'numeric' },
-    viewDidMount: function(view) {
-      // This function is called when the view is mounted
-      // We modify the day headers after the calendar has rendered
-      var headerCells = document.querySelectorAll('.fc-col-header-cell-cushion');
-      headerCells.forEach(function(cell) {
-        var date = cell.getAttribute('aria-label');
-        var dayOfWeek = date.split(',')[0].trim().substring(0, 3); // Extract day of the week (e.g., Tue)
-        var dayOfMonth = date.split(',')[1].trim().split(' ')[1]; // Extract day of the month (e.g., 12)
-
-        // Set the content of the day header cell with the desired format
-        cell.textContent = dayOfWeek + ' ' + dayOfMonth;
-      });
-    }
+    titleFormat: { month: 'long', year: 'numeric' }
   });
 
   calendar.render();
@@ -847,11 +808,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Select all elements with the class .fc-day
+$('.fc-toolbar-chunk div').each(function() {
+  // Create a new div element
+  var div = $('<div class="hi"></div>');
+  // Add class to the div
+  div.addClass('fc-add-task');
+  // Add content to the div
+  div.html('<img src="icon/plus.svg"><p>add task</p>');
+  // Append the div to the current .fc-day element
+  $(this).append(div);
+});
 
 
 
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Get the element
+//   var element = document.querySelector('.fc-col-header-cell-cushion');
+  
+//   // Manipulate the text content
+//   element.textContent = element.textContent.replace(/3\//g, ''); // Remove "3/"
+//   element.textContent = element.textContent.replace(/March\s/, ''); // Remove month name if needed
+// });
 
 
 

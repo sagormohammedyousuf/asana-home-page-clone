@@ -2048,11 +2048,14 @@ thead {
 } */
 
 .fc-toolbar-chunk div{
-  display: flex;
+  display: flex !important;
+  margin-bottom: 8px;
+
 }
 
  #fc-dom-1{
-  font-size: 20px;
+  font-size: 20px !important;
+  font-weight: 400 !important;
   margin-left: 10px;
 }
 
@@ -2099,4 +2102,70 @@ tbody {
 
 .fc-day-fri {
   order: 5;
+}
+
+
+
+
+
+
+.fc-header-toolbar{
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+ 
+}
+
+
+.fc-today-button  {
+  background: none !important;
+  margin-inline: 10px !important;
+  border: 1px solid #4c4c4c !important;
+  text-transform: capitalize  !important;
+  width: 49px !important;
+  height: 28px !important;
+  font-size: 12px !important;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+}
+
+.fc-prev-button {
+  margin-right: 5px !important;
+}
+
+.fc-prev-button , .fc-next-button  {
+  background: none !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+
+.fc-next-button,.fc-prev-button:hover {
+  background: #2B2C2E!important;
+  border: none !important;
+}
+
+.fc-button-group {
+  margin-right: 30px !important;
+}
+
+.fc-button-group  button{
+  background: none !important;
+  border: none !important;
+}
+
+
+.fc-button-group  button:hover{
+  background: #2B2C2E !important;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
 }
