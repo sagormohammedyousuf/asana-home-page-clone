@@ -1908,8 +1908,6 @@ body.modal-open {
 
 
 .color-coustomize {
-  
-
   height: 28px;
   width: 89px;
   padding-inline: 8px;
@@ -1919,6 +1917,10 @@ body.modal-open {
   font-size: 12px;
   border: 1px solid #5f5f61;
   border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
 }
 
 .color-coustomize p {
@@ -1964,12 +1966,15 @@ body.modal-open {
 
 /* full calender css add  */
 
+.fc-scrollgrid-section-header  {
+  border: 2px solid red !important;
+}
 .fc-col-header {
   border: 0px solid  !important;
 }
 
-.fc-daygrid-day-frame {
-  display: none;
+.fc-daygrid-day-frame { 
+  /* display: none; */
 }
 
 .fc-day-today {
@@ -1983,8 +1988,6 @@ body.modal-open {
  
 
 }
-
-
 
 /* table, tr, td, th {
   border: 0;
@@ -2001,8 +2004,12 @@ body.modal-open {
   ;
 }
 
+.fc-scrollgrid td {
+  border: px solid green !important;
+}
+
 table {
-  border: 0px solid red;
+  
   outline: none;
 }
 
@@ -2033,7 +2040,7 @@ table {
 
 thead {
   background: #1E1F21;
-  width: 317px !important;
+  max-width: 317px !important;
   height: 70px;
 
   
@@ -2060,7 +2067,8 @@ thead {
 }
 
 tr {
-  /* display: flex; */
+
+ 
 }
 
 
@@ -2070,15 +2078,20 @@ tbody {
   background-color: #252628;
   
 }
+/* td {
+  max-width: 318px;
+} */
+
 
 .fc-day-sat {
-  width: 43px;
+  width: 43px !important;
   order: 6;
   border-bottom: 1px solid #4c4c4c !important;
+  border-right: none;
 }
 
 .fc-day-sun {
-  width: 43px;
+  width: 43px !important;
   /* order: 7; */
   direction: ltr !important;
   border-bottom: 1px solid #4c4c4c !important;
@@ -2086,22 +2099,27 @@ tbody {
 
 .fc-day-mon {
   order: 1;
+  width: 318.500px !important;
 }
 
-.fc-day-tue {
+.fc-day-tue{
   order: 2;
+  width: 318.500px !important;
 }
 
-.fc-day-wed {
+.fc-day-wed{
   order: 3;
+  width: 318.500px !important;
 }
 
-.fc-day-thu{
+.fc-day-thu {
   order: 4;
+  width: 318.500px !important;
 }
 
-.fc-day-fri {
+.fc-day-fri{
   order: 5;
+  width: 318.500px !important;
 }
 
 
@@ -2168,4 +2186,59 @@ tbody {
   -moz-border-radius: 4px !important;
   -ms-border-radius: 4px !important;
   -o-border-radius: 4px !important;
+}
+
+.fc-event-time {
+  display: none !important;
+}
+
+.fc-daygrid-day-events{
+  background: none !important;
+}
+
+.fc-daygrid-day-frame {
+  background: none !important;
+}
+
+.fc-event {
+  background: none !important;
+  border: none !important;
+}
+
+
+.event-add-task {
+  background: #252628 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 15px;
+  margin-left: 7px;
+  height: 36px;
+  max-width: 300.406px;
+  padding: 12px 0 12px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.event-add-task:hover {
+  background-color: #323335 !important;
+}
+
+.event-add-task:hover p {
+  color: #fff !important;
+}
+
+.event-add-task img {
+  width: 14px;
+  height: 14px;
+}
+
+.event-add-task p {
+  font-weight: 500 !important;
+  font-size:14px;
+  color: #8c8f97;
 }

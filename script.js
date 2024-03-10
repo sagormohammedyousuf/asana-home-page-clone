@@ -753,17 +753,19 @@ function showKpdText() {
 
 
 function myTask() {
-  $(".home-page-content").css("display" , "none")
-  $("#side-nav-home").removeClass("side-nav-item-active")
-  $("#side-nav-task").addClass("side-nav-item-active")
-  $(".my-task").css("display", "block")
+  $(".home-page-content").css("display" , "none");
+  $("#side-nav-home").removeClass("side-nav-item-active");
+  $("#side-nav-task").addClass("side-nav-item-active");
+  $(".my-task").css("display", "block" );
+  // $(".fc-scrollgrid").css("width", "1700px")
+  
 }
 
 function myHome() {
-  $(".home-page-content").css("display" , "block")
-  $("#side-nav-home").addClass("side-nav-item-active")
-  $("#side-nav-task").removeClass("side-nav-item-active")
-  $(".my-task").css("display", "none")
+  $(".home-page-content").css("display" , "block");
+  $("#side-nav-home").addClass("side-nav-item-active");
+  $("#side-nav-task").removeClass("side-nav-item-active");
+  $(".my-task").css("display", "none");
 }
 
 
@@ -783,54 +785,75 @@ function myHome() {
 
 
   
-document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var calendarEl = document.getElementById('calendar');
   
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    timeZone: 'UTC',
-    initialView: 'dayGridWeek',
-    headerToolbar: {
-      left: 'today,prev,next,title',
+//   var calendar = new FullCalendar.Calendar(calendarEl, {
+//     timeZone: 'UTC',
+//     initialView: 'dayGridWeek',
+//     headerToolbar: {
+//       left: 'today,prev,next,title',
       
    
  
-      center: "",  
-      right: 'dayGridWeek,dayGridDay'
+//       center: "",  
+//       right: 'dayGridWeek,dayGridDay'
       
-    },
-    editable: true,
-    events: 'https://fullcalendar.io/api/demo-feeds/events.json',
-    titleFormat: { month: 'long', year: 'numeric' }
-  });
-
-  calendar.render();
-});
-
-
-
-// Select all elements with the class .fc-day
-$('.fc-toolbar-chunk div').each(function() {
-  // Create a new div element
-  var div = $('<div class="hi"></div>');
-  // Add class to the div
-  div.addClass('fc-add-task');
-  // Add content to the div
-  div.html('<img src="icon/plus.svg"><p>add task</p>');
-  // Append the div to the current .fc-day element
-  $(this).append(div);
-});
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   // Get the element
-//   var element = document.querySelector('.fc-col-header-cell-cushion');
+//     },
+//     editable: true,
+//     // events: 'https://fullcalendar.io/api/demo-feeds/events.json',
+//     titleFormat: { month: 'long', year: 'numeric' },
+//     eventContent: { html: '<div class="event-add-task"><img src="icon/plus.svg"><p>Add task</p></div>' },
   
-//   // Manipulate the text content
-//   element.textContent = element.textContent.replace(/3\//g, ''); // Remove "3/"
-//   element.textContent = element.textContent.replace(/March\s/, ''); // Remove month name if needed
+    
+//     events:
+//             [
+//               {
+                
+//                 id: 1,
+//                 title: 'Yusuf',
+//                 start: '2023-01-07',
+//                 end: '2025-01-10',
+//                 editable: false,
+//                 allDay : true,
+                
+//                 start: "2024-01-01", //specify start date
+//                 stick : true,
+//                 daysOfWeek: [ '4' ],
+//                 initialDate: '2014-01-01',
+//                 startRecur: '2024-03-01',
+//                 endRecur: '2025-03-02',
+                
+//                 extendedProps: {
+//                   description: 'Test 1 '
+//                 },
+//                 color: 'none',
+               
+//               },
+
+//               {
+//                 id: 2,
+//                 title: 'Sagor',
+//                 start: '2024-03-08',
+//                 end: '2024-03-08',
+//                 editable: false,
+//                 extendedProps: {
+//                   description: 'Test 2'
+//                 },
+//               }
+//             ],
+//             eventColor: 'green',
+
+    
+//   });
+
+  
+
+//   calendar.render();
+
+
+
+
 // });
 
 
@@ -838,4 +861,48 @@ $('.fc-toolbar-chunk div').each(function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
 
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    timeZone: 'UTC',
+    initialView: 'dayGridWeek',
+    headerToolbar: {
+      left: 'today,prev,next,title',
+      center: "",  
+      right: 'dayGridWeek,dayGridDay'      
+    },
+    editable: true,
+    titleFormat: { month: 'long', year: 'numeric' },
+    eventContent: { html: '<div class="event-add-task"><img src="icon/plus.svg"><p>Add task</p></div>' },
+    events: generateEvents(), 
+    
+  });
+
+  calendar.render();
+});
+
+function generateEvents() {
+  var events = [];
+  var startDate = new Date('2024-01-01'); 
+  var endDate = new Date('2025-01-01'); 
+
+  // Loop through each day between start and end date
+  for (var currentDate = startDate; currentDate < endDate; currentDate.setDate(currentDate.getDate() + 1)) {
+    
+    if (currentDate.getDay() !== 6 && currentDate.getDay() !== 0) {
+      events.push({
+        title: 'Yusuf',
+        start: currentDate.toISOString().split('T')[0], 
+        editable: false,
+        allDay: true,
+        extendedProps: {
+          description: 'Test 1'
+        },
+        color: 'none'
+      });
+    }
+  }
+
+  return events;
+}
