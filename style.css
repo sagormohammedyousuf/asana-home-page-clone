@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 :root {
   --dark-neutral: rgba(0, 0, 0, 0.75);
   --dark: hsl(60, 2%, 12%);
@@ -2054,6 +2056,11 @@ thead {
   border: 4px solid red;
 } */
 
+.fc-toolbar-chunk {
+  display: flex;
+  
+}
+
 .fc-toolbar-chunk div{
   display: flex !important;
   margin-bottom: 8px;
@@ -2087,7 +2094,7 @@ tbody {
   width: 43px !important;
   order: 6;
   border-bottom: 1px solid #4c4c4c !important;
-  border-right: none;
+ 
 }
 
 .fc-day-sun {
@@ -2237,8 +2244,96 @@ tbody {
   height: 14px;
 }
 
+
 .event-add-task p {
   font-weight: 500 !important;
   font-size:14px;
   color: #8c8f97;
 }
+
+.add-task-btn {
+  background-color: red !important;
+}
+
+.fc-addTaskButton-button {
+  margin-left: 25px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: #4573D2 !important;
+  width: 80px !important;
+  height: 28px !important;
+  font-size: 12px !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px 0 0px 6px !important;
+  -webkit-border-radius: 6px 0 0px 6px !important;
+  -moz-border-radius: 6px 0 0px 6px !important;
+  -ms-border-radius: 6px 0 0px 6px !important;
+  -o-border-radius: 6px 0 0px 6px !important;
+}
+
+.fc-addTaskButton-button::before {
+  margin-right: 2px;
+  content: '\f64d'; 
+  font-family: 'bootstrap-icons'; 
+  color: #ffffff !important;
+}
+
+.fc--button {
+  display: none !important;
+}
+
+.fc-moreAction-button {
+  margin-right: 30px !important;
+  margin-left: -10px !important;
+  width: 22px !important;
+  height: 28px !important;
+  background: #4573D2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  font-size: 8px !important;
+  border-radius: 0px 6px 6px 0px !important;
+  -webkit-border-radius: 0px 6px 6px 0px !important;
+  -moz-border-radius: 0px 6px 6px 0px !important;
+  -ms-border-radius: 0px 6px 6px 0px !important;
+  -o-border-radius: 0px 6px 6px 0px !important;
+}
+
+.fc-moreAction-button::after {
+  content: " ";
+  width: 1px !important;
+  height: 16px !important;
+  background: #424244 !important;
+  position: absolute !important;
+  margin-right: -60px;
+}
+
+.fc-button-group button {
+  font-size:  12px !important;
+  color: #a3a3a3 !important;
+}
+
+.fc-allTask-button::before {
+  font-size: 10px;
+  margin-right: 2px;
+  content: '\F26B'; 
+  font-family: 'bootstrap-icons'; 
+  color: #c4c2c2 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

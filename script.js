@@ -858,28 +858,79 @@ function myHome() {
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
+
+    themeSystem: 'bootstrap',
     timeZone: 'UTC',
     initialView: 'dayGridWeek',
+    // themeSystem: 'bootstrap5',
     headerToolbar: {
-      left: 'today,prev,next,title',
+      left: 'addTaskButton ,moreAction,today,prev,next,title',
       center: "",  
-      right: 'dayGridWeek,dayGridDay'      
+      right: 'allTask,dayGridWeek,unScheduled'      
     },
     editable: true,
     titleFormat: { month: 'long', year: 'numeric' },
+    default: { week: 'long', day: 'numeric' },
     eventContent: { html: '<div class="event-add-task"><img src="icon/plus.svg"><p>Add task</p></div>' },
     events: generateEvents(), 
-    
+    customButtons: {
+      addTaskButton: {
+        text: 'Add task',
+        hint: "Add task",
+        click: function() {
+          // Custom action when the button is clicked
+          console.log('Add task button clicked');
+        }
+      },
+      moreAction: {
+        hint: "More action",
+        icon: ' bi bi-chevron-down',
+        click: function() {
+          // Custom action when the button is clicked
+          console.log('Add task button clicked');
+        }
+      },
+
+      unScheduled : {
+        text : "Unscheduled"
+      },
+      dayGridWeek:  {
+        text : "Week view",
+        
+      },
+
+      allTask : {
+        text : "All tasks",
+      }
+
+
+
+
+    },
+
+    // addTaskButton : { html: '<img  src= "icon/expand_more.svg"/>' },
+   
+
+
   });
 
   calendar.render();
+
+  //   // Injecting image into custom button
+  // viewDidMount: function(view) {
+  //     // Injecting image into custom button after the calendar has been rendered
+  //     var addButton = document.querySelector('.fc-customButton-button');
+  //     var img = document.createElement('img');
+  //     img.src = 'icon/plus.svg';
+  //     img.alt = 'Add Task';
+  //     addButton.prepend(img);
+  //   }
+
+
 });
 
 function generateEvents() {
