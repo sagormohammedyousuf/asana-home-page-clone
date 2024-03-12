@@ -783,90 +783,13 @@ function myHome() {
 // for calender //
 
 
-
-  
-// document.addEventListener('DOMContentLoaded', function() {
-//   var calendarEl = document.getElementById('calendar');
-  
-//   var calendar = new FullCalendar.Calendar(calendarEl, {
-//     timeZone: 'UTC',
-//     initialView: 'dayGridWeek',
-//     headerToolbar: {
-//       left: 'today,prev,next,title',
-      
-   
- 
-//       center: "",  
-//       right: 'dayGridWeek,dayGridDay'
-      
-//     },
-//     editable: true,
-//     // events: 'https://fullcalendar.io/api/demo-feeds/events.json',
-//     titleFormat: { month: 'long', year: 'numeric' },
-//     eventContent: { html: '<div class="event-add-task"><img src="icon/plus.svg"><p>Add task</p></div>' },
-  
-    
-//     events:
-//             [
-//               {
-                
-//                 id: 1,
-//                 title: 'Yusuf',
-//                 start: '2023-01-07',
-//                 end: '2025-01-10',
-//                 editable: false,
-//                 allDay : true,
-                
-//                 start: "2024-01-01", //specify start date
-//                 stick : true,
-//                 daysOfWeek: [ '4' ],
-//                 initialDate: '2014-01-01',
-//                 startRecur: '2024-03-01',
-//                 endRecur: '2025-03-02',
-                
-//                 extendedProps: {
-//                   description: 'Test 1 '
-//                 },
-//                 color: 'none',
-               
-//               },
-
-//               {
-//                 id: 2,
-//                 title: 'Sagor',
-//                 start: '2024-03-08',
-//                 end: '2024-03-08',
-//                 editable: false,
-//                 extendedProps: {
-//                   description: 'Test 2'
-//                 },
-//               }
-//             ],
-//             eventColor: 'green',
-
-    
-//   });
-
-  
-
-//   calendar.render();
-
-
-
-
-// });
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-
     themeSystem: 'bootstrap',
     timeZone: 'UTC',
     initialView: 'dayGridWeek',
-    // themeSystem: 'bootstrap5',
     headerToolbar: {
       left: 'addTaskButton ,moreAction,today,prev,next,title',
       center: "",  
@@ -874,7 +797,9 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     editable: true,
     titleFormat: { month: 'long', year: 'numeric' },
-    default: { week: 'long', day: 'numeric' },
+    dayHeaderFormat: {  day: 'numeric' , weekday: 'short' },
+   
+    dayHeaderCon: { html: '<div class="event-add-task">hello</div>' },
     eventContent: { html: '<div class="event-add-task"><img src="icon/plus.svg"><p>Add task</p></div>' },
     events: generateEvents(), 
     customButtons: {
@@ -882,7 +807,6 @@ document.addEventListener('DOMContentLoaded', function() {
         text: 'Add task',
         hint: "Add task",
         click: function() {
-          // Custom action when the button is clicked
           console.log('Add task button clicked');
         }
       },
@@ -890,48 +814,42 @@ document.addEventListener('DOMContentLoaded', function() {
         hint: "More action",
         icon: ' bi bi-chevron-down',
         click: function() {
-          // Custom action when the button is clicked
           console.log('Add task button clicked');
         }
       },
-
-      unScheduled : {
-        text : "Unscheduled"
+      unScheduled: {
+        text: "Unscheduled"
       },
       dayGridWeek:  {
-        text : "Week view",
-        
+        text: "Week view",
       },
-
-      allTask : {
-        text : "All tasks",
+      allTask: {
+        text: "All tasks",
       }
-
-
-
-
     },
-
-    // addTaskButton : { html: '<img  src= "icon/expand_more.svg"/>' },
-   
-
-
+    // Use the datesSet callback to trigger your custom logic when the date range changes
+    datesSet: function(view) {
+      updateHeaderCells();
+    }
   });
 
   calendar.render();
 
-  //   // Injecting image into custom button
-  // viewDidMount: function(view) {
-  //     // Injecting image into custom button after the calendar has been rendered
-  //     var addButton = document.querySelector('.fc-customButton-button');
-  //     var img = document.createElement('img');
-  //     img.src = 'icon/plus.svg';
-  //     img.alt = 'Add Task';
-  //     addButton.prepend(img);
-  //   }
-
-
+  // Function to update header cells
+  function updateHeaderCells() {
+    var elements = document.querySelectorAll('.fc-col-header-cell-cushion');
+    elements.forEach(function(element) {
+      var text = element.textContent.trim();
+      var words = text.split(' ');
+      var reversedWords = words.reverse();
+      reversedWords[0] = '<span class="first-word">' + reversedWords[0] + '</span>';
+      reversedWords[reversedWords.length - 1] = '<span class="last-word">' + reversedWords[reversedWords.length - 1] + '</span>';
+      var reversedText = reversedWords.join(' ');
+      element.innerHTML = reversedText;
+    });
+  }
 });
+
 
 function generateEvents() {
   var events = [];
@@ -957,3 +875,4 @@ function generateEvents() {
 
   return events;
 }
+
