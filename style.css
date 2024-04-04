@@ -1778,12 +1778,18 @@ body.modal-open {
   
 }
 
-#calendar {
+#calendar ,#calendar-month {
   max-width: 1700px;
   height: 100%;
   
   margin: 0px auto;
   
+}
+
+
+#calendar-month {
+  max-width: 1700px;
+  background-color: rgb(37, 36, 37);
 }
 
 .calender-div {
@@ -1968,6 +1974,30 @@ body.modal-open {
 
 /* full calender css add  */
 
+
+
+#calendar ,#calendar-month {
+  max-width: 1700px;
+  height: 100%;
+  
+  margin: 0px auto;
+  
+}
+
+
+
+#calendar-month {
+  max-width: 1680px;
+  
+}
+
+
+#calendar-month .fc-scrollgrid {
+  overflow: hidden;
+}
+
+
+
 .fc-scrollgrid-section-header  {
   border: 2px solid red !important;
 }
@@ -1976,7 +2006,23 @@ body.modal-open {
 }
 
 .fc-daygrid-day-frame { 
-  /* display: none; */
+  height: 74vh;
+}
+
+#calendar-month .fc-daygrid-day-frame {
+  width: 314px;
+  height: 185px;
+}
+
+#calendar-month .fc-day-sun .fc-daygrid-day-frame {
+  width: 43px;
+  height: 185px;
+}
+
+
+#calendar-month .fc-day-sat .fc-daygrid-day-frame {
+  width: 43px;
+  height: 185px;
 }
 
 .fc-day-today {
@@ -1987,8 +2033,11 @@ body.modal-open {
   border: 1px solid #4c4c4e!important ;
   border-bottom: 0 !important;
   border-left: 0 !important;
- 
+}
 
+#calendar-month .fc-day {
+  border-bottom: 1px solid #4c4c4e !important;
+  
 }
 
 /* table, tr, td, th {
@@ -1997,7 +2046,8 @@ body.modal-open {
 } */
 
 .fc-view-harness {
-  margin-top: -19px;
+  margin-top: -20px;
+  
 }
 
 
@@ -2015,35 +2065,65 @@ table {
   outline: none;
 }
 
-.fc {
-  background: #1E1F21;
-   
-}
-
 
 .fc-header-toolbar {
   background: #1E1F21;
- 
+  
   display: flex;
   align-items: center;
-  margin-top: 10px;
   
+  
+}
+
+#calendar-month .fc-header-toolbar {
+  margin-top: 0;
+  height: 48px;
 }
 
 
 .fc-header-toolbar-center {
   /* CSS styles for the center part of the toolbar */
 }
-
-.fc-header-toolbar-right {
+ 
+#calendar-month .fc-dayGridWeek-button  {
   /* CSS styles for the right part of the toolbar */
+
+  background: none !important;
+  border: none;
+  margin-right: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8e8f8d;
 }
+
+
+#calendar-month .fc-dayGridWeek-button:hover  {
+  /* CSS styles for the right part of the toolbar */
+
+ background: #2B2C2E!important;
+
+}
+
 
 
 thead {
   background: #1E1F21;
   max-width: 317px !important;
-  height: 70px;
+  height: 70px !important;
+}
+
+#calendar-month thead {
+  height: 24px !important;
+}
+
+
+#calendar-month .fc-daygrid-day-top {
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  text-align: left;
 
   
 }
@@ -2063,7 +2143,21 @@ thead {
 
 .fc-toolbar-chunk div{
   display: flex !important;
+  align-items: center;
+ 
   margin-bottom: 8px;
+  margin-top: 8px;
+
+}
+
+
+#calendar-month .fc-toolbar-chunk div{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+ margin-bottom: 8;
+ 
+ height: 48px;
 
 }
 
@@ -2073,11 +2167,33 @@ thead {
   margin-left: 10px;
 }
 
-tr {
 
- 
+#calendar-month .fc-toolbar-title{
+ font-size: 20px !important;
+ font-weight: 400 !important;
+ margin-left: 10px;
 }
 
+#calendar-month .fc-col-header-cell {
+
+  border-right: none !important;
+
+}
+
+
+#calendar-month .fc-day-sun .fc-col-header-cell-cushion{
+
+ display: none !important;
+
+}
+
+
+#calendar-month .fc-day-sat .fc-col-header-cell-cushion{
+
+  display: none !important;
+ 
+ }
+ 
 
 
 
@@ -2085,9 +2201,14 @@ tbody {
   background-color: #252628;
   
 }
-/* td {
-  max-width: 318px;
-} */
+td {
+
+}
+
+#calendar-month .fc-daygrid-day {
+  width: 314px;
+  height: 185px;
+}
 
 
 .fc-day-sat {
@@ -2214,16 +2335,45 @@ tbody {
 }
 
 
+.event-task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.event-input {
+ 
+  display: none;
+  width: 300px;
+  height: 36px;
+  padding-inline: 12px;
+  background: none;
+  color: #fff;
+  border: 2px solid #393a3b;
+  outline: none;
+  z-index: 9999 !important;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+
 .event-add-task {
   background: #252628 !important;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
+  border: none;
   margin-top: 15px;
   margin-left: 7px;
   height: 36px;
-  max-width: 300.406px;
+  width: 95%;
+  max-width: 300.406px !important;
   padding: 12px 0 12px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -2257,6 +2407,7 @@ tbody {
 }
 
 .fc-addTaskButton-button {
+  margin-top: 8px !important;
   margin-left: 25px !important;
   display: flex !important;
   align-items: center !important;
@@ -2274,10 +2425,22 @@ tbody {
 }
 
 .fc-addTaskButton-button::before {
-  margin-right: 2px;
+  margin-right: 4px;
   content: '\f64d'; 
   font-family: 'bootstrap-icons'; 
   color: #ffffff !important;
+}
+
+.fc-filter-button::before {
+  margin-right: 4px;
+  content: '\F3CA';
+  font-family: 'bootstrap-icons'; 
+  font-size: 13px;
+}
+
+.fc-filter-button {
+  display: flex !important;
+  align-items: center !important;
 }
 
 .fc--button {
@@ -2318,10 +2481,25 @@ tbody {
 
 .fc-allTask-button::before {
   font-size: 10px;
-  margin-right: 2px;
+  margin-right: 4px;
   content: '\F26B'; 
   font-family: 'bootstrap-icons'; 
   color: #c4c2c2 !important;
+}
+
+.fc-dayGridMonth-button::before {
+  font-size: 10px;
+  margin-right: 4px;
+  content: '\F62C'; 
+  font-family: 'bootstrap-icons'; 
+  color: #c4c2c2 !important;
+}
+
+.fc-dayGridWeek-button::before {
+  font-size: 10px;
+  margin-right: 4px;
+  content: '\F62C'; 
+  font-family: 'bootstrap-icons';
 }
 
 
@@ -2335,6 +2513,14 @@ tbody {
   flex-direction: column;
   justify-content: space-between !important;
   margin-top: 8px;
+}
+
+#calendar-month .fc-col-header-cell-cushion {
+  height: 0px !important;
+  margin-top: 0px !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #A2A0A2;
 }
 
 .first-word {
@@ -2364,3 +2550,78 @@ tbody {
 }
 
 
+#calendar-month .fc-day div div  a{
+  width: 100%;
+  
+  
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+
+  padding: 2px 8px 2px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+#calendar-month .fc-day-today div .fc-daygrid-day-top  {
+
+  display: flex !important;
+  align-items: center;
+  justify-content:left !important;
+  text-align: center !important;
+  width: 100%;
+  height: 30px;
+ 
+}
+
+
+#calendar-month .fc-day-today div .fc-daygrid-day-top a{
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 8%;
+
+  
+  background-color: #4573D2;
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+
+  padding: 4px 8px 4px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+
+#calendar-month  .fc-day {
+  cursor: cell;
+}
+
+
+#calendar-month .event-add-task {
+  cursor: cell;
+  width: 300px;
+  height: 80px;
+  margin-left: -2px;
+}
+
+
+#calendar-month .event-add-task p{
+  display: none;
+}
+
+#calendar-month .event-add-task img{
+  display: none;
+}
+
+
+#calendar-month .event-add-task:hover {
+  background: none !important;
+}
+
+
+#calendar-month .fc-today .event-task-container .event-add-task p {
+  display: block !important;
+  
+}
