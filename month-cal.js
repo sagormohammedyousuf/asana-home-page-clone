@@ -63,28 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
       
       
             addButton.addEventListener('click', function () {
-              const inputValue = inputField.value.trim();
-      
-              if (inputValue !== '') {
-                
-                
-      
-                inputField.style.display = 'block';
-                inputField.blur();
-      
-              } else {
-                
-               
-                inputField.focus();
-               
-                if (inputField.style.display === 'none' || inputField.style.display === '') {
-                  inputField.style.display = 'block';
-                  inputField.focus();
-                } else {
-                  inputField.style.display = 'none';
-                }
+              toggleInputField();
+          });
+          
+          inputField.addEventListener('keydown', function(event) {
+              if (event.keyCode === 13) { // Check if Enter key is pressed
+                  toggleInputField();
               }
-            });
+          });
+          
+          function toggleInputField() {
+              const inputValue = inputField.value.trim();
+              if (inputValue !== '') {
+                  inputField.style.display = 'block';
+                  inputField.blur();
+              } else {
+                  inputField.focus();
+                  if (inputField.style.display === 'none' || inputField.style.display === '') {
+                      inputField.style.display = 'block';
+                      inputField.focus();
+                  } else {
+                      inputField.style.display = 'none';
+                  }
+              }
+          }
+          
       
       
       
