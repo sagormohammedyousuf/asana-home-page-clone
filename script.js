@@ -714,15 +714,12 @@ function myHome() {
 
 
 
-
-
-
 // for calender //
 
 
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
-  var calendarMonth = document.getElementById('calendar-month');
+  // var calendarMonth = document.getElementById('calendar-month');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'bootstrap',
@@ -731,7 +728,7 @@ document.addEventListener('DOMContentLoaded', function () {
     headerToolbar: {
       left: 'addTaskButton ,moreAction,today,prev,next,title',
       center: "",
-      right: 'allTask,dayGridMonth,unScheduled'
+      right: 'allTask,dayGridWeek,dayGridMonth,unScheduled'
     },
     editable: true,
     titleFormat: { month: 'long', year: 'numeric' },
@@ -763,7 +760,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         click: function () {
           // calendarEl.style.display = 'block'
-
+          // calendar.changeView('dayGridWeek');
         }
       },
 
@@ -772,8 +769,9 @@ document.addEventListener('DOMContentLoaded', function () {
         text: "Month view",
 
         click: function () {
-          calendarEl.style.display = 'none';
-          calendarMonth.style.display = 'flex' ;
+          // calendarEl.style.display = 'none';
+          // calendarMonth.style.display = 'flex';
+          // calendar.changeView('dayGridMonth');
 
         }
       },
@@ -801,9 +799,6 @@ document.addEventListener('DOMContentLoaded', function () {
       addButton.classList.add('event-add-task');
 
 
-
-
-
       addButton.addEventListener('click', function () {
         toggleInputField();
     });
@@ -813,17 +808,27 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleInputField();
         }
     });
+
+
+
     
     function toggleInputField() {
         const inputValue = inputField.value.trim();
+        localStorage.setItem('inputFieldValue', inputValue);
+
+
         if (inputValue !== '') {
             inputField.style.display = 'block';
             inputField.blur();
+
+        
         } else {
             inputField.focus();
             if (inputField.style.display === 'none' || inputField.style.display === '') {
                 inputField.style.display = 'block';
                 inputField.focus();
+
+              
             } else {
                 inputField.style.display = 'none';
             }
@@ -831,17 +836,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
-    
-
-
+    const savedValue = localStorage.getItem('inputFieldValue');
+    if (savedValue) { 
+      inputField.value = savedValue;
+    }
 
       containerEl.appendChild(inputField);
       containerEl.appendChild(addButton);
       return { domNodes: [containerEl] };
     },
-
-
-
 
 
   });
@@ -880,7 +883,7 @@ function generateEvents() {
 
     if (currentDate.getDay() !== 6 && currentDate.getDay() !== 0) {
       events.push({
-        title: 'Yusuf',
+        title: '',
         start: currentDate.toISOString().split('T')[0],
         editable: false,
         allDay: true,
