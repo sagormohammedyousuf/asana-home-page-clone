@@ -717,9 +717,17 @@ function myHome() {
 // for calender //
 
 
+
+
+// full calendar // 
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
-  // var calendarMonth = document.getElementById('calendar-month');
+  const myData = []
+
+
+
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'bootstrap',
@@ -728,28 +736,44 @@ document.addEventListener('DOMContentLoaded', function () {
     headerToolbar: {
       left: 'addTaskButton ,moreAction,today,prev,next,title',
       center: "",
-      right: 'allTask,dayGridWeek,dayGridMonth,unScheduled'
+      right: 'allTask,dayGridMonth,unScheduled'
     },
     editable: true,
     titleFormat: { month: 'long', year: 'numeric' },
     dayHeaderFormat: { day: 'numeric', weekday: 'short' },
 
 
-   
+    // dayRender: function(info) {
+    //   var uniqueId = generateUniqueId(info.date);
+    //   info.el.setAttribute('data-id', uniqueId);
+    // }
+
+
+
+
     events: generateEvents(),
     customButtons: {
       addTaskButton: {
         text: 'Add task',
         hint: "Add task",
         click: function () {
-          
+
+        }
+      }, filter: {
+
+        // icon: " bi bi-filter",
+        text: "Filter",
+        click: function () {
+
+
+
         }
       },
       moreAction: {
         hint: "More action",
         icon: ' bi bi-chevron-down',
         click: function () {
-          
+
         }
       },
       unScheduled: {
@@ -760,7 +784,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         click: function () {
           // calendarEl.style.display = 'block'
-          // calendar.changeView('dayGridWeek');
+          calendar.setOption('headerToolbar', {
+            left: 'addTaskButton ,moreAction,today,prev,next,title',
+            center: "",
+            right: 'allTask,dayGridMonth,unScheduled'
+          });
+          calendar.changeView('dayGridWeek');
+          //   calendar.setOption('datesSet', function(view) {
+          //     updateHeaderCells(); 
+          // });
         }
       },
 
@@ -769,10 +801,16 @@ document.addEventListener('DOMContentLoaded', function () {
         text: "Month view",
 
         click: function () {
-          // calendarEl.style.display = 'none';
-          // calendarMonth.style.display = 'flex';
-          // calendar.changeView('dayGridMonth');
 
+          calendar.setOption('headerToolbar', {
+            left: 'today,prev,next,title',
+            center: "",
+            right: 'filter,dayGridWeek'
+          });
+          calendar.changeView('dayGridMonth');
+          // calendar.setOption('datesSet', null);
+
+          applyMonthViewStyles()
         }
       },
 
@@ -782,80 +820,229 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
 
-
-
     datesSet: function (view) {
-      updateHeaderCells();
+      if (view.view.type === 'dayGridMonth') {
+        applyMonthViewStyles();
+        updateHeaderCellsForMonthView()
+
+      }
+
+      if (view.view.type === 'dayGridWeek') {
+        updateHeaderCells();
+      }
     },
-    
+
+
+
+
+
+
     eventContent: function (arg) {
+
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
       const inputField = document.createElement('input');
+      var myPara = document.createElement('p');
+      myPara.classList.add('my-para');
+
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
-
+      // const uniqueKey = 'input_' + Math.random().toString(36).substr(2, 9);
+      //       inputField.setAttribute('id', uniqueKey);
 
       addButton.addEventListener('click', function () {
         toggleInputField();
-    });
-    
-    inputField.addEventListener('keydown', function(event) {
+
+      });
+
+      inputField.addEventListener('keydown', function (event) {
         if (event.keyCode === 13) { // Check if Enter key is pressed
-            toggleInputField();
+          toggleInputField(); // Pass the date to the function
         }
-    });
+      });
 
-
-
-    
-    function toggleInputField() {
+      function toggleInputField() {
         const inputValue = inputField.value.trim();
-        localStorage.setItem('inputFieldValue', inputValue);
-
 
         if (inputValue !== '') {
-            inputField.style.display = 'block';
-            inputField.blur();
+          inputField.blur();
+          inputField.style.display = 'block';
 
+          const tdElements = document.querySelectorAll('td.fc-day');
         
+          tdElements.forEach(td => {
+            var keyDate = td.getAttribute('data-date');
+            const inputField = td.querySelector('.event-input');
+            const inputValue = inputField ? inputField.value : '';
+            // const inputValue = inputField.value;
+            localStorage.setItem(keyDate, inputValue);
+
+            // console.log(keyDate + ': ' + inputValue)
+            
+            // const dateValue = localStorage.getItem(keyDate); // Move this line inside the loop
+
+            //  inputField.value = dateValue; 
+
+            
+
+             
+          });
+
+          // const dateValue = localStorage.getItem(keyDate);
+          // myPara.textContent = dateValue;
+         
+      
+
+         
+
         } else {
+          inputField.focus();
+          if (inputField.style.display === 'none' || inputField.style.display === '') {
+            inputField.style.display = 'block';
             inputField.focus();
-            if (inputField.style.display === 'none' || inputField.style.display === '') {
-                inputField.style.display = 'block';
-                inputField.focus();
+          } else {
+            inputField.style.display = 'none';
 
-              
-            } else {
-                inputField.style.display = 'none';
-            }
+          }
         }
-    }
-    
+      }
 
-    const savedValue = localStorage.getItem('inputFieldValue');
-    if (savedValue) { 
-      inputField.value = savedValue;
-    }
+
+      // Get the stored value for a specific date
+      // const storedValue = localStorage.getItem();
+      
+
+      //  console.log(storedValue)
+      // if (storedValue) {
+      //   myPara.textContent = storedValue; // Set the text content of myPara to the stored value
+      // }
+
+      
+
+      console.log()
 
       containerEl.appendChild(inputField);
       containerEl.appendChild(addButton);
       return { domNodes: [containerEl] };
     },
 
-
   });
-
-
-
-
 
   calendar.render();
 
 
+  function applyMonthViewStyles() {
+    // Hide the last word in header cells
+    const lastWords = document.querySelectorAll(".last-word");
+    lastWords.forEach(function (lastWord) {
+      lastWord.style.display = 'none';
+
+    });
+
+    // Change cursor style 
+    const fcDays = document.querySelectorAll(".fc-day");
+    fcDays.forEach(function (fcDay) {
+      fcDay.style.cursor = 'cell';
+
+    });
+
+    // set custom height in dayFrame 
+    const dayFrames = document.querySelectorAll('.fc-daygrid-day-frame');
+    dayFrames.forEach(function (dayFrame) {
+      dayFrame.style.height = '185px';
+    })
+
+
+    // set style on event task p //
+
+    const eventTextS = document.querySelectorAll('.event-add-task p')
+    eventTextS.forEach(function (text) {
+      text.style.display = 'none !important';
+    })
+
+
+    const eventImgS = document.querySelectorAll('.event-add-task img')
+    eventImgS.forEach(function (img) {
+      img.style.display = 'none !important';
+    })
+
+    // set date right to left // 
+
+    const dates = document.querySelectorAll('.fc-daygrid-day-number');
+    dates.forEach(function (date) {
+      const styles = `
+          width: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 2px 8px;
+          border-radius: 8px;
+          font-size: 16px;
+         
+        `;
+
+      date.style.cssText = styles;
+
+    });
+    // current day style // 
+    const currentDay = document.querySelectorAll('.fc-day-today div .fc-daygrid-day-top a');
+
+    currentDay.forEach(function (day) {
+
+      day.style = `
+     margin-top: 8px;
+     margin-left: 5px;
+     width: 8%;
+   
+     
+     background-color: #4573D2;
+     display: flex;
+     align-items:flex-start;
+     justify-content: flex-start;
+   
+     padding: 4px 8px 4px 8px;
+     border-radius: 8px;
+     font-size: 16px;
+     
+     
+     `
+    })
+
+    // set style current day position // 
+
+    const dayPosition = document.querySelectorAll('.fc-day-today div .fc-daygrid-day-top');
+    dayPosition.forEach(function (cDayP) {
+      cDayP.style = `
+      display: flex !important;
+      align-items: center;
+      justify-content:left !important;
+      text-align: center !important;
+      width: 100%;
+      height: 30px;
+      
+      `
+    })
+
+
+
+    //     const thead = document.querySelectorAll('thead');
+    //     thead.forEach(function(thd){
+    //      thd.style.height = '24px';
+    //      thd.style.backgroundColor = 'red';
+    //  })
+
+
+    const headerCell = document.querySelectorAll('.fc-col-header-cell-cushion');
+    headerCell.forEach(function (hc) {
+      hc.style.height = '0px';
+      //  hc.style.color = 'red';
+    });
+
+
+  }
 
   // update header cells
   function updateHeaderCells() {
@@ -865,10 +1052,61 @@ document.addEventListener('DOMContentLoaded', function () {
       var words = text.split(' ');
       var reversedWords = words.reverse();
       reversedWords[0] = '<span class="first-word">' + reversedWords[0] + '</span>';
-      reversedWords[reversedWords.length - 1] = '<span class="last-word">' + reversedWords[reversedWords.length - 1] + '</span>';
+      reversedWords[reversedWords.length - 1] = '<span class="last-word" id="lastWord">' + reversedWords[reversedWords.length - 1] + '</span>';
       var reversedText = reversedWords.join(' ');
       element.innerHTML = reversedText;
     });
+  }
+
+
+  function updateHeaderCellsForMonthView() {
+
+
+
+    var headerThead = document.querySelectorAll('thead');
+
+    headerThead.forEach(function (th) {
+
+      th.style.height = "24px";
+      // th.style.display = 'none'
+      th.style.cursor = 'pointer !important';
+
+
+    })
+
+
+
+
+    var elements = document.querySelectorAll('.fc-col-header-cell-cushion');
+
+    elements.forEach(function (element) {
+      element.style = `
+      font-size: 12px;
+      color: gray ;
+      
+      `
+    })
+    elements.forEach(function (element) {
+      var text = element.textContent.trim();
+      var words = text.split(' ');
+
+
+      for (var i = 0; i < words.length; i++) {
+
+        if (!isNaN(words[i])) {
+
+          words.splice(i, 1);
+
+          i--;
+        }
+      }
+
+ 
+      var newText = words.join(' ');
+
+      element.textContent = newText;
+    });
+
   }
 });
 
@@ -897,3 +1135,35 @@ function generateEvents() {
 
   return events;
 }
+
+
+
+
+
+// var setId = () => {
+
+
+//   let inputs = document.querySelectorAll(".event-input");
+
+//   for (let i = 0; i < inputs.length; i++) {
+//     let input = inputs[i];
+
+
+//     let uniqueKey = "id" + i + "_"
+
+
+//     localStorage.setItem("uniqueID_" + input.textContent.trim(), uniqueKey);
+
+
+//     input.style.background = "red";
+
+
+//     input.setAttribute("data", uniqueKey);
+//   }
+
+// }
+
+
+
+
+
