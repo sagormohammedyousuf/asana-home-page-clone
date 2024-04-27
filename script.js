@@ -628,10 +628,67 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
 
+
+
+
+
+
+
+// // form widget drag and drop //
+
+
+//   var myDragDropFunction = function() {
+//     $(".draggable").draggable();
+//     $(".droppable").droppable({
+//         drop: function(event, ui) {
+//           $(".customize-modal").append(ui.draggable);
+//           $("#form-widgets").attr("style", "position: relative;");
+//           $("#form").css("display", "block");
+//           $("#form-widgets").css("display", "none"); 
+//         }
+//     });
+//   };
+
+
+// myDragDropFunction();
+
+
+
+
+// var myDragDropFunctionTwo = function() {
+//   $(".draggable-2").draggable();
+//   $(".droppable").droppable({
+//       drop: function(event, ui) {
+//         $(".customize-modal").append(ui.draggable-2);
+//         $("#note-widget").attr("style", "position: relative;");
+//         $("#private-notepad").css("display", "block");
+//         $("#note-widget").css("display", "none"); 
+//       }
+//   });
+// };
+
+
+// myDragDropFunctionTwo();
 
 
 var myDragDropFunction = function () {
@@ -695,13 +752,32 @@ function showKpdText() {
 }
 
 
+// function myTask() {
+//   $(".home-page-content").css("display", "none");
+//   $("#side-nav-home").removeClass("side-nav-item-active");
+//   $("#side-nav-task").addClass("side-nav-item-active");
+//   $(".my-task").css("display", "block");
+
+
+// }
+
+// function myHome() {
+//   $(".home-page-content").css("display", "block");
+//   $("#side-nav-home").addClass("side-nav-item-active");
+//   $("#side-nav-task").removeClass("side-nav-item-active");
+//   $(".my-task").css("display", "none");
+// }
+
+
+
 function myTask() {
   $(".home-page-content").css("display", "none");
   $("#side-nav-home").removeClass("side-nav-item-active");
   $("#side-nav-task").addClass("side-nav-item-active");
   $(".my-task").css("display", "block");
-  // $(".fc-scrollgrid").css("width", "1700px")
 
+  // Save state in local storage
+  localStorage.setItem("currentPage", "task");
 }
 
 function myHome() {
@@ -709,12 +785,27 @@ function myHome() {
   $("#side-nav-home").addClass("side-nav-item-active");
   $("#side-nav-task").removeClass("side-nav-item-active");
   $(".my-task").css("display", "none");
+
+  // Save state in local storage
+  localStorage.setItem("currentPage", "home");
 }
 
+// Check local storage on page load and set the initial state
+$(document).ready(function () {
+  var currentPage = localStorage.getItem("currentPage");
+  if (currentPage === "task") {
+    myTask();
+  } else {
+    myHome();
+  }
+});
 
 
 
-// for calender //
+
+
+
+
 
 
 
@@ -724,9 +815,15 @@ function myHome() {
 
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
-  const myData = []
 
 
+
+  function closestAncestorWithClass(element, className) {
+    while (element && !element.classList.contains(className)) {
+        element = element.parentNode; // Use parentNode instead of parentElement
+    }
+    return element;
+}
 
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -833,71 +930,54 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
 
+   
 
 
-
+    
 
     eventContent: function (arg) {
+     
+     let globalKeyDates = 0; // define global variable //
 
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
+      const myText = document.createElement('p');
+      myText.classList.add('my-getText');
+      containerEl.appendChild(myText);
       const inputField = document.createElement('input');
-      var myPara = document.createElement('p');
-      myPara.classList.add('my-para');
-
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
-      // const uniqueKey = 'input_' + Math.random().toString(36).substr(2, 9);
-      //       inputField.setAttribute('id', uniqueKey);
-
+     
       addButton.addEventListener('click', function () {
-        toggleInputField();
-
+        
+      toggleInputField();
+      setAndGet() 
       });
 
       inputField.addEventListener('keydown', function (event) {
-        if (event.keyCode === 13) { // Check if Enter key is pressed
-          toggleInputField(); // Pass the date to the function
+        if (event.keyCode === 13) { 
+          toggleInputField(); 
+          setAndGet() 
+          const keyDates = setAndGet();
+          console.log(keyDates + ' pressed');
         }
       });
+      function setAndGet() {
+        const tdElement = event.target.closest('td.fc-day');
+        globalKeyDates = tdElement.getAttribute('data-date'); 
+      const inputField = tdElement.querySelector('.event-input');
+        const inputValue = inputField ? inputField.value : '';
+      localStorage.setItem(globalKeyDates, inputValue);
+      }
 
       function toggleInputField() {
         const inputValue = inputField.value.trim();
-
         if (inputValue !== '') {
           inputField.blur();
           inputField.style.display = 'block';
-
-          const tdElements = document.querySelectorAll('td.fc-day');
-        
-          tdElements.forEach(td => {
-            var keyDate = td.getAttribute('data-date');
-            const inputField = td.querySelector('.event-input');
-            const inputValue = inputField ? inputField.value : '';
-            // const inputValue = inputField.value;
-            localStorage.setItem(keyDate, inputValue);
-
-            // console.log(keyDate + ': ' + inputValue)
-            
-            // const dateValue = localStorage.getItem(keyDate); // Move this line inside the loop
-
-            //  inputField.value = dateValue; 
-
-            
-
-             
-          });
-
-          // const dateValue = localStorage.getItem(keyDate);
-          // myPara.textContent = dateValue;
-         
-      
-
-         
-
         } else {
           inputField.focus();
           if (inputField.style.display === 'none' || inputField.style.display === '') {
@@ -905,25 +985,13 @@ document.addEventListener('DOMContentLoaded', function () {
             inputField.focus();
           } else {
             inputField.style.display = 'none';
-
           }
         }
       }
 
 
-      // Get the stored value for a specific date
-      // const storedValue = localStorage.getItem();
-      
-
-      //  console.log(storedValue)
-      // if (storedValue) {
-      //   myPara.textContent = storedValue; // Set the text content of myPara to the stored value
-      // }
-
-      
-
-      console.log()
-
+      const storedValue = localStorage.getItem(globalKeyDates);
+      console.log(storedValue + " it's from localStorage");
       containerEl.appendChild(inputField);
       containerEl.appendChild(addButton);
       return { domNodes: [containerEl] };
@@ -1101,7 +1169,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
- 
+
       var newText = words.join(' ');
 
       element.textContent = newText;
@@ -1140,30 +1208,31 @@ function generateEvents() {
 
 
 
-// var setId = () => {
+var setId = () => {
 
 
-//   let inputs = document.querySelectorAll(".event-input");
+  let inputs = document.querySelectorAll(".event-input");
 
-//   for (let i = 0; i < inputs.length; i++) {
-//     let input = inputs[i];
-
-
-//     let uniqueKey = "id" + i + "_"
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i];
 
 
-//     localStorage.setItem("uniqueID_" + input.textContent.trim(), uniqueKey);
+    let uniqueKey = "id" + i + "_"
 
 
-//     input.style.background = "red";
+    localStorage.setItem("uniqueID_" + input.textContent.trim(), uniqueKey);
 
 
-//     input.setAttribute("data", uniqueKey);
-//   }
-
-// }
+    input.style.background = "red";
 
 
+    input.setAttribute("data", uniqueKey);
+  }
+
+}
 
 
 
+
+
+// i have to make my self as a pro programmer and a stablish businessman // 
