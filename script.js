@@ -801,15 +801,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
-
-
-
-
 // full calendar // 
 
 
@@ -820,10 +811,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closestAncestorWithClass(element, className) {
     while (element && !element.classList.contains(className)) {
-        element = element.parentNode; // Use parentNode instead of parentElement
+      element = element.parentNode; // Use parentNode instead of parentElement
     }
     return element;
-}
+  }
 
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -930,50 +921,52 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
 
-   
-
-
-    
 
     eventContent: function (arg) {
-     
-     let globalKeyDates = 0; // define global variable //
 
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
-      const myText = document.createElement('p');
-      myText.classList.add('my-getText');
-      containerEl.appendChild(myText);
       const inputField = document.createElement('input');
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
-     
+
+
+      const myText = document.createElement('span');
+      containerEl.appendChild(myText);
+      myText.classList.add('event-text');
+
+
       addButton.addEventListener('click', function () {
+
+        toggleInputField();
         
-      toggleInputField();
-      setAndGet() 
       });
 
       inputField.addEventListener('keydown', function (event) {
-        if (event.keyCode === 13) { 
-          toggleInputField(); 
-          setAndGet() 
-          const keyDates = setAndGet();
-          console.log(keyDates + ' pressed');
+        if (event.keyCode === 13) {
+          toggleInputField();
+          
+
+
+
         }
       });
       function setAndGet() {
         const tdElement = event.target.closest('td.fc-day');
-        globalKeyDates = tdElement.getAttribute('data-date'); 
-      const inputField = tdElement.querySelector('.event-input');
+        const globalKeyDates = tdElement.getAttribute('data-date');
+        const inputField = tdElement.querySelector('.event-input');
         const inputValue = inputField ? inputField.value : '';
-      localStorage.setItem(globalKeyDates, inputValue);
+        localStorage.setItem(globalKeyDates, inputValue);
+
       }
 
       function toggleInputField() {
+        setAndGet()
+
+
         const inputValue = inputField.value.trim();
         if (inputValue !== '') {
           inputField.blur();
@@ -990,8 +983,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
 
-      const storedValue = localStorage.getItem(globalKeyDates);
-      console.log(storedValue + " it's from localStorage");
+    window.addEventListener('load', function () {
+      const tdElements = document.querySelectorAll('td.fc-day');
+      tdElements.forEach((tdElement) => {
+          const key = tdElement.getAttribute('data-date');
+          console.log(key + 'node');
+          const targetSpan = tdElement.querySelector('.event-text');
+          if (targetSpan) {
+              targetSpan.setAttribute('data-date', key);
+              let myKey = targetSpan.getAttribute('data-date');
+              let myData = localStorage.getItem(myKey);
+              targetSpan.innerHTML = myData
+          }
+      });
+  });
+    
+
+
       containerEl.appendChild(inputField);
       containerEl.appendChild(addButton);
       return { domNodes: [containerEl] };
@@ -1064,8 +1072,7 @@ document.addEventListener('DOMContentLoaded', function () {
      margin-top: 8px;
      margin-left: 5px;
      width: 8%;
-   
-     
+
      background-color: #4573D2;
      display: flex;
      align-items:flex-start;
@@ -1203,36 +1210,3 @@ function generateEvents() {
 
   return events;
 }
-
-
-
-
-
-var setId = () => {
-
-
-  let inputs = document.querySelectorAll(".event-input");
-
-  for (let i = 0; i < inputs.length; i++) {
-    let input = inputs[i];
-
-
-    let uniqueKey = "id" + i + "_"
-
-
-    localStorage.setItem("uniqueID_" + input.textContent.trim(), uniqueKey);
-
-
-    input.style.background = "red";
-
-
-    input.setAttribute("data", uniqueKey);
-  }
-
-}
-
-
-
-
-
-// i have to make my self as a pro programmer and a stablish businessman // 
