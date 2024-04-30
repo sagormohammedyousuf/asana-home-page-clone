@@ -1778,19 +1778,9 @@ body.modal-open {
   
 }
 
-#calendar ,#calendar-month {
-  max-width: 1700px;
-  height: 100%;
-  
-  margin: 0px auto;
-  
-}
 
 
-#calendar-month {
-  max-width: 1700px;
-  background-color: rgb(37, 36, 37);
-}
+
 
 .calender-div {
   display: flex;
@@ -1976,25 +1966,6 @@ body.modal-open {
 
 
 
-#calendar ,#calendar-month {
-  max-width: 1700px;
-  height: 100%;
-  
-  margin: 0px auto;
-  
-}
-
-
-
-#calendar-month {
-  max-width: 1680px;
-  
-}
-
-
-#calendar-month .fc-scrollgrid {
-  overflow: hidden;
-}
 
 
 
@@ -2009,22 +1980,6 @@ body.modal-open {
   height: 74vh;
 }
 
-#calendar-month .fc-daygrid-day-frame {
-  width: 314px;
-  height: 185px;
-}
-
-#calendar-month .fc-day-sun .fc-daygrid-day-frame {
-  width: 43px;
-  height: 185px;
-}
-
-
-#calendar-month .fc-day-sat .fc-daygrid-day-frame {
-  width: 43px;
-  height: 185px;
-}
-
 .fc-day-today {
   background: none !important;
 }
@@ -2034,16 +1989,6 @@ body.modal-open {
   border-bottom: 0 !important;
   border-left: 0 !important;
 }
-
-#calendar-month .fc-day {
-  border-bottom: 1px solid #4c4c4e !important;
-  
-}
-
-/* table, tr, td, th {
-  border: 0;
-  
-} */
 
 .fc-view-harness {
   margin-top: -20px;
@@ -2075,33 +2020,9 @@ table {
   
 }
 
-#calendar-month .fc-header-toolbar {
-  margin-top: 0;
-  height: 48px;
-}
-
 
 .fc-header-toolbar-center {
   /* CSS styles for the center part of the toolbar */
-}
- 
-#calendar-month .fc-dayGridWeek-button  {
-  /* CSS styles for the right part of the toolbar */
-
-  background: none !important;
-  border: none;
-  margin-right: 30px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #8e8f8d;
-}
-
-
-#calendar-month .fc-dayGridWeek-button:hover  {
-  /* CSS styles for the right part of the toolbar */
-
- background: #2B2C2E!important;
-
 }
 
 
@@ -2112,21 +2033,6 @@ thead {
   height: 70px !important;
 }
 
-#calendar-month thead {
-  height: 24px !important;
-}
-
-
-#calendar-month .fc-daygrid-day-top {
-  
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start !important;
-  text-align: left;
-
-  
-}
 
 .fc-dayGridWeek-view {
   
@@ -2151,51 +2057,6 @@ thead {
 }
 
 
-#calendar-month .fc-toolbar-chunk div{
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
- margin-bottom: 8;
- 
- height: 48px;
-
-}
-
- #fc-dom-1{
-  font-size: 20px !important;
-  font-weight: 400 !important;
-  margin-left: 10px;
-}
-
-
-#calendar-month .fc-toolbar-title{
- font-size: 20px !important;
- font-weight: 400 !important;
- margin-left: 10px;
-}
-
-#calendar-month .fc-col-header-cell {
-
-  border-right: none !important;
-
-}
-
-
-#calendar-month .fc-day-sun .fc-col-header-cell-cushion{
-
- display: none !important;
-
-}
-
-
-#calendar-month .fc-day-sat .fc-col-header-cell-cushion{
-
-  display: none !important;
- 
- }
- 
-
-
 
 tbody {
   background-color: #252628;
@@ -2205,10 +2066,6 @@ td {
 
 }
 
-#calendar-month .fc-daygrid-day {
-  width: 314px;
-  height: 185px;
-}
 
 
 .fc-day-sat {
@@ -2515,14 +2372,6 @@ td {
   margin-top: 8px;
 }
 
-#calendar-month .fc-col-header-cell-cushion {
-  height: 0px !important;
-  margin-top: 0px !important;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #A2A0A2;
-}
-
 .first-word {
   font-weight: 700; 
   text-transform: uppercase;
@@ -2547,81 +2396,4 @@ td {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-}
-
-
-#calendar-month .fc-day div div  a{
-  width: 100%;
-  
-  
-  display: flex;
-  align-items:flex-start;
-  justify-content: flex-start;
-
-  padding: 2px 8px 2px 8px;
-  border-radius: 8px;
-  font-size: 16px;
-  
-}
-
-#calendar-month .fc-day-today div .fc-daygrid-day-top  {
-
-  display: flex !important;
-  align-items: center;
-  justify-content:left !important;
-  text-align: center !important;
-  width: 100%;
-  height: 30px;
- 
-}
-
-
-#calendar-month .fc-day-today div .fc-daygrid-day-top a{
-  margin-top: 8px;
-  margin-left: 5px;
-  width: 8%;
-
-  
-  background-color: #4573D2;
-  display: flex;
-  align-items:flex-start;
-  justify-content: flex-start;
-
-  padding: 4px 8px 4px 8px;
-  border-radius: 8px;
-  font-size: 16px;
-  
-}
-
-
-#calendar-month  .fc-day {
-  cursor: cell;
-}
-
-
-#calendar-month .event-add-task {
-  cursor: cell;
-  width: 300px;
-  height: 80px;
-  margin-left: -2px;
-}
-
-
-#calendar-month .event-add-task p{
-  display: none;
-}
-
-#calendar-month .event-add-task img{
-  display: none;
-}
-
-
-#calendar-month .event-add-task:hover {
-  background: none !important;
-}
-
-
-#calendar-month .fc-today .event-task-container .event-add-task p {
-  display: block !important;
-  
 }
