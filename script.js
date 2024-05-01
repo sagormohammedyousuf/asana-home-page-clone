@@ -792,12 +792,15 @@ document.addEventListener('DOMContentLoaded', function () {
       addTaskButton: {
         text: 'Add task',
         hint: "Add task",
+       
         click: function () {
           toggleInputField();
         }
       }, filter: {
         // icon: " bi bi-filter",
         text: "Filter",
+        
+        
         click: function () {
 
         }
@@ -805,6 +808,7 @@ document.addEventListener('DOMContentLoaded', function () {
       moreAction: {
         hint: "More action",
         icon: ' bi bi-chevron-down',
+        
         click: function () {
 
         }
@@ -873,8 +877,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Create button for adding task
       const addButton = document.createElement('button');
-      addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
+      addButton.innerHTML = '<img src="icon/plus.svg" alt="plus-icon"><p>Add task</p>';
       addButton.classList.add('event-add-task');
+      addButton.title = 'Add task';
 
         // Create span element for displaying event text
       const myText = document.createElement('span');

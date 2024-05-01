@@ -3,6 +3,8 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Discover the power of our Asana-inspired homepage clone, featuring intuitive drag-and-drop content, seamless calendar integration, and the ability to effortlessly add tasks. Streamline your productivity and workflow like never before.">
+
       <link rel="icon" type="image/x-icon"   href="asset/favicon-16x16.png"  sizes="12x12" />
       <link rel="stylesheet" href="style.css" />
       <!-- for calender  -->
@@ -18,166 +20,162 @@
       <title>Home - Asana</title>
    </head>
    <body>
-      <header class="header">
-      </header>
-      <div class="wrapper">
-         <nav class="navbar">
-            <div class="top-navbar-left">
-               <div class="menu-box">
-                  <div class="menu-icon-box">
-                     <img class="menu-icon" src="icon/nav-icon.svg" alt="navbar" />
+      <nav class="navbar">
+         <div class="top-navbar-left">
+            <div class="menu-box">
+               <div class="menu-icon-box">
+                  <img class="menu-icon" src="icon/nav-icon.svg" alt="navbar-icon" />
+               </div>
+               <div class="create">
+                  <div class="create-icon" id="create-modal">
+                     <img class="add" src="icon/add.svg"  alt="add-icon"/><span>Create</span>
                   </div>
-                  <div class="create">
-                     <div class="create-icon" id="create-modal">
-                        <img class="add" src="icon/add.svg" /><span>Create</span>
+                  <!--  modal //  -->
+                  <div class="create-modal">
+                     <div class="modal-item" style="background-color: #373839;">
+                        <img src="icon/taks-icon.svg" alt="task-icon" />Task
                      </div>
-                     <!--  modal //  -->
-                     <div class="create-modal">
-                        <div class="modal-item" style="background-color: #373839;">
-                           <img src="icon/taks-icon.svg" alt="task" />Task
-                        </div>
-                        <div class="modal-item">
-                           <img src="icon/assignment.svg" alt="project" />Project
-                        </div>
-                        <div class="modal-item">
-                           <img src="icon/sms.svg" alt="massage" />Massage
-                        </div>
-                        <div class="modal-item">
-                           <img src="icon/work.svg" alt="portfolio" />Portfolio
-                        </div>
-                        <hr class="modal-hr" />
-                        <div class="modal-item">
-                           <img src="icon/add-people.svg" alt="Invite" />Invite
-                        </div>
+                     <div class="modal-item">
+                        <img src="icon/assignment.svg" alt="assignment-icon" />Project
+                     </div>
+                     <div class="modal-item">
+                        <img src="icon/sms.svg" alt="massage-icon" />Massage
+                     </div>
+                     <div class="modal-item">
+                        <img src="icon/work.svg" alt="portfolio-icon" />Portfolio
+                     </div>
+                     <hr class="modal-hr" />
+                     <div class="modal-item">
+                        <img src="icon/add-people.svg" alt="Invite-people-icon" />Invite
                      </div>
                   </div>
                </div>
             </div>
-            <div class="search-box">
-               <img src="icon/search.svg" />
-               <input id="search" type="search" placeholder="Search" onfocus="hideKpdText()" onblur="showKpdText()" />
-               <div class="kbd">
-                  <kbd class="likely-text ctrl" id="ctrl">Ctrl</kbd>
-                  <kbd class="likely-text k" id="k">K</kbd>
-               </div>
+         </div>
+         <div class="search-box">
+            <img src="icon/search.svg"  alt="search-icon"/>
+            <input id="search" type="search" placeholder="Search" onfocus="hideKpdText()" onblur="showKpdText()" aria-label="search" />
+            <div class="kbd">
+               <kbd class="likely-text ctrl" id="ctrl">Ctrl</kbd>
+               <kbd class="likely-text k" id="k">K</kbd>
             </div>
-            <div class="top-navbar-right">
-               <div class="profile-box">
-                  <button class="up-btn">Upgrade</button>
-                  <div class="profile">
-                     <img class="profile-pic" src="asset/human_face_1.png" />
-                     <img class="expand" src="icon/expand_more.svg" />
+         </div>
+         <div class="top-navbar-right">
+            <div class="profile-box">
+               <button class="up-btn" aria-label="upgrade">Upgrade</button>
+               <div class="profile">
+                  <img class="profile-pic" src="asset/human_face_1.png"  alt="human-face"/>
+                  <img class="expand" src="icon/expand_more.svg" alt="expand-more-icon"/>
+               </div>
+               <!-- profile modal  -->
+               <div class="profile-modal">
+                  <div class="user-details">
+                     <img
+                        src="asset/human_face_1.png"
+                        alt="human_face_1"
+                        class="profile-pic"
+                        />
+                     <p class="work-sp">My workspace</p>
+                     <p class="email-pro">smyusu565@gmail.com</p>
                   </div>
-                  <!-- profile modal  -->
-                  <div class="profile-modal">
-                     <div class="user-details">
-                        <img
-                           src="asset/human_face_1.png"
-                           alt="human_face_1"
-                           class="profile-pic"
-                           />
-                        <p class="work-sp">My workspace</p>
-                        <p class="email-pro">smyusu565@gmail.com</p>
-                     </div>
-                     <div class="profile-modal-item">
-                        <img src="icon/admin-console-icon.svg" alt="" />Admin console
-                     </div>
-                     <div class="profile-modal-item">
-                        <img src="icon/add-gray.svg" alt="new" />New workspace
-                     </div>
-                     <div class="profile-modal-item">
-                        <img src="icon/add-people.svg" alt="invite to asana" />Invite to
-                        Asana
-                     </div>
-                     <div class="profile-modal-item">
-                        <button class="btn-pro-modal">Upgrade</button>
-                     </div>
-                     <hr class="modal-hr" />
-                     <div class="profile-modal-item">
-                        <img src="icon/profile-icon.svg" alt="account" />Profile
-                     </div>
-                     <div class="profile-modal-item">
-                        <img src="icon/setting icon.svg" alt="setting" />Setting
-                     </div>
-                     <div class="profile-modal-item">
-                        <img src="icon/add-gray.svg" alt="setting" />Add another account
-                     </div>
-                     <hr class="modal-hr" />
-                     <div class="profile-modal-item">
-                        <img src="icon/logout-sign.svg" alt="logout" />Logout
+                  <div class="profile-modal-item">
+                     <img src="icon/admin-console-icon.svg" alt="admin-console-icon" />Admin console
+                  </div>
+                  <div class="profile-modal-item">
+                     <img src="icon/add-gray.svg" alt="add-icon" />New workspace
+                  </div>
+                  <div class="profile-modal-item">
+                     <img src="icon/add-people.svg" alt="invite to asana" />Invite to
+                     Asana
+                  </div>
+                  <div class="profile-modal-item">
+                     <button class="btn-pro-modal" aria-label="upgrade">Upgrade</button>
+                  </div>
+                  <hr class="modal-hr" />
+                  <div class="profile-modal-item">
+                     <img src="icon/profile-icon.svg" alt="account-icon" />Profile
+                  </div>
+                  <div class="profile-modal-item">
+                     <img src="icon/setting icon.svg" alt="setting-icon" />Setting
+                  </div>
+                  <div class="profile-modal-item">
+                     <img src="icon/add-gray.svg" alt="setting-icon" />Add another account
+                  </div>
+                  <hr class="modal-hr" />
+                  <div class="profile-modal-item">
+                     <img src="icon/logout-sign.svg" alt="logout-icon" />Logout
+                  </div>
+               </div>
+               <!-- customize modal  -->
+               <div class="customize-modal droppable">
+                  <div class="cm-top">
+                     <h1>Customize Home</h1>
+                     <div class="hide-customize-modal">
+                        <img src="icon/keyboard_tab.svg" alt="keyboard_tab">
                      </div>
                   </div>
-                  <!-- customize modal  -->
-                  <div class="customize-modal droppable">
-                     <div class="cm-top">
-                        <h1>Customize Home</h1>
-                        <div class="hide-customize-modal">
-                           <img src="icon/keyboard_tab.svg">
+                  <!-- set background  -->
+                  <h3 class="bg-text">Background</h3>
+                  <div class="bg-theme">
+                     <div class="bg-clr maroon"> </div>
+                     <div class="bg-clr golden"> </div>
+                     <div class="bg-clr olive"> </div>
+                     <div class="bg-clr deep-greenish-blue"> </div>
+                     <div class="bg-clr blue-green"> </div>
+                     <div class="bg-clr pale-green"></div>
+                     <div class="bg-clr steel-blue"> </div>
+                     <div class="bg-clr lavender-blue"> </div>
+                     <div class="bg-clr lavender-purple"> </div>
+                     <div class="bg-clr salmon"> </div>
+                     <div class="bg-clr pale-beige"> </div>
+                     <div class="bg-clr dark-bg"></div>
+                  </div>
+                  <h3 class="widgets-text">Widgets</h3>
+                  <p class="widgets-info">Click add or drag widgets below to your Home 
+                     screen. You can also reorder and remove them.
+                  </p>
+                  <div class="widgets draggable-2" id="note-widget" >
+                     <div class="widget-top">
+                        <p class="widget-title">Private notepad</p>
+                        <div class="add-widget" id="add-note">
+                           <img src="icon/add.svg" alt="add-icon">
+                           <p>Add</p>
                         </div>
                      </div>
-                     <!-- set background  -->
-                     <h3 class="bg-text">Background</h3>
-                     <div class="bg-theme">
-                        <div class="bg-clr maroon"> </div>
-                        <div class="bg-clr golden"> </div>
-                        <div class="bg-clr olive"> </div>
-                        <div class="bg-clr deep-greenish-blue"> </div>
-                        <div class="bg-clr blue-green"> </div>
-                        <div class="bg-clr pale-green"></div>
-                        <div class="bg-clr steel-blue"> </div>
-                        <div class="bg-clr lavender-blue"> </div>
-                        <div class="bg-clr lavender-purple"> </div>
-                        <div class="bg-clr salmon"> </div>
-                        <div class="bg-clr pale-beige"> </div>
-                        <div class="bg-clr dark-bg"></div>
+                     <div class="img-wrapper">
+                        <img class="node-pad-img" src="asset/home_notepad_widget_preview_dark.png" alt="widget"/>
                      </div>
-                     <h3 class="widgets-text">Widgets</h3>
-                     <p class="widgets-info">Click add or drag widgets below to your Home 
-                        screen. You can also reorder and remove them.
-                     </p>
-                     <div class="widgets draggable-2" id="note-widget" >
-                        <div class="widget-top">
-                           <p class="widget-title">Private notepad</p>
-                           <div class="add-widget" id="add-note">
-                              <img src="icon/add.svg">
-                              <p>Add</p>
-                           </div>
-                        </div>
-                        <div class="img-wrapper">
-                           <img class="node-pad-img" src="asset/home_notepad_widget_preview_dark.png"/>
-                        </div>
-                     </div>
-
-                    
-                     <!-- 2nd widgets -->
-                     <div class="widgets draggable " id="form-widgets" style="">
-                        <div class="widget-top">
-                           <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
-                           <div class="add-widget" id="add-form">
-                              <img src="icon/add.svg">
-                              <p>Add</p> 
-                           </div>
-                        </div>
-                        <div class="sub-div">
-                           <div class="gray-div"></div>
-                           <img src="icon/link.svg" alt="link-icon">
-                        </div>
-                        <div class="sub-div">
-                           <div class="gray-div"></div>
-                           <img src="icon/link.svg" alt="link-icon">
-                        </div>
-                        <div class="sub-div">
-                           <div class="gray-div"></div>
-                           <img src="icon/link.svg" alt="link-icon">
-                        </div>
-                     </div>
+                  </div>
 
                  
-
+                  <!-- 2nd widgets -->
+                  <div class="widgets draggable " id="form-widgets" style="">
+                     <div class="widget-top">
+                        <p class="widget-title">Froms <img src="icon/editor_choice.svg"></p>
+                        <div class="add-widget" id="add-form">
+                           <img src="icon/add.svg" alt="add-icon">
+                           <p>Add</p> 
+                        </div>
+                     </div>
+                     <div class="sub-div">
+                        <div class="gray-div"></div>
+                        <img src="icon/link.svg" alt="link-icon">
+                     </div>
+                     <div class="sub-div">
+                        <div class="gray-div"></div>
+                        <img src="icon/link.svg" alt="link-icon">
+                     </div>
+                     <div class="sub-div">
+                        <div class="gray-div"></div>
+                        <img src="icon/link.svg" alt="link-icon">
+                     </div>
                   </div>
                </div>
             </div>
-         </nav>
+         </div>
+      </nav>
+      <div class="wrapper">
+         
          <!-- home page  -->
          <div class="home-page">
             <!-- site nav  -->
@@ -197,11 +195,11 @@
                <hr class="modal-hr mt-half mb"/>
                <div class="insights-top-div" id="side-nav-hover-id">
                   <div class="insights">
-                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />
+                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" alt="arrow_drop_down" />
                      <p>Insights</p>
                      
                   </div>
-                  <img src="icon/plus.svg" class="add-icon"  />
+                  <img src="icon/plus.svg" class="add-icon" alt="add-icon" />
                </div>
                <div class="side-nav-item">
                   <img src="icon/repotting-icon.svg" alt="sign" />
@@ -220,12 +218,12 @@
                   id="project-main"
                   >
                   <div class="project insights">
-                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" />
+                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down"  alt="arrow_drop_down"/>
                      <p>Projects</p>
-                     <img id="more-icon" src="icon/more_horiz.svg" />
+                     <img id="more-icon" src="icon/more_horiz.svg" alt="more-icon"/>
                      
                   </div>
-                  <img src="icon/plus.svg" class="add-icon"  />
+                  <img src="icon/plus.svg" class="add-icon"  alt="plus-icon" />
                </div>
                <div class="side-nav-item">
                   <div class="clr-div"></div>
@@ -236,10 +234,10 @@
                   id="project-main"
                   >
                   <div class="project insights">
-                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" /> 
+                     <img src="icon/arrow_drop_down.svg" id="arrow_drop_down" alt="arrow_drop_down"/> 
                      <p>Team</p>
                   </div>
-                  <img id="app-icon" class="project-app-icon" src="icon/apps_.svg" />
+                  <img id="app-icon" class="project-app-icon" src="icon/apps_.svg" alt="app-icon"/>
                </div>
                <div class="side-nav-item" id="workspace">
                   <img id="workplace-icon" src="icon/workplace-icon.svg" alt="group" />
@@ -262,7 +260,7 @@
                      <!-- another item  -->
                      <div class="workspace-modal-item">
                         <p class="wsmi-p">
-                           <img src="icon/assignment.svg" /> Create project
+                           <img src="icon/assignment.svg" alt="assignment" /> Create project
                         </p>
                      </div>
                      <hr class="modal-hr" />
@@ -276,12 +274,12 @@
                   <hr class="modal-hr" />
                   <div class="cover-div">
                      <div class="invite-div">
-                        <img src="icon//Asana-Dots-Coral-source.svg" />
+                        <img src="icon//Asana-Dots-Coral-source.svg"  alt="Asana-Dots-Coral-source"/>
                         <p>Invite</p>
                      </div>
                      <div class="border-stand"></div>
                      <div class="help-div">
-                        <img class="help-icon" src="icon/what.svg" />
+                        <img class="help-icon" src="icon/what.svg"  alt="help-icon"/>
                         <p>Help</p>
                      </div>
                   </div>
@@ -344,7 +342,7 @@
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option" id="remove-option-private-note">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete-icon">
                                        Remove widget
                                     </div>
                                  </div>
@@ -357,17 +355,17 @@
                            <div class="btm-icon" style=" margin-left: 10px;">
                               <img src="icon/plus.svg" style="width: 14px; height: 14px;">
                               <div class="border-stand" style="height: 18px;"></div>
-                              <img src="icon/b.svg"/>
-                              <img src="icon/italic.svg"/>
-                              <img src="icon/underline.svg"/>
-                              <img src="icon/strike.svg"/>
-                              <img src="icon/2arrow.svg"/>
-                              <img src="icon/format_list_bulleted.svg" style="width: 16px; height: 16px;"/>
-                              <img src="icon/numberOrder.svg"/>
-                              <img src="icon/link.svg"/>
+                              <img src="icon/b.svg" alt="b"/>
+                              <img src="icon/italic.svg" alt="italic"/>
+                              <img src="icon/underline.svg" alt="underline"/>
+                              <img src="icon/strike.svg" alt="strike"/>
+                              <img src="icon/2arrow.svg" alt="2arrow"/>
+                              <img src="icon/format_list_bulleted.svg" style="width: 16px; height: 16px;" alt="format_list_bulleted"/>
+                              <img src="icon/numberOrder.svg" alt="numberOrder"/>
+                              <img src="icon/link.svg" alt="link"/>
                               <div class="border-stand"  style="height: 18px;"></div>
-                              <img src="icon/smile.svg" style="width: 16px; height: 16px;"/>
-                              <img src="icon/addthered.svg" style="width: 16px; height: 16px;"/>
+                              <img src="icon/smile.svg" style="width: 16px; height: 16px;" alt="smile"/>
+                              <img src="icon/addthered.svg" style="width: 16px; height: 16px;" alt="addthered"/>
 
 
                            </div>
@@ -389,12 +387,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option project-option">
-                                    <div class="size-option active-option" id="project-half-size"><img>Half size</div>
+                                    <div class="size-option active-option" id="project-half-size">Half size</div>
                                     <div class="size-option" id="project-full-size">
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option" id="remove-option-from">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete">
                                        Remove widget
                                     </div>
                                  </div>
@@ -402,8 +400,8 @@
                            </div>
                            <p class="task-summary">Upgrade to Asana Starter to use forms</p>
                            <div class="btn-div" style="margin-top: 12px;">
-                              <button class="task-clr-btn btn">Try for free</button>
-                              <button class="task-border-btn btn">Remove Widget</button>
+                              <button class="task-clr-btn btn" aria-label="task-clr-btn">Try for free</button>
+                              <button class="task-border-btn btn" aria-label="task-border-btn">Remove Widget</button>
                            </div>
                            <div class="status" style="margin-top: 0;">
                               <div class="task-status" style="height: 62px; margin-top: 20px;">
@@ -444,12 +442,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option gbo-g">
-                                    <div class="size-option active-option" id="goal-half-size"><img>Half size</div>
+                                    <div class="size-option active-option" id="goal-half-size">Half size</div>
                                     <div class="size-option" id="goal-full-size">
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete">
                                        Remove widget
                                     </div>
                                  </div>
@@ -457,8 +455,8 @@
                            </div>
                            <p class="task-summary">Try Asana Advanced to make traction on the goals you own.</p>
                            <div class="btn-div">
-                              <button class="task-clr-btn btn">Try for free</button>
-                              <button class="task-border-btn btn ">Remove widget</button>
+                              <button class="task-clr-btn btn" aria-label="task-border-btn">Try for free</button>
+                              <button class="task-border-btn btn " aria-label="task-border-btn">Remove widget</button>
                            </div>
                            <div class="status">
                               <div class="task-status">
@@ -508,12 +506,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option z" id="id-more-btn-option">
-                                    <div class="size-option active-option" id="status-half-size"><img> Half size</div>
+                                    <div class="size-option active-option" id="status-half-size">Half size</div>
                                     <div class="size-option" id="status-full-size">
                                        <p style="margin-right:px;">Full size</p>
                                     </div>
                                     <div class="remove-option">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete-icon">
                                        Remove widget
                                     </div>
                                  </div>
@@ -571,12 +569,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option draft-option">
-                                    <div class="size-option active-option" id="draft-half-size"><img>Half size</div>
+                                    <div class="size-option active-option" id="draft-half-size">Half size</div>
                                     <div class="size-option" id="draft-full-size">
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete-icon">
                                        Remove widget
                                     </div>
                                  </div>
@@ -606,12 +604,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option project-option">
-                                    <div class="size-option active-option" id="project-half-size"><img>Half size</div>
+                                    <div class="size-option active-option" id="project-half-size">Half size</div>
                                     <div class="size-option" id="project-full-size">
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete-icon">
                                        Remove widget
                                     </div>
                                  </div>
@@ -620,13 +618,13 @@
                            <div class="wrap">
                               <div class="create-project" >
                                  <div class="border">
-                                    <img src="icon/plus.svg" style="width: 16px;"/>
+                                    <img src="icon/plus.svg" style="width: 16px;" alt="plus-icon"/>
                                  </div>
                                  <p class="dark-text">Create project</p>
                               </div>
                               <div class="create-project" >
                                  <div class="reg-img-div">
-                                    <img class="reg-img" src="icon/bulet-list-icon.svg" >
+                                    <img class="reg-img" src="icon/bulet-list-icon.svg" alt="bulet-list-icon">
                                  </div>
                                  <p class="reg-p">Cross-functional project pl...</p>
                               </div>
@@ -644,12 +642,12 @@
                                     <img src="icon/more_horiz.svg" alt="more-icon"/>
                                  </div>
                                  <div class="more-btn-option assign-option">
-                                    <div class="size-option active-option" id="assign-half-size"><img>Half size</div>
+                                    <div class="size-option active-option" id="assign-half-size">Half size</div>
                                     <div class="size-option" id="assign-full-size">
                                        <p>Full size</p>
                                     </div>
                                     <div class="remove-option">
-                                       <img src="icon/delete.svg">
+                                       <img src="icon/delete.svg" alt="delete">
                                        Remove widget
                                     </div>
                                  </div>
@@ -664,7 +662,7 @@
                                  </div>
                                  <div class="ps-right">
                                     <p class="Y-day">Yesterday</p>
-                                    <img class="girl-face-3" src="asset/human_face_1.png" alt="">
+                                    <img class="girl-face-3" src="asset/human_face_1.png" alt="human-face">
                                  </div>
                               </div>
                               <hr class="modal-hr" />
@@ -686,7 +684,7 @@
                                  </div>
                                  <div class="ps-right">
                                     <p class="tomorrow">Tomorrow</p>
-                                    <img class="girl-face-3" src="asset/member-1.png" alt="">
+                                    <img class="girl-face-3" src="asset/member-1.png" alt="member-1">
                                  </div>
                               </div>
                               <hr class="modal-hr" id="hr-4"/>
@@ -703,8 +701,8 @@
                            </div>
                            <p class="task-summary mt-1" >upgrade to Asana Starter to keep track of tasks  <br>you've assigned your colleagues</p>
                            <div class="btn-div">
-                              <button class="task-clr-btn btn">Try for Free</button>
-                              <button class="task-border-btn btn ">Remove widget</button>
+                              <button class="task-clr-btn btn" aria-label="task-border-btn">Try for Free</button>
+                              <button class="task-border-btn btn " aria-label="task-border-btn">Remove widget</button>
                            </div>
                         </div>
                         <!-- task.div.8 -->
@@ -731,12 +729,12 @@
                   <div class="calender-div">
                      <div class="left-side-calender-top">
                         <div class="profile-pic-c">
-                           <img src="asset/human_face_1.png">
+                           <img src="asset/human_face_1.png" alt="human-face">
                         </div>
                         <div class="task-list">
                            <div class="task-list-top">
                               <h2>My tasks</h2>
-                              <img src="/icon/expand_more.svg">
+                              <img src="/icon/expand_more.svg" alt="expand">
                            </div>
                            <ul class="task-list-bottom">
                               <li>List</li>
@@ -747,7 +745,7 @@
                         </div>
                         <div class="right-side-calender-top">
                            <div class="share">
-                              <img src="icon/lock.svg">
+                              <img src="icon/lock.svg" alt="lock">
                               Share
                            </div>
                            <div class="border-stand c-stand"></div>
@@ -763,19 +761,7 @@
                         
                               <p>Customize</p>
                            </div>
-                           <!-- <div class="color-coustomize">
-                              <div class="color-icon">
-                                 <div class="cit">
-                                    <div class="red-square"></div>
-                                    <div class="yello-square"></div>
-                                 </div>
-                                 <div class="cib">
-                                    <div class="blue-square"></div>
-                                    <div class="border-square"></div>
-                                 </div>
-                              </div>
-                              <p>Customize</p>
-                           </div> -->
+                          
                         </div>
                      </div>
                      <div id='calendar'>
