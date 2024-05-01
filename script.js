@@ -268,6 +268,8 @@ $(document).ready(function () {
   // Click handlers for each background option
   $(".maroon").click(function () {
     setBackgroundAndSave(".maroon", "linear-gradient(208deg, hsla(317, 30%, 14%, 1) 26%, hsla(312, 15%, 13%, 1) 40%, hsla(220, 5%, 12%, 1) 100%)", "#43373F");
+    // setBackgroundAndSave(".maroon", "https://d3ki9tyy5l5ruj.cloudfront.net/obj/b7df78ac010aa18589d7ea7a11599a3c9ccf660c/Maroon_background_dark.jpg");
+
   });
 
 
@@ -626,33 +628,7 @@ $(document).ready(function () {
 
   })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
-
-
-
-
-
-
-
-
 
 // // form widget drag and drop //
 
@@ -736,9 +712,6 @@ $(document).on('click', function (event) {
 
 
 
-
-
-
 // Function to hide the likely text
 function hideKpdText() {
   $('#ctrl').hide();
@@ -751,13 +724,11 @@ function showKpdText() {
   $('#k').css('display', 'flex');
 }
 
-
 // function myTask() {
 //   $(".home-page-content").css("display", "none");
 //   $("#side-nav-home").removeClass("side-nav-item-active");
 //   $("#side-nav-task").addClass("side-nav-item-active");
 //   $(".my-task").css("display", "block");
-
 
 // }
 
@@ -768,8 +739,6 @@ function showKpdText() {
 //   $(".my-task").css("display", "none");
 // }
 
-
-
 function myTask() {
   $(".home-page-content").css("display", "none");
   $("#side-nav-home").removeClass("side-nav-item-active");
@@ -779,7 +748,6 @@ function myTask() {
   // Save state in local storage
   localStorage.setItem("currentPage", "task");
 }
-
 function myHome() {
   $(".home-page-content").css("display", "block");
   $("#side-nav-home").addClass("side-nav-item-active");
@@ -800,22 +768,16 @@ $(document).ready(function () {
   }
 });
 
-
 // full calendar // 
-
 
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
-
-
-
   function closestAncestorWithClass(element, className) {
     while (element && !element.classList.contains(className)) {
       element = element.parentNode; // Use parentNode instead of parentElement
     }
     return element;
   }
-
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'bootstrap',
@@ -830,30 +792,18 @@ document.addEventListener('DOMContentLoaded', function () {
     titleFormat: { month: 'long', year: 'numeric' },
     dayHeaderFormat: { day: 'numeric', weekday: 'short' },
 
-
-    // dayRender: function(info) {
-    //   var uniqueId = generateUniqueId(info.date);
-    //   info.el.setAttribute('data-id', uniqueId);
-    // }
-
-
-
-
     events: generateEvents(),
     customButtons: {
       addTaskButton: {
         text: 'Add task',
         hint: "Add task",
         click: function () {
-
+          toggleInputField();
         }
       }, filter: {
-
         // icon: " bi bi-filter",
         text: "Filter",
         click: function () {
-
-
 
         }
       },
@@ -896,8 +846,6 @@ document.addEventListener('DOMContentLoaded', function () {
             right: 'filter,dayGridWeek'
           });
           calendar.changeView('dayGridMonth');
-          // calendar.setOption('datesSet', null);
-
           applyMonthViewStyles()
         }
       },
@@ -906,7 +854,6 @@ document.addEventListener('DOMContentLoaded', function () {
         text: "All tasks",
       }
     },
-
 
     datesSet: function (view) {
       if (view.view.type === 'dayGridMonth') {
@@ -919,41 +866,48 @@ document.addEventListener('DOMContentLoaded', function () {
         updateHeaderCells();
       }
     },
-
-
-
     eventContent: function (arg) {
-
+      // Create the container element for the event
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
+
+      // Create input field for editing task
       const inputField = document.createElement('input');
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
+
+        // Create button for adding task
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
 
-
+      // Create span element for displaying event text
       const myText = document.createElement('span');
       containerEl.appendChild(myText);
       myText.classList.add('event-text');
 
+        // Get the start date of the event
+      const date = arg.event.start;
+      // Set data-date attribute directly based on the event date
+      myText.setAttribute('data-date', date.toISOString().split('T')[0]);
+      // Retrieve data from localStorage based on the event date
+      const eventData = localStorage.getItem(date.toISOString().split('T')[0]);
+      myText.textContent = eventData || '';
+
+
+
 
       addButton.addEventListener('click', function () {
-
         toggleInputField();
-        
       });
 
       inputField.addEventListener('keydown', function (event) {
         if (event.keyCode === 13) {
           toggleInputField();
-          
-
-
-
         }
       });
+
+      // set value in local storage and getAttribute // 
       function setAndGet() {
         const tdElement = event.target.closest('td.fc-day');
         const globalKeyDates = tdElement.getAttribute('data-date');
@@ -961,12 +915,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputValue = inputField ? inputField.value : '';
         localStorage.setItem(globalKeyDates, inputValue);
 
+        myText.textContent = inputValue;
+
       }
 
       function toggleInputField() {
         setAndGet()
-
-
         const inputValue = inputField.value.trim();
         if (inputValue !== '') {
           inputField.blur();
@@ -983,21 +937,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
 
-    window.addEventListener('load', function () {
-      const tdElements = document.querySelectorAll('td.fc-day');
-      tdElements.forEach((tdElement) => {
-          const key = tdElement.getAttribute('data-date');
-          console.log(key + 'node');
-          const targetSpan = tdElement.querySelector('.event-text');
-          if (targetSpan) {
-              targetSpan.setAttribute('data-date', key);
-              let myKey = targetSpan.getAttribute('data-date');
-              let myData = localStorage.getItem(myKey);
-              targetSpan.innerHTML = myData
-          }
-      });
-  });
-    
 
 
       containerEl.appendChild(inputField);
@@ -1005,9 +944,30 @@ document.addEventListener('DOMContentLoaded', function () {
       return { domNodes: [containerEl] };
     },
 
+
   });
 
+
+
+
+
   calendar.render();
+
+
+  // text content from local stor  stay after load //
+  const tdElements = document.querySelectorAll('td.fc-day');
+  tdElements.forEach((tdElement) => {
+    const key = tdElement.getAttribute('data-date');
+    const targetSpan = tdElement.querySelector('.event-text');
+    if (targetSpan) {
+      const myData = localStorage.getItem(key);
+      targetSpan.innerHTML = myData;
+    }
+  });
+
+
+
+
 
 
   function applyMonthViewStyles() {
@@ -1015,38 +975,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastWords = document.querySelectorAll(".last-word");
     lastWords.forEach(function (lastWord) {
       lastWord.style.display = 'none';
-
     });
-
     // Change cursor style 
     const fcDays = document.querySelectorAll(".fc-day");
     fcDays.forEach(function (fcDay) {
       fcDay.style.cursor = 'cell';
-
     });
-
     // set custom height in dayFrame 
     const dayFrames = document.querySelectorAll('.fc-daygrid-day-frame');
     dayFrames.forEach(function (dayFrame) {
       dayFrame.style.height = '185px';
     })
-
-
     // set style on event task p //
-
     const eventTextS = document.querySelectorAll('.event-add-task p')
     eventTextS.forEach(function (text) {
       text.style.display = 'none !important';
     })
-
-
     const eventImgS = document.querySelectorAll('.event-add-task img')
     eventImgS.forEach(function (img) {
       img.style.display = 'none !important';
     })
-
     // set date right to left // 
-
     const dates = document.querySelectorAll('.fc-daygrid-day-number');
     dates.forEach(function (date) {
       const styles = `
@@ -1059,30 +1008,23 @@ document.addEventListener('DOMContentLoaded', function () {
           font-size: 16px;
          
         `;
-
       date.style.cssText = styles;
-
     });
     // current day style // 
     const currentDay = document.querySelectorAll('.fc-day-today div .fc-daygrid-day-top a');
-
     currentDay.forEach(function (day) {
 
       day.style = `
      margin-top: 8px;
      margin-left: 5px;
      width: 8%;
-
      background-color: #4573D2;
      display: flex;
      align-items:flex-start;
      justify-content: flex-start;
-   
      padding: 4px 8px 4px 8px;
      border-radius: 8px;
-     font-size: 16px;
-     
-     
+     font-size: 16px; 
      `
     })
 
@@ -1097,16 +1039,13 @@ document.addEventListener('DOMContentLoaded', function () {
       text-align: center !important;
       width: 100%;
       height: 30px;
-      
       `
     })
 
-
-
     //     const thead = document.querySelectorAll('thead');
     //     thead.forEach(function(thd){
-    //      thd.style.height = '24px';
-    //      thd.style.backgroundColor = 'red';
+
+    //      thd.style.backgroundColor = 'yellow';
     //  })
 
 
@@ -1115,7 +1054,6 @@ document.addEventListener('DOMContentLoaded', function () {
       hc.style.height = '0px';
       //  hc.style.color = 'red';
     });
-
 
   }
 
@@ -1133,27 +1071,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-
   function updateHeaderCellsForMonthView() {
-
-
-
     var headerThead = document.querySelectorAll('thead');
-
     headerThead.forEach(function (th) {
-
       th.style.height = "24px";
       // th.style.display = 'none'
       th.style.cursor = 'pointer !important';
 
-
     })
 
-
-
-
     var elements = document.querySelectorAll('.fc-col-header-cell-cushion');
-
     elements.forEach(function (element) {
       element.style = `
       font-size: 12px;
@@ -1164,36 +1091,24 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.forEach(function (element) {
       var text = element.textContent.trim();
       var words = text.split(' ');
-
-
       for (var i = 0; i < words.length; i++) {
-
         if (!isNaN(words[i])) {
-
           words.splice(i, 1);
-
           i--;
         }
       }
-
-
       var newText = words.join(' ');
-
       element.textContent = newText;
     });
-
   }
 });
-
 
 function generateEvents() {
   var events = [];
   var startDate = new Date('2024-01-01');
   var endDate = new Date('2026-01-01');
-
   // Loop through each day between start and end date
   for (var currentDate = startDate; currentDate < endDate; currentDate.setDate(currentDate.getDate() + 1)) {
-
     if (currentDate.getDay() !== 6 && currentDate.getDay() !== 0) {
       events.push({
         title: '',
@@ -1207,6 +1122,5 @@ function generateEvents() {
       });
     }
   }
-
   return events;
 }
