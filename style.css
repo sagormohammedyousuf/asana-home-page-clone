@@ -18,12 +18,15 @@
   --pale-beige: hsl(38, 32%, 82%);
 }
 
+
+
 button,
 input,
 select {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 
 /* customize scroll bar */
 
@@ -51,6 +54,8 @@ select {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+   
   font-size: 14px;
   overflow: hidden;
 }
@@ -129,8 +134,6 @@ body {
 
 .create-icon {
   display: flex;
-  /* align-items: center; */
-
   background: #ef655d;
   width: 20px;
   height: 20px;
@@ -206,17 +209,19 @@ body {
   border: 1px solid #6a696a;
   display: flex;
   align-items: center;
-
+  
   border-radius: 10vmax;
   -webkit-border-radius: 10vmax;
   -moz-border-radius: 10vmax;
   -ms-border-radius: 10vmax;
   -o-border-radius: 10vmax;
+
 }
 
 .search-box:hover {
   outline: 3px solid #fff;
 }
+
 
 .hover {
   outline: 3px solid #fff;
@@ -227,6 +232,7 @@ body {
   margin-right: 15px;
   gap: 4px;
   color: #fff;
+
 }
 
 .ctrl {
@@ -250,9 +256,9 @@ body {
   background: #363639;
   /*padding-inline: 5px;
   padding-block: 0px;
-  */
-  border: 1px solid #aaa7a7;
+  */border: 1px solid #aaa7a7;
   border-radius: 4px;
+
 }
 
 .search-box img {
@@ -433,6 +439,7 @@ body {
   padding: 0 4px 0 12px;
   cursor: pointer;
   border-radius: 8px;
+
 }
 
 .side-nav-item:hover {
@@ -696,12 +703,9 @@ body {
   padding-top: 49px;
   color: #fff;
   background: hsla(317, 30%, 14%, 1);
-  background: linear-gradient(
-    208deg,
-    hsla(317, 30%, 14%, 1) 26%,
-    hsla(312, 15%, 13%, 1) 40%,
-    hsla(220, 5%, 12%, 1) 100%
-  );
+  background: linear-gradient(208deg, hsla(317, 30%, 14%, 1) 26%, hsla(312, 15%, 13%, 1) 40%, hsla(220, 5%, 12%, 1) 100%); 
+  /* background: url('https://d3ki9tyy5l5ruj.cloudfront.net/obj/b7df78ac010aa18589d7ea7a11599a3c9ccf660c/Maroon_background_dark.jpg'); */
+ 
 }
 
 .home-page-content {
@@ -911,7 +915,7 @@ body {
 .task-section {
   margin-top: 1.2rem;
   display: flex;
-  margin-inline: auto;
+  margin-inline:  auto;
   flex-direction: column;
   width: 1200px;
   gap: 0.9rem;
@@ -929,7 +933,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   display: flex;
-
+  
   flex-wrap: wrap;
   gap: 16px;
 
@@ -1761,21 +1765,37 @@ body.modal-open {
   height: 200px;
 }
 
+
 /* calender  */
 
 .my-task {
   height: 850px;
 }
 
-.calender-section {
+.calender-section{
   height: 850px;
+  
+}
+
+#calendar ,#calendar-month {
+  max-width: 1700px;
+  height: 100%;
+  
+  margin: 0px auto;
+  
+}
+
+
+#calendar-month {
+  max-width: 1700px;
+  background-color: rgb(37, 36, 37);
 }
 
 .calender-div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1e1f21;
+  background: #1E1F21;
   width: 1680px;
   height: 73px;
   border-bottom: 1px solid #4c4c4e;
@@ -1783,11 +1803,13 @@ body.modal-open {
   margin-right: 30px;
 }
 
+
 .left-side-calender-top {
   width: 280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .profile-pic-c {
@@ -1798,6 +1820,8 @@ body.modal-open {
   margin-right: 20px;
 }
 
+
+
 .task-list {
   height: 72px;
   display: flex;
@@ -1807,8 +1831,8 @@ body.modal-open {
 }
 
 .task-list-top {
-  display: flex;
-  margin-top: 3px;
+ display: flex;
+ margin-top: 3px;
 }
 
 .task-list-top h2 {
@@ -1827,7 +1851,7 @@ body.modal-open {
 .task-list-bottom {
   margin-top: 2px;
   display: flex;
-  align-items: baseline;
+  align-items:baseline;
   justify-content: space-between;
   list-style: none;
   width: 215px;
@@ -1840,7 +1864,7 @@ body.modal-open {
 
 .cal-text {
   color: #fff;
-  padding: 0 0 8px 0;
+  padding: 0 0 8px 0 ;
   border-bottom: 2px solid rgb(173, 169, 169);
 }
 
@@ -1881,12 +1905,14 @@ body.modal-open {
   /* margin-right: 4px; */
 }
 
+
 .c-stand {
   margin-right: 4px;
   margin-left: 4px;
   background: #484a4d;
   height: 28px;
 }
+
 
 .color-coustomize {
   height: 28px;
@@ -1922,38 +1948,80 @@ body.modal-open {
 .color-icon div {
   width: 5px;
   height: 5px;
+  
 }
 
 .blue-square {
-  background: #5da283;
+  background: #5DA283;
   margin-top: 1px;
 }
 
 .yellow-square {
-  background: #f1bd6c;
+  background: #F1BD6C;
 }
 
 .red-square {
-  background: #f06a6a;
+  background: #F06A6A;
   margin-right: 1px;
 }
 
 .border-square {
   margin-top: 1px;
-  border: 1px solid #4573d2;
+  border: 1px solid #4573D2;
 }
+
 
 /* full calender css add  */
 
-.fc-scrollgrid-section-header {
+
+
+#calendar ,#calendar-month {
+  max-width: 1700px;
+  height: 100%;
+  
+  margin: 0px auto;
+  
+}
+
+
+
+#calendar-month {
+  max-width: 1680px;
+  
+}
+
+
+#calendar-month .fc-scrollgrid {
+  overflow: hidden;
+}
+
+
+
+.fc-scrollgrid-section-header  {
   border: 2px solid red !important;
 }
 .fc-col-header {
-  border: 0px solid !important;
+  border: 0px solid  !important;
 }
 
-.fc-daygrid-day-frame {
+.fc-daygrid-day-frame { 
   height: 74vh;
+}
+
+#calendar-month .fc-daygrid-day-frame {
+  width: 314px;
+  height: 185px;
+}
+
+#calendar-month .fc-day-sun .fc-daygrid-day-frame {
+  width: 43px;
+  height: 185px;
+}
+
+
+#calendar-month .fc-day-sat .fc-daygrid-day-frame {
+  width: 43px;
+  height: 185px;
 }
 
 .fc-day-today {
@@ -1961,17 +2029,30 @@ body.modal-open {
 }
 
 .fc-day {
-  border: 1px solid #4c4c4e !important ;
+  border: 1px solid #4c4c4e!important ;
   border-bottom: 0 !important;
   border-left: 0 !important;
 }
 
-.fc-view-harness {
-  margin-top: -20px;
+#calendar-month .fc-day {
+  border-bottom: 1px solid #4c4c4e !important;
+  
 }
 
-.fc-scrollgrid {
+/* table, tr, td, th {
+  border: 0;
+  
+} */
+
+.fc-view-harness {
+  margin-top: -20px;
+  
+}
+
+
+.fc-scrollgrid  {
   border: none !important;
+  ;
 }
 
 .fc-scrollgrid td {
@@ -1979,27 +2060,72 @@ body.modal-open {
 }
 
 table {
+  
   outline: none;
 }
 
-.fc-header-toolbar {
-  background: #1e1f21;
 
+.fc-header-toolbar {
+  background: #1E1F21;
+  
   display: flex;
   align-items: center;
+  
+  
 }
+
+#calendar-month .fc-header-toolbar {
+  margin-top: 0;
+  height: 48px;
+}
+
 
 .fc-header-toolbar-center {
   /* CSS styles for the center part of the toolbar */
 }
+ 
+#calendar-month .fc-dayGridWeek-button  {
+  /* CSS styles for the right part of the toolbar */
+
+  background: none !important;
+  border: none;
+  margin-right: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8e8f8d;
+}
+
+
+#calendar-month .fc-dayGridWeek-button:hover  {
+ background: #2B2C2E!important;
+}
+
+
 
 thead {
-  background: #1e1f21;
+  background: #1E1F21;
   max-width: 317px !important;
   height: 70px !important;
 }
 
+#calendar-month thead {
+  height: 24px !important;
+}
+
+
+#calendar-month .fc-daygrid-day-top {
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  text-align: left;
+
+  
+}
+
 .fc-dayGridWeek-view {
+  
 }
 
 /* .fc-view-harness  {
@@ -2008,26 +2134,84 @@ thead {
 
 .fc-toolbar-chunk {
   display: flex;
+  
 }
 
-.fc-toolbar-chunk div {
+.fc-toolbar-chunk div{
   display: flex !important;
   align-items: center;
-
+ 
   margin-bottom: 8px;
   margin-top: 8px;
+
 }
+
+
+#calendar-month .fc-toolbar-chunk div{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+ margin-bottom: 8;
+ 
+ height: 48px;
+
+}
+
+ #fc-dom-1{
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  margin-left: 10px;
+}
+
+
+#calendar-month .fc-toolbar-title{
+ font-size: 20px !important;
+ font-weight: 400 !important;
+ margin-left: 10px;
+}
+
+#calendar-month .fc-col-header-cell {
+
+  border-right: none !important;
+
+}
+
+
+#calendar-month .fc-day-sun .fc-col-header-cell-cushion{
+
+ display: none !important;
+
+}
+
+
+#calendar-month .fc-day-sat .fc-col-header-cell-cushion{
+
+  display: none !important;
+ 
+ }
+
 
 tbody {
   background-color: #252628;
+  
 }
 td {
+
 }
+
+#calendar-month .fc-daygrid-day {
+  width: 314px;
+  height: 185px;
+}
+
+
+
 
 .fc-day-sat {
   width: 43px !important;
   order: 6;
   border-bottom: 1px solid #4c4c4c !important;
+ 
 }
 
 .fc-day-sun {
@@ -2035,44 +2219,52 @@ td {
   /* order: 7; */
   direction: ltr !important;
   border-bottom: 1px solid #4c4c4c !important;
+  
 }
 
 .fc-day-mon {
   order: 1;
-  width: 318.5px !important;
+  width: 318.500px !important;
 }
 
-.fc-day-tue {
+.fc-day-tue{
   order: 2;
-  width: 318.5px !important;
+  width: 318.500px !important;
 }
 
-.fc-day-wed {
+.fc-day-wed{
   order: 3;
-  width: 318.5px !important;
+  width: 318.500px !important;
 }
 
 .fc-day-thu {
   order: 4;
-  width: 318.5px !important;
+  width: 318.500px !important;
 }
 
-.fc-day-fri {
+.fc-day-fri{
   order: 5;
-  width: 318.5px !important;
+  width: 318.500px !important;
 }
 
-.fc-header-toolbar {
+
+
+
+
+
+.fc-header-toolbar{
   height: 40px !important;
   display: flex !important;
   align-items: center !important;
+ 
 }
 
-.fc-today-button {
+
+.fc-today-button  {
   background: none !important;
   margin-inline: 10px !important;
   border: 1px solid #4c4c4c !important;
-  text-transform: capitalize !important;
+  text-transform: capitalize  !important;
   width: 49px !important;
   height: 28px !important;
   font-size: 12px !important;
@@ -2087,8 +2279,7 @@ td {
   margin-right: 5px !important;
 }
 
-.fc-prev-button,
-.fc-next-button {
+.fc-prev-button , .fc-next-button  {
   background: none !important;
   width: 28px !important;
   height: 28px !important;
@@ -2098,9 +2289,8 @@ td {
   border: none !important;
 }
 
-.fc-next-button,
-.fc-prev-button:hover {
-  background: #2b2c2e !important;
+.fc-next-button,.fc-prev-button:hover {
+  background: #2B2C2E!important;
   border: none !important;
 }
 
@@ -2108,13 +2298,14 @@ td {
   margin-right: 30px !important;
 }
 
-.fc-button-group button {
+.fc-button-group  button{
   background: none !important;
   border: none !important;
 }
 
-.fc-button-group button:hover {
-  background: #2b2c2e !important;
+
+.fc-button-group  button:hover{
+  background: #2B2C2E !important;
   border-radius: 4px !important;
   -webkit-border-radius: 4px !important;
   -moz-border-radius: 4px !important;
@@ -2126,7 +2317,7 @@ td {
   display: none !important;
 }
 
-.fc-daygrid-day-events {
+.fc-daygrid-day-events{
   background: none !important;
 }
 
@@ -2138,6 +2329,7 @@ td {
   background: none !important;
   border: none !important;
 }
+
 
 .event-task-container {
   display: flex;
@@ -2164,7 +2356,10 @@ td {
   -o-border-radius: 6px;
 }
 
+
 .event-add-task {
+  cursor: pointer;
+  /* -webkit-cursor: pointer; */
   background: #252628 !important;
   display: flex;
   align-items: center;
@@ -2183,11 +2378,9 @@ td {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
-
 .event-add-task:hover {
   background-color: #323335 !important;
 }
-
 .event-add-task:hover p {
   color: #fff !important;
 }
@@ -2199,10 +2392,10 @@ td {
 
 .event-add-task p {
   font-weight: 500 !important;
-  font-size: 14px;
+  font-size:14px;
   color: #8c8f97;
-}
 
+}
 .add-task-btn {
   background-color: red !important;
 }
@@ -2212,7 +2405,7 @@ td {
   margin-left: 25px !important;
   display: flex !important;
   align-items: center !important;
-  background: #4573d2 !important;
+  background: #4573D2 !important;
   width: 80px !important;
   height: 28px !important;
   font-size: 12px !important;
@@ -2227,15 +2420,15 @@ td {
 
 .fc-addTaskButton-button::before {
   margin-right: 4px;
-  content: "\f64d";
-  font-family: "bootstrap-icons";
+  content: '\f64d'; 
+  font-family: 'bootstrap-icons'; 
   color: #ffffff !important;
 }
 
 .fc-filter-button::before {
   margin-right: 4px;
-  content: "\F3CA";
-  font-family: "bootstrap-icons";
+  content: '\F3CA';
+  font-family: 'bootstrap-icons'; 
   font-size: 13px;
 }
 
@@ -2253,7 +2446,7 @@ td {
   margin-left: -10px !important;
   width: 22px !important;
   height: 28px !important;
-  background: #4573d2 !important;
+  background: #4573D2 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2276,37 +2469,37 @@ td {
 }
 
 .fc-button-group button {
-  font-size: 12px !important;
+  font-size:  12px !important;
   color: #a3a3a3 !important;
 }
 
 .fc-allTask-button::before {
   font-size: 10px;
   margin-right: 4px;
-  content: "\F26B";
-  font-family: "bootstrap-icons";
+  content: '\F26B'; 
+  font-family: 'bootstrap-icons'; 
   color: #c4c2c2 !important;
 }
 
 .fc-dayGridMonth-button::before {
   font-size: 10px;
   margin-right: 4px;
-  content: "\F62C";
-  font-family: "bootstrap-icons";
+  content: '\F62C'; 
+  font-family: 'bootstrap-icons'; 
   color: #c4c2c2 !important;
 }
 
 .fc-dayGridWeek-button::before {
   font-size: 10px;
   margin-right: 4px;
-  content: "\F62C";
-  font-family: "bootstrap-icons";
+  content: '\F62C'; 
+  font-family: 'bootstrap-icons';
 }
 
 .fc-col-header-cell-cushion {
   width: 43px;
   height: 54px;
-
+  
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -2314,25 +2507,121 @@ td {
   margin-top: 8px;
 }
 
+#calendar-month .fc-col-header-cell-cushion {
+  height: 0px !important;
+  margin-top: 0px !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #A2A0A2;
+}
+
 .first-word {
-  font-weight: 700;
+  font-weight: 700; 
   text-transform: uppercase;
   font-size: 12px;
   color: hsl(300, 1%, 63%);
 }
 .last-word {
-  font-weight: 400;
+  font-weight: 400; 
   font-size: 20px;
   margin-top: 4px !important;
+ 
 }
 
-.fc-day-today .last-word {
+
+
+.fc-day-today .last-word { 
   margin-top: 4px;
-  background: #4573d2;
+  background: #4573D2;
   padding: 2px 8px 2px 8px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+
+#calendar-month .fc-day div div  a{
+  width: 100%;
+  
+  
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+
+  padding: 2px 8px 2px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+#calendar-month .fc-day-today div .fc-daygrid-day-top  {
+
+  display: flex !important;
+  align-items: center;
+  justify-content:left !important;
+  text-align: center !important;
+  width: 100%;
+  height: 30px;
+ 
+}
+
+
+#calendar-month .fc-day-today div .fc-daygrid-day-top a{
+  margin-top: 8px;
+  margin-left: 5px;
+  width: 8%;
+
+  
+  background-color: #4573D2;
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+
+  padding: 4px 8px 4px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  
+}
+
+
+#calendar-month  .fc-day {
+  cursor: cell;
+}
+
+
+/* #calendar-month .event-add-task {
+  cursor: cell;
+  width: 300px;
+  height: 80px;
+  margin-left: -2px;
+} */
+
+
+#calendar-month .event-add-task p{
+  display: none;
+}
+
+#calendar-month .event-add-task img{
+  display: none;
+}
+
+
+#calendar-month .event-add-task:hover {
+  background: none !important;
+}
+
+
+#calendar-month .fc-today .event-task-container .event-add-task p {
+  display: block !important;
+  
+}
+
+
+.my-para {
+  width: 100%;
+  background-color: rebeccapurple;
+  height: 50px;
+  display: block !important;
 }

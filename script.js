@@ -867,29 +867,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     eventContent: function (arg) {
-      // Create the container element for the event
+
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
-
-      // Create input field for editing task
       const inputField = document.createElement('input');
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
-
-        // Create button for adding task
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
-
-      // Create span element for displaying event text
       const myText = document.createElement('span');
       containerEl.appendChild(myText);
       myText.classList.add('event-text');
 
-        // Get the start date of the event
       const date = arg.event.start;
+
       // Set data-date attribute directly based on the event date
       myText.setAttribute('data-date', date.toISOString().split('T')[0]);
+
       // Retrieve data from localStorage based on the event date
       const eventData = localStorage.getItem(date.toISOString().split('T')[0]);
       myText.textContent = eventData || '';
@@ -906,8 +901,6 @@ document.addEventListener('DOMContentLoaded', function () {
           toggleInputField();
         }
       });
-
-      // set value in local storage and getAttribute // 
       function setAndGet() {
         const tdElement = event.target.closest('td.fc-day');
         const globalKeyDates = tdElement.getAttribute('data-date');
@@ -924,7 +917,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputValue = inputField.value.trim();
         if (inputValue !== '') {
           inputField.blur();
-          inputField.style.display = 'block';
+          inputField.style.display = 'none';
         } else {
           inputField.focus();
           if (inputField.style.display === 'none' || inputField.style.display === '') {
@@ -953,8 +946,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   calendar.render();
 
-
-  // text content from local stor  stay after load //
   const tdElements = document.querySelectorAll('td.fc-day');
   tdElements.forEach((tdElement) => {
     const key = tdElement.getAttribute('data-date');
