@@ -772,12 +772,7 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var calendarEl = document.getElementById('calendar');
-  function closestAncestorWithClass(element, className) {
-    while (element && !element.classList.contains(className)) {
-      element = element.parentNode; // Use parentNode instead of parentElement
-    }
-    return element;
-  }
+
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
     themeSystem: 'bootstrap',
@@ -867,15 +862,21 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     eventContent: function (arg) {
-
+      // Create the container element for the event
       const containerEl = document.createElement('div');
       containerEl.classList.add('event-task-container');
+
+        // Create input field for editing task
       const inputField = document.createElement('input');
       inputField.setAttribute('type', 'text');
       inputField.classList.add('event-input');
+
+      // Create button for adding task
       const addButton = document.createElement('button');
       addButton.innerHTML = '<img src="icon/plus.svg"><p>Add task</p>';
       addButton.classList.add('event-add-task');
+
+        // Create span element for displaying event text
       const myText = document.createElement('span');
       containerEl.appendChild(myText);
       myText.classList.add('event-text');
